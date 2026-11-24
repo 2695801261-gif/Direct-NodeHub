@@ -40,7 +40,7 @@ def run():
     standard={"mixed-port":7890,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":configs,
       "proxy-groups":[
        {"name":"节点手动选择","type":"select","proxies":names+["DIRECT"]},
-       {"name":"节点自动优选","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":80,"lazy":True,"proxies":names},
+       {"name":"节点自动优选","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":80,"lazy":True,"proxies":names or ["DIRECT"]},
        {"name":"节点故障切换","type":"fallback","url":"https://www.gstatic.com/generate_204","interval":180,"lazy":True,"proxies":names},
        {"name":"PROXY","type":"select","proxies":["节点自动优选","节点故障切换","节点手动选择","DIRECT"]}],
       "rules":["MATCH,PROXY"]}
@@ -49,7 +49,7 @@ def run():
     fast_yaml={"mixed-port":7891,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":fastconfigs,
       "proxy-groups":[
        {"name":"高速手动选择","type":"select","proxies":fastnames+["DIRECT"]},
-       {"name":"高速自动优选","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":80,"lazy":True,"proxies":fastnames},
+       {"name":"高速自动优选","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":80,"lazy":True,"proxies":fastnames or ["DIRECT"]},
        {"name":"PROXY","type":"select","proxies":["高速自动优选","高速手动选择","DIRECT"]}],
       "rules":["MATCH,PROXY"]}
     (OUTPUT/"fast.yaml").write_text(yaml.safe_dump(fast_yaml,allow_unicode=True,sort_keys=False),encoding="utf-8")
@@ -58,7 +58,7 @@ def run():
     home={"name":"HOME-RESIDENTIAL-REPLACE-ME","type":"socks5","server":"YOUR_HOME_HOST","port":1080,"username":"YOUR_USERNAME","password":"YOUR_PASSWORD","dialer-proxy":"ENTRY-AUTO"}
     chain={"mixed-port":7892,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":chainconfigs+[home],
       "proxy-groups":[
-       {"name":"ENTRY-AUTO","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":180,"tolerance":100,"lazy":True,"proxies":chainnames},
+       {"name":"ENTRY-AUTO","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":180,"tolerance":100,"lazy":True,"proxies":chainnames or ["DIRECT"]},
        {"name":"HOME-CHAIN","type":"select","proxies":["HOME-RESIDENTIAL-REPLACE-ME"]}],
       "rules":["MATCH,HOME-CHAIN"]}
     (OUTPUT/"chain-template.yaml").write_text(yaml.safe_dump(chain,allow_unicode=True,sort_keys=False),encoding="utf-8")
@@ -66,7 +66,7 @@ def run():
     stamp=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())
     status={"generated_at":stamp,"summary":summary,"cloud_tcp":data.get("cloud_tcp_summary"),"protocol":data.get("protocol_summary"),"risk":data.get("risk_summary"),"stability":data.get("stability_summary"),"sources":data.get("sources",[])}
     (OUTPUT/"status.json").write_text(json.dumps(status,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    html="<!doctype html><html lang='zh-CN'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Direct-NodeHub 状态</title><style>body{font:16px system-ui;background:#101722;color:#e7edf5;max-width:760px;margin:36px auto;padding:0 18px}a{color:#8cc8ff}section{background:#1b2735;padding:16px;border-radius:12px;margin:14px 0}small{color:#aab7c7}</style><h1>Direct-NodeHub</h1><p>公开节点云端筛选状态</p><section><h2>订阅文件</h2><p><a href="clash.yaml">信誉情报筛选稳定池</a></p><p><a href="fast.yaml">高速稳定池</a></p><p><a href="chain-template.yaml">家宽链式代理模板</a></p><p><a href="status.json">JSON 状态</a></p></section><section><h2>测试边界</h2><p>云端协议与下载测试不代表中国大陆连通性。大陆状态尚未测试。</p><small>免费公开节点可能随时失效；不要用于敏感账号或支付。</small></section></html>"
+    html="""<!doctype html><html lang='zh-CN'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Direct-NodeHub 状态</title><style>body{font:16px system-ui;background:#101722;color:#e7edf5;max-width:760px;margin:36px auto;padding:0 18px}a{color:#8cc8ff}section{background:#1b2735;padding:16px;border-radius:12px;margin:14px 0}small{color:#aab7c7}</style><h1>Direct-NodeHub</h1><p>公开节点云端筛选状态</p><section><h2>订阅文件</h2><p><a href="clash.yaml">信誉情报筛选稳定池</a></p><p><a href="fast.yaml">高速稳定池</a></p><p><a href="chain-template.yaml">家宽链式代理模板</a></p><p><a href="status.json">JSON 状态</a></p></section><section><h2>测试边界</h2><p>云端协议与下载测试不代表中国大陆连通性。大陆状态尚未测试。</p><small>免费公开节点可能随时失效；不要用于敏感账号或支付。</small></section></html>"""
     (OUTPUT/"index.html").write_text(html,encoding="utf-8")
     print(json.dumps(summary,ensure_ascii=False,indent=2))
     return summary
