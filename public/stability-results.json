@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T11:26:54Z",
+  "generated_at": "2026-11-24T11:29:57Z",
   "summary": {
-    "candidates_tested": 56,
-    "stable": 45,
-    "degraded": 8,
-    "unstable": 3,
+    "candidates_tested": 36,
+    "stable": 27,
+    "degraded": 3,
+    "unstable": 6,
     "rounds": 3,
     "required_successful_rounds": 3,
     "minimum_download_kbps": 128.0,
@@ -16,62 +16,14 @@
   },
   "results": [
     {
-      "id": "392b60305b42edc4",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 568.5,
-      "median_download_kbps": 302.5,
-      "median_upload_kbps": 1754.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "88.216.182.53",
-          "exit_ip_agreement": 3,
-          "latency_ms": 568.5,
-          "latency_ok": true,
-          "download_kbps": 307.2,
-          "upload_kbps": 1759.6,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "88.216.182.53",
-          "exit_ip_agreement": 3,
-          "latency_ms": 567.7,
-          "latency_ok": true,
-          "download_kbps": 302.5,
-          "upload_kbps": 1754.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "88.216.182.53",
-          "exit_ip_agreement": 3,
-          "latency_ms": 573.1,
-          "latency_ok": true,
-          "download_kbps": 294.8,
-          "upload_kbps": 1721.0,
-          "error": null
-        }
-      ]
-    },
-    {
       "id": "3d2c612459ea5b10",
       "stable_status": "stable",
       "successful_rounds": 3,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 575.6,
-      "median_download_kbps": 298.6,
-      "median_upload_kbps": 1619.4,
+      "median_latency_ms": 688.7,
+      "median_download_kbps": 222.5,
+      "median_upload_kbps": 1678.0,
       "rounds": [
         {
           "round": 1,
@@ -79,10 +31,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 575.6,
+          "latency_ms": 675.3,
           "latency_ok": true,
-          "download_kbps": 298.6,
-          "upload_kbps": 1652.8,
+          "download_kbps": 222.5,
+          "upload_kbps": 1678.0,
           "error": null
         },
         {
@@ -91,10 +43,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 566.3,
+          "latency_ms": 688.7,
           "latency_ok": true,
-          "download_kbps": 309.0,
-          "upload_kbps": 1612.3,
+          "download_kbps": 222.5,
+          "upload_kbps": 1498.8,
           "error": null
         },
         {
@@ -103,23 +55,23 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 577.0,
+          "latency_ms": 701.2,
           "latency_ok": true,
-          "download_kbps": 293.3,
-          "upload_kbps": 1619.4,
+          "download_kbps": 232.9,
+          "upload_kbps": 1678.1,
           "error": null
         }
       ]
     },
     {
-      "id": "47f3ffbf7418ca98",
+      "id": "392b60305b42edc4",
       "stable_status": "stable",
       "successful_rounds": 3,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 564.9,
-      "median_download_kbps": 305.1,
-      "median_upload_kbps": 1705.1,
+      "median_latency_ms": 692.4,
+      "median_download_kbps": 227.6,
+      "median_upload_kbps": 1336.7,
       "rounds": [
         {
           "round": 1,
@@ -127,10 +79,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 564.9,
+          "latency_ms": 692.4,
           "latency_ok": true,
-          "download_kbps": 302.7,
-          "upload_kbps": 1705.1,
+          "download_kbps": 223.2,
+          "upload_kbps": 1324.3,
           "error": null
         },
         {
@@ -139,10 +91,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 558.0,
+          "latency_ms": 714.1,
           "latency_ok": true,
-          "download_kbps": 305.1,
-          "upload_kbps": 1473.4,
+          "download_kbps": 227.6,
+          "upload_kbps": 1418.0,
           "error": null
         },
         {
@@ -151,10 +103,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 580.4,
+          "latency_ms": 677.8,
           "latency_ok": true,
-          "download_kbps": 309.4,
-          "upload_kbps": 1726.5,
+          "download_kbps": 235.8,
+          "upload_kbps": 1336.7,
           "error": null
         }
       ]
@@ -165,9 +117,9 @@
       "successful_rounds": 3,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 564.3,
-      "median_download_kbps": 308.8,
-      "median_upload_kbps": 1761.3,
+      "median_latency_ms": 683.4,
+      "median_download_kbps": 226.7,
+      "median_upload_kbps": 1461.8,
       "rounds": [
         {
           "round": 1,
@@ -175,10 +127,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 564.3,
+          "latency_ms": 683.4,
           "latency_ok": true,
-          "download_kbps": 308.8,
-          "upload_kbps": 84.2,
+          "download_kbps": 226.7,
+          "upload_kbps": 1461.8,
           "error": null
         },
         {
@@ -187,10 +139,10 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 581.9,
+          "latency_ms": 691.6,
           "latency_ok": true,
-          "download_kbps": 305.8,
-          "upload_kbps": 1761.3,
+          "download_kbps": 232.9,
+          "upload_kbps": 1616.8,
           "error": null
         },
         {
@@ -199,2482 +151,490 @@
           "protocol_status": "verified",
           "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 559.8,
+          "latency_ms": 672.1,
           "latency_ok": true,
-          "download_kbps": 310.0,
-          "upload_kbps": 1812.6,
+          "download_kbps": 220.8,
+          "upload_kbps": 1395.4,
           "error": null
         }
       ]
     },
     {
-      "id": "7f5fe84f30150bf0",
+      "id": "47f3ffbf7418ca98",
       "stable_status": "stable",
       "successful_rounds": 3,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 83.0,
-      "median_download_kbps": 2244.3,
-      "median_upload_kbps": 1774.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.86.51.144",
-          "exit_ip_agreement": 3,
-          "latency_ms": 83.0,
-          "latency_ok": true,
-          "download_kbps": 2202.8,
-          "upload_kbps": 1261.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.86.51.144",
-          "exit_ip_agreement": 3,
-          "latency_ms": 83.4,
-          "latency_ok": true,
-          "download_kbps": 2256.9,
-          "upload_kbps": 1774.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.86.51.144",
-          "exit_ip_agreement": 3,
-          "latency_ms": 82.8,
-          "latency_ok": true,
-          "download_kbps": 2244.3,
-          "upload_kbps": 1862.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "38e90c42cfe9ede3",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 81.7,
-      "median_download_kbps": 2041.5,
-      "median_upload_kbps": 1739.5,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.230.230.142",
-          "exit_ip_agreement": 3,
-          "latency_ms": 77.9,
-          "latency_ok": true,
-          "download_kbps": 2041.5,
-          "upload_kbps": 1766.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.230.230.142",
-          "exit_ip_agreement": 3,
-          "latency_ms": 81.7,
-          "latency_ok": true,
-          "download_kbps": 329.0,
-          "upload_kbps": 1739.5,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.230.230.142",
-          "exit_ip_agreement": 3,
-          "latency_ms": 92.0,
-          "latency_ok": true,
-          "download_kbps": 2206.9,
-          "upload_kbps": 1720.0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "43ed323db66e6e0a",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 628.8,
-      "median_download_kbps": 538.9,
-      "median_upload_kbps": 1390.2,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "15.204.247.206",
-          "exit_ip_agreement": 3,
-          "latency_ms": 686.4,
-          "latency_ok": true,
-          "download_kbps": 1496.5,
-          "upload_kbps": 1741.9,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "15.204.247.206",
-          "exit_ip_agreement": 3,
-          "latency_ms": 628.8,
-          "latency_ok": true,
-          "download_kbps": 272.9,
-          "upload_kbps": 1262.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "15.204.247.206",
-          "exit_ip_agreement": 3,
-          "latency_ms": 553.9,
-          "latency_ok": true,
-          "download_kbps": 538.9,
-          "upload_kbps": 1390.2,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "75a37523503b3768",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 83.2,
-      "median_download_kbps": 1967.9,
-      "median_upload_kbps": 1740.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "172.111.38.72",
-          "exit_ip_agreement": 3,
-          "latency_ms": 83.2,
-          "latency_ok": true,
-          "download_kbps": 1967.9,
-          "upload_kbps": 542.9,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "172.111.38.72",
-          "exit_ip_agreement": 3,
-          "latency_ms": 79.3,
-          "latency_ok": true,
-          "download_kbps": 251.5,
-          "upload_kbps": 1740.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "172.111.38.72",
-          "exit_ip_agreement": 3,
-          "latency_ms": 83.4,
-          "latency_ok": true,
-          "download_kbps": 2020.2,
-          "upload_kbps": 1764.4,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "2f77dc93dcde326b",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 130.5,
-      "median_download_kbps": 1263.2,
-      "median_upload_kbps": 1588.4,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 137.1,
-          "latency_ok": true,
-          "download_kbps": 1263.2,
-          "upload_kbps": 1643.6,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 130.5,
-          "latency_ok": true,
-          "download_kbps": 841.5,
-          "upload_kbps": 1355.7,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 127.4,
-          "latency_ok": true,
-          "download_kbps": 1584.6,
-          "upload_kbps": 1588.4,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "3a0371edbceaf2b9",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 165.4,
-      "median_download_kbps": 1084.7,
-      "median_upload_kbps": 1672.5,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 149.3,
-          "latency_ok": true,
-          "download_kbps": 1198.6,
-          "upload_kbps": 1724.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 165.4,
-          "latency_ok": true,
-          "download_kbps": 671.9,
-          "upload_kbps": 1672.5,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 213.7,
-          "latency_ok": true,
-          "download_kbps": 1084.7,
-          "upload_kbps": 1587.3,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "99fe3323856506b5",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 162.9,
-      "median_download_kbps": 1139.8,
-      "median_upload_kbps": 1625.9,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 187.8,
-          "latency_ok": true,
-          "download_kbps": 1185.2,
-          "upload_kbps": 1715.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 158.0,
-          "latency_ok": true,
-          "download_kbps": 553.7,
-          "upload_kbps": 1604.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 162.9,
-          "latency_ok": true,
-          "download_kbps": 1139.8,
-          "upload_kbps": 1625.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "bc4067741ac47e59",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 185.6,
-      "median_download_kbps": 853.8,
-      "median_upload_kbps": 1759.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 161.4,
-          "latency_ok": true,
-          "download_kbps": 840.7,
-          "upload_kbps": 1960.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 185.6,
-          "latency_ok": true,
-          "download_kbps": 1216.8,
-          "upload_kbps": 1497.0,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 223.7,
-          "latency_ok": true,
-          "download_kbps": 853.8,
-          "upload_kbps": 1759.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "77f936d980cb049c",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 90.5,
-      "median_download_kbps": 853.0,
-      "median_upload_kbps": 1494.4,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.160",
-          "exit_ip_agreement": 3,
-          "latency_ms": 90.5,
-          "latency_ok": true,
-          "download_kbps": 853.0,
-          "upload_kbps": 1494.4,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.160",
-          "exit_ip_agreement": 3,
-          "latency_ms": 89.6,
-          "latency_ok": true,
-          "download_kbps": 1192.5,
-          "upload_kbps": 1720.4,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.160",
-          "exit_ip_agreement": 3,
-          "latency_ms": 92.8,
-          "latency_ok": true,
-          "download_kbps": 289.1,
-          "upload_kbps": 699.0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "99df50b52c2f5147",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 187.2,
-      "median_download_kbps": 965.8,
-      "median_upload_kbps": 1689.3,
+      "median_latency_ms": 710.7,
+      "median_download_kbps": 228.6,
+      "median_upload_kbps": 1453.8,
       "rounds": [
         {
           "round": 1,
           "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
+          "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 92.8,
+          "latency_ms": 723.9,
           "latency_ok": true,
-          "download_kbps": 87.8,
-          "upload_kbps": 1689.9,
+          "download_kbps": 228.6,
+          "upload_kbps": 1453.8,
           "error": null
         },
         {
           "round": 2,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
+          "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 230.7,
+          "latency_ms": 710.7,
           "latency_ok": true,
-          "download_kbps": 910.8,
-          "upload_kbps": 1657.4,
+          "download_kbps": 236.1,
+          "upload_kbps": 1411.9,
           "error": null
         },
         {
           "round": 3,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
+          "exit_ip": "88.216.182.53",
           "exit_ip_agreement": 3,
-          "latency_ms": 143.8,
+          "latency_ms": 679.7,
           "latency_ok": true,
-          "download_kbps": 1020.7,
-          "upload_kbps": 1721.3,
+          "download_kbps": 225.8,
+          "upload_kbps": 1490.5,
           "error": null
         }
       ]
     },
     {
-      "id": "c2f8ed209775fd03",
-      "stable_status": "stable",
-      "successful_rounds": 3,
+      "id": "4a8f330184d89625",
+      "stable_status": "unstable",
+      "successful_rounds": 0,
       "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 89.1,
-      "median_download_kbps": 1582.3,
-      "median_upload_kbps": 1720.4,
+      "same_exit_ip": false,
+      "median_latency_ms": null,
+      "median_download_kbps": 0,
+      "median_upload_kbps": 0,
       "rounds": [
         {
           "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.243",
-          "exit_ip_agreement": 3,
-          "latency_ms": 88.6,
-          "latency_ok": true,
-          "download_kbps": 1685.4,
-          "upload_kbps": 1500.4,
-          "error": null
+          "ok": false,
+          "protocol_status": "partial",
+          "exit_ip": "2a14:a087:3:80::2",
+          "exit_ip_agreement": 1,
+          "latency_ms": 1813.4,
+          "latency_ok": false,
+          "download_kbps": 154.1,
+          "upload_kbps": 1468.5,
+          "error": "fewer than two echo services agreed on exit IP"
         },
         {
           "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.243",
-          "exit_ip_agreement": 3,
-          "latency_ms": 89.1,
-          "latency_ok": true,
-          "download_kbps": 1498.1,
-          "upload_kbps": 1789.6,
-          "error": null
+          "ok": false,
+          "protocol_status": "partial",
+          "exit_ip": "2a14:a087:3:80::2",
+          "exit_ip_agreement": 1,
+          "latency_ms": 2084.2,
+          "latency_ok": false,
+          "download_kbps": 99.0,
+          "upload_kbps": 1544.7,
+          "error": "fewer than two echo services agreed on exit IP"
         },
         {
           "round": 3,
-          "ok": true,
+          "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "37.19.198.243",
+          "exit_ip": "2a14:a087:3:80::2",
           "exit_ip_agreement": 2,
-          "latency_ms": 90.3,
-          "latency_ok": true,
-          "download_kbps": 1582.3,
-          "upload_kbps": 1720.4,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "d3e3db81b3de9219",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 161.3,
-      "median_download_kbps": 1175.1,
-      "median_upload_kbps": 1600.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 151.6,
-          "latency_ok": true,
-          "download_kbps": 1536.3,
-          "upload_kbps": 1600.1,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 253.0,
-          "latency_ok": true,
-          "download_kbps": 1175.1,
-          "upload_kbps": 886.9,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 161.3,
-          "latency_ok": true,
-          "download_kbps": 514.0,
-          "upload_kbps": 1817.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "ebdc67126ae2f6e0",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 123.1,
-      "median_download_kbps": 962.7,
-      "median_upload_kbps": 1826.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 123.1,
-          "latency_ok": true,
-          "download_kbps": 713.7,
-          "upload_kbps": 1659.6,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 160.4,
-          "latency_ok": true,
-          "download_kbps": 962.7,
-          "upload_kbps": 1855.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 97.1,
-          "latency_ok": true,
-          "download_kbps": 1110.4,
-          "upload_kbps": 1826.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "e8e7de4d98928cbb",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 157.9,
-      "median_download_kbps": 929.4,
-      "median_upload_kbps": 1763.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 226.4,
-          "latency_ok": true,
-          "download_kbps": 929.4,
-          "upload_kbps": 1763.1,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 157.9,
-          "latency_ok": true,
-          "download_kbps": 1591.2,
-          "upload_kbps": 1770.7,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 140.1,
-          "latency_ok": true,
-          "download_kbps": 903.3,
-          "upload_kbps": 1446.0,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "f0a22eb7eb57c747",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 132.8,
-      "median_download_kbps": 1410.5,
-      "median_upload_kbps": 1594.3,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 218.6,
-          "latency_ok": true,
-          "download_kbps": 1617.0,
-          "upload_kbps": 1692.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 132.8,
-          "latency_ok": true,
-          "download_kbps": 722.6,
-          "upload_kbps": 1594.3,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 126.8,
-          "latency_ok": true,
-          "download_kbps": 1410.5,
-          "upload_kbps": 1245.3,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "fcdcef67b78ca613",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 157.9,
-      "median_download_kbps": 1390.2,
-      "median_upload_kbps": 1626.8,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 165.9,
-          "latency_ok": true,
-          "download_kbps": 1489.9,
-          "upload_kbps": 1589.5,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 150.0,
-          "latency_ok": true,
-          "download_kbps": 1290.6,
-          "upload_kbps": 1664.0,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 230.9,
-          "latency_ok": true,
-          "download_kbps": 0.0,
-          "upload_kbps": 1648.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "7c5e11096b539e5f",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 269.8,
-      "median_download_kbps": 943.7,
-      "median_upload_kbps": 1755.7,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 431.9,
-          "latency_ok": true,
-          "download_kbps": 1493.2,
-          "upload_kbps": 1899.2,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 2,
-          "latency_ms": 107.7,
-          "latency_ok": true,
-          "download_kbps": 394.1,
-          "upload_kbps": 1612.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 183.1,
-          "latency_ok": true,
-          "download_kbps": 0.0,
-          "upload_kbps": 1547.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "4a4f778c41e84b73",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 211.1,
-      "median_download_kbps": 906.4,
-      "median_upload_kbps": 1735.9,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 211.1,
-          "latency_ok": true,
-          "download_kbps": 906.4,
-          "upload_kbps": 1704.5,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 130.0,
-          "latency_ok": true,
-          "download_kbps": 1191.2,
-          "upload_kbps": 1856.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 214.7,
-          "latency_ok": true,
-          "download_kbps": 698.1,
-          "upload_kbps": 1735.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "1d922930e8593270",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 109.8,
-      "median_download_kbps": 981.4,
-      "median_upload_kbps": 1670.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 130.4,
-          "latency_ok": true,
-          "download_kbps": 827.3,
-          "upload_kbps": 1707.9,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 209.9,
-          "latency_ok": true,
-          "download_kbps": 72.7,
-          "upload_kbps": 1810.0,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.174",
-          "exit_ip_agreement": 3,
-          "latency_ms": 89.2,
-          "latency_ok": true,
-          "download_kbps": 1135.5,
-          "upload_kbps": 1633.2,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "48cab99de8ba090c",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 151.2,
-      "median_download_kbps": 483.3,
-      "median_upload_kbps": 1694.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 151.2,
-          "latency_ok": true,
-          "download_kbps": 364.8,
-          "upload_kbps": 1705.1,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 94.3,
-          "latency_ok": true,
-          "download_kbps": 856.8,
-          "upload_kbps": 1679.9,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
-          "exit_ip_agreement": 3,
-          "latency_ms": 182.5,
-          "latency_ok": true,
-          "download_kbps": 483.3,
-          "upload_kbps": 1694.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "36632df8b6359fef",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 128.5,
-      "median_download_kbps": 879.3,
-      "median_upload_kbps": 1613.2,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 128.5,
-          "latency_ok": true,
-          "download_kbps": 879.3,
-          "upload_kbps": 1620.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 155.6,
-          "latency_ok": true,
-          "download_kbps": 917.2,
-          "upload_kbps": 1613.2,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.55",
-          "exit_ip_agreement": 3,
-          "latency_ms": 123.4,
-          "latency_ok": true,
-          "download_kbps": 703.5,
-          "upload_kbps": 928.2,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "d358f6d397b84801",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 142.5,
-      "median_download_kbps": 891.5,
-      "median_upload_kbps": 1631.3,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 165.6,
-          "latency_ok": true,
-          "download_kbps": 869.2,
-          "upload_kbps": 1630.5,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 122.6,
-          "latency_ok": true,
-          "download_kbps": 891.5,
-          "upload_kbps": 1750.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 142.5,
-          "latency_ok": true,
-          "download_kbps": 1575.8,
-          "upload_kbps": 1631.3,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "49b76a00f2d3ddb8",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 140.5,
-      "median_download_kbps": 788.0,
-      "median_upload_kbps": 1621.9,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.54",
-          "exit_ip_agreement": 3,
-          "latency_ms": 140.2,
-          "latency_ok": true,
-          "download_kbps": 788.0,
-          "upload_kbps": 1621.3,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.54",
-          "exit_ip_agreement": 3,
-          "latency_ms": 140.5,
-          "latency_ok": true,
-          "download_kbps": 533.2,
-          "upload_kbps": 1621.9,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "45.144.112.54",
-          "exit_ip_agreement": 3,
-          "latency_ms": 186.7,
-          "latency_ok": true,
-          "download_kbps": 844.6,
-          "upload_kbps": 1622.5,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "8bd4e32f90297e5b",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 182.6,
-      "median_download_kbps": 1232.0,
-      "median_upload_kbps": 1606.8,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 212.7,
-          "latency_ok": true,
-          "download_kbps": 1170.0,
-          "upload_kbps": 1505.1,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 123.7,
-          "latency_ok": true,
-          "download_kbps": 35.5,
-          "upload_kbps": 1645.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 152.4,
-          "latency_ok": true,
-          "download_kbps": 1293.9,
-          "upload_kbps": 1708.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "8e3f87de95c68902",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 93.8,
-      "median_download_kbps": 1530.9,
-      "median_upload_kbps": 1703.7,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.244",
-          "exit_ip_agreement": 3,
-          "latency_ms": 95.7,
-          "latency_ok": true,
-          "download_kbps": 103.9,
-          "upload_kbps": 1715.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.244",
-          "exit_ip_agreement": 3,
-          "latency_ms": 90.8,
-          "latency_ok": true,
-          "download_kbps": 1422.9,
-          "upload_kbps": 1734.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.244",
-          "exit_ip_agreement": 3,
-          "latency_ms": 96.8,
-          "latency_ok": true,
-          "download_kbps": 1638.9,
-          "upload_kbps": 1672.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "b0dcd075ecfabcf5",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 185.6,
-      "median_download_kbps": 886.8,
-      "median_upload_kbps": 1645.0,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 185.6,
-          "latency_ok": true,
-          "download_kbps": 682.1,
-          "upload_kbps": 1654.0,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 220.8,
-          "latency_ok": true,
-          "download_kbps": 1655.2,
-          "upload_kbps": 1645.0,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 139.8,
-          "latency_ok": true,
-          "download_kbps": 886.8,
-          "upload_kbps": 1188.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "52f7258fbe88e490",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 105.2,
-      "median_download_kbps": 981.7,
-      "median_upload_kbps": 1729.0,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 106.9,
-          "latency_ok": true,
-          "download_kbps": 1431.9,
-          "upload_kbps": 1788.3,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 103.5,
-          "latency_ok": true,
-          "download_kbps": 531.5,
-          "upload_kbps": 1669.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.88",
-          "exit_ip_agreement": 3,
-          "latency_ms": 217.2,
-          "latency_ok": true,
-          "download_kbps": 1493.5,
-          "upload_kbps": 22.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "dd97dca48333aab2",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 92.9,
-      "median_download_kbps": 1513.7,
-      "median_upload_kbps": 1740.2,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.236",
-          "exit_ip_agreement": 3,
-          "latency_ms": 89.0,
-          "latency_ok": true,
-          "download_kbps": 930.6,
-          "upload_kbps": 1856.5,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.236",
-          "exit_ip_agreement": 3,
-          "latency_ms": 92.9,
-          "latency_ok": true,
-          "download_kbps": 1513.7,
-          "upload_kbps": 1740.2,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "37.19.198.236",
-          "exit_ip_agreement": 3,
-          "latency_ms": 126.5,
-          "latency_ok": true,
-          "download_kbps": 1609.4,
-          "upload_kbps": 1677.3,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "67509db674161bb0",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 134.2,
-      "median_download_kbps": 747.7,
-      "median_upload_kbps": 1762.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 134.2,
-          "latency_ok": true,
-          "download_kbps": 544.0,
-          "upload_kbps": 1678.9,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 187.5,
-          "latency_ok": true,
-          "download_kbps": 747.7,
-          "upload_kbps": 1762.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 86.0,
-          "latency_ok": true,
-          "download_kbps": 1211.3,
-          "upload_kbps": 1894.8,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "237c4f53b8afcc45",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 164.3,
-      "median_download_kbps": 1027.8,
-      "median_upload_kbps": 1617.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 164.3,
-          "latency_ok": true,
-          "download_kbps": 1027.8,
-          "upload_kbps": 1486.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 218.5,
-          "latency_ok": true,
-          "download_kbps": 831.7,
-          "upload_kbps": 1770.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.168",
-          "exit_ip_agreement": 3,
-          "latency_ms": 150.3,
-          "latency_ok": true,
-          "download_kbps": 1574.7,
-          "upload_kbps": 1617.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "e23d4ef351efd502",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 123.1,
-      "median_download_kbps": 935.6,
-      "median_upload_kbps": 1452.8,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 227.7,
-          "latency_ok": true,
-          "download_kbps": 769.4,
-          "upload_kbps": 1619.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 123.1,
-          "latency_ok": true,
-          "download_kbps": 1189.5,
-          "upload_kbps": 1452.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 109.6,
-          "latency_ok": true,
-          "download_kbps": 935.6,
-          "upload_kbps": 1301.7,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "f73a662d9d8fcd0d",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 175.8,
-      "median_download_kbps": 857.4,
-      "median_upload_kbps": 1590.4,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.84",
-          "exit_ip_agreement": 3,
-          "latency_ms": 183.4,
-          "latency_ok": true,
-          "download_kbps": 1175.4,
-          "upload_kbps": 1590.4,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.84",
-          "exit_ip_agreement": 3,
-          "latency_ms": 121.2,
-          "latency_ok": true,
-          "download_kbps": 652.4,
-          "upload_kbps": 1619.4,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "162.120.69.84",
-          "exit_ip_agreement": 3,
-          "latency_ms": 175.8,
-          "latency_ok": true,
-          "download_kbps": 857.4,
-          "upload_kbps": 881.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "a52c7e9662e12000",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 220.5,
-      "median_download_kbps": 1058.3,
-      "median_upload_kbps": 1700.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 220.5,
-          "latency_ok": true,
-          "download_kbps": 1058.3,
-          "upload_kbps": 444.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 311.9,
-          "latency_ok": true,
-          "download_kbps": 475.0,
-          "upload_kbps": 1700.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 158.6,
-          "latency_ok": true,
-          "download_kbps": 1089.3,
-          "upload_kbps": 1942.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "d9d39bb0f0697537",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 169.8,
-      "median_download_kbps": 892.6,
-      "median_upload_kbps": 1484.3,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 183.3,
-          "latency_ok": true,
-          "download_kbps": 892.6,
-          "upload_kbps": 1484.3,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 169.8,
-          "latency_ok": true,
-          "download_kbps": 1502.4,
-          "upload_kbps": 1412.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 103.6,
-          "latency_ok": true,
-          "download_kbps": 879.9,
-          "upload_kbps": 1860.5,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "165c561573db7858",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 103.1,
-      "median_download_kbps": 1454.1,
-      "median_upload_kbps": 1543.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "2605:6400:10:4a9:ba0d:30d6:58c8:8c71",
-          "exit_ip_agreement": 2,
-          "latency_ms": 100.7,
-          "latency_ok": true,
-          "download_kbps": 246.8,
-          "upload_kbps": 1693.6,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "2605:6400:10:4a9:ba0d:30d6:58c8:8c71",
-          "exit_ip_agreement": 2,
-          "latency_ms": 103.1,
-          "latency_ok": true,
-          "download_kbps": 1466.1,
-          "upload_kbps": 1543.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "2605:6400:10:4a9:ba0d:30d6:58c8:8c71",
-          "exit_ip_agreement": 2,
-          "latency_ms": 105.9,
-          "latency_ok": true,
-          "download_kbps": 1454.1,
-          "upload_kbps": 452.5,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "57eff1fb5969b44e",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 141.0,
-      "median_download_kbps": 1117.2,
-      "median_upload_kbps": 1555.1,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 219.9,
-          "latency_ok": true,
-          "download_kbps": 1561.4,
-          "upload_kbps": 1615.0,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 127.2,
-          "latency_ok": true,
-          "download_kbps": 1117.2,
-          "upload_kbps": 1555.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 141.0,
-          "latency_ok": true,
-          "download_kbps": 760.8,
-          "upload_kbps": 1523.4,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "c51e1e89d9ecc6bf",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 155.4,
-      "median_download_kbps": 882.6,
-      "median_upload_kbps": 1650.6,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 229.3,
-          "latency_ok": true,
-          "download_kbps": 1414.1,
-          "upload_kbps": 1415.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 154.8,
-          "latency_ok": true,
-          "download_kbps": 837.3,
-          "upload_kbps": 1650.6,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 155.4,
-          "latency_ok": true,
-          "download_kbps": 882.6,
-          "upload_kbps": 1707.1,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "57f04c124af646db",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 100.4,
-      "median_download_kbps": 1357.0,
-      "median_upload_kbps": 1474.3,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 92.1,
-          "latency_ok": true,
-          "download_kbps": 1403.2,
-          "upload_kbps": 1474.3,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 129.9,
-          "latency_ok": true,
-          "download_kbps": 1357.0,
-          "upload_kbps": 340.2,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
-          "exit_ip_agreement": 3,
-          "latency_ms": 100.4,
-          "latency_ok": true,
-          "download_kbps": 762.9,
-          "upload_kbps": 1744.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "e9a0e5b52a0dd956",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 151.0,
-      "median_download_kbps": 1487.8,
-      "median_upload_kbps": 1547.8,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 151.0,
-          "latency_ok": true,
-          "download_kbps": 1578.9,
-          "upload_kbps": 1681.2,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 105.4,
-          "latency_ok": true,
-          "download_kbps": 1487.8,
-          "upload_kbps": 1547.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "185.195.57.175",
-          "exit_ip_agreement": 3,
-          "latency_ms": 190.5,
-          "latency_ok": true,
-          "download_kbps": 1142.6,
-          "upload_kbps": 1547.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "57e536c62bf5e14f",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 89.7,
-      "median_download_kbps": 1482.5,
-      "median_upload_kbps": 1648.2,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "193.151.163.139",
-          "exit_ip_agreement": 3,
-          "latency_ms": 88.8,
-          "latency_ok": true,
-          "download_kbps": 1437.7,
-          "upload_kbps": 1570.0,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "193.151.163.139",
-          "exit_ip_agreement": 3,
-          "latency_ms": 89.7,
-          "latency_ok": true,
-          "download_kbps": 1482.5,
-          "upload_kbps": 1648.2,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "193.151.163.139",
-          "exit_ip_agreement": 3,
-          "latency_ms": 92.3,
-          "latency_ok": true,
-          "download_kbps": 1618.9,
-          "upload_kbps": 1650.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "8d37d8c2852ea334",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 102.6,
-      "median_download_kbps": 1437.6,
-      "median_upload_kbps": 1690.7,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "38.91.100.39",
-          "exit_ip_agreement": 3,
-          "latency_ms": 105.8,
-          "latency_ok": true,
-          "download_kbps": 1468.2,
-          "upload_kbps": 1690.7,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "38.91.100.39",
-          "exit_ip_agreement": 3,
-          "latency_ms": 102.6,
-          "latency_ok": true,
-          "download_kbps": 1437.6,
-          "upload_kbps": 1170.5,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "38.91.100.39",
-          "exit_ip_agreement": 3,
-          "latency_ms": 96.8,
-          "latency_ok": true,
-          "download_kbps": 1364.2,
-          "upload_kbps": 1700.6,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "7217d737dcdbf28d",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 117.5,
-      "median_download_kbps": 1236.5,
-      "median_upload_kbps": 1704.9,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.134",
-          "exit_ip_agreement": 3,
-          "latency_ms": 117.8,
-          "latency_ok": true,
-          "download_kbps": 1216.4,
-          "upload_kbps": 444.1,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.134",
-          "exit_ip_agreement": 3,
-          "latency_ms": 114.7,
-          "latency_ok": true,
-          "download_kbps": 1480.1,
-          "upload_kbps": 1821.4,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.134",
-          "exit_ip_agreement": 3,
-          "latency_ms": 117.5,
-          "latency_ok": true,
-          "download_kbps": 1236.5,
-          "upload_kbps": 1704.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "dd0e4ab2ec0d20b3",
-      "stable_status": "degraded",
-      "successful_rounds": 2,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 121.4,
-      "median_download_kbps": 418.2,
-      "median_upload_kbps": 1833.3,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.133",
-          "exit_ip_agreement": 3,
-          "latency_ms": 117.3,
-          "latency_ok": true,
-          "download_kbps": 406.4,
-          "upload_kbps": 1894.0,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.133",
-          "exit_ip_agreement": 3,
-          "latency_ms": 118.3,
-          "latency_ok": true,
+          "latency_ms": 1822.3,
+          "latency_ok": false,
           "download_kbps": 83.8,
-          "upload_kbps": 1736.1,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.133",
-          "exit_ip_agreement": 3,
-          "latency_ms": 125.6,
-          "latency_ok": true,
-          "download_kbps": 430.1,
-          "upload_kbps": 1772.7,
+          "upload_kbps": 724.5,
           "error": null
         }
       ]
     },
     {
-      "id": "0c969137f3faf949",
-      "stable_status": "stable",
+      "id": "a03e1c2daad3f59e",
+      "stable_status": "unstable",
       "successful_rounds": 3,
       "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 117.3,
-      "median_download_kbps": 707.9,
-      "median_upload_kbps": 1439.8,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.138",
-          "exit_ip_agreement": 3,
-          "latency_ms": 117.3,
-          "latency_ok": true,
-          "download_kbps": 573.5,
-          "upload_kbps": 298.6,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.138",
-          "exit_ip_agreement": 3,
-          "latency_ms": 118.1,
-          "latency_ok": true,
-          "download_kbps": 1487.3,
-          "upload_kbps": 1439.8,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "149.40.57.138",
-          "exit_ip_agreement": 3,
-          "latency_ms": 115.8,
-          "latency_ok": true,
-          "download_kbps": 707.9,
-          "upload_kbps": 1695.9,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "02e5372a90fa5ee8",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 147.8,
-      "median_download_kbps": 946.8,
-      "median_upload_kbps": 1700.9,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.200.165",
-          "exit_ip_agreement": 3,
-          "latency_ms": 147.8,
-          "latency_ok": true,
-          "download_kbps": 923.0,
-          "upload_kbps": 1663.2,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.200.165",
-          "exit_ip_agreement": 3,
-          "latency_ms": 136.7,
-          "latency_ok": true,
-          "download_kbps": 946.8,
-          "upload_kbps": 1700.9,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.200.165",
-          "exit_ip_agreement": 3,
-          "latency_ms": 164.2,
-          "latency_ok": true,
-          "download_kbps": 1054.6,
-          "upload_kbps": 1854.8,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "67866c4c33fe7af3",
-      "stable_status": "unstable",
-      "successful_rounds": 0,
-      "total_rounds": 3,
       "same_exit_ip": false,
-      "median_latency_ms": null,
-      "median_download_kbps": 0,
-      "median_upload_kbps": 0,
+      "median_latency_ms": 211.6,
+      "median_download_kbps": 485.2,
+      "median_upload_kbps": 1523.7,
       "rounds": [
         {
           "round": 1,
-          "ok": false,
-          "protocol_status": "failed",
-          "exit_ip": null,
-          "exit_ip_agreement": 0,
-          "latency_ms": null,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 815.6,
-          "error": "no valid public IP returned through proxy"
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "66.163.113.3",
+          "exit_ip_agreement": 3,
+          "latency_ms": 209.6,
+          "latency_ok": true,
+          "download_kbps": 496.2,
+          "upload_kbps": 1577.7,
+          "error": null
         },
         {
           "round": 2,
-          "ok": false,
-          "protocol_status": "failed",
-          "exit_ip": null,
-          "exit_ip_agreement": 0,
-          "latency_ms": null,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 1722.0,
-          "error": "no valid public IP returned through proxy"
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "216.106.185.141",
+          "exit_ip_agreement": 3,
+          "latency_ms": 295.8,
+          "latency_ok": true,
+          "download_kbps": 485.2,
+          "upload_kbps": 1523.7,
+          "error": null
         },
         {
           "round": 3,
-          "ok": false,
+          "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "51.79.85.185",
-          "exit_ip_agreement": 2,
-          "latency_ms": 2385.5,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 1767.5,
+          "exit_ip": "66.163.113.3",
+          "exit_ip_agreement": 3,
+          "latency_ms": 211.6,
+          "latency_ok": true,
+          "download_kbps": 171.1,
+          "upload_kbps": 1516.0,
           "error": null
         }
       ]
     },
     {
-      "id": "215c16b798406d60",
-      "stable_status": "unstable",
-      "successful_rounds": 0,
-      "total_rounds": 3,
-      "same_exit_ip": false,
-      "median_latency_ms": null,
-      "median_download_kbps": 0,
-      "median_upload_kbps": 0,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": false,
-          "protocol_status": "failed",
-          "exit_ip": null,
-          "exit_ip_agreement": 0,
-          "latency_ms": null,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 1655.0,
-          "error": "no valid public IP returned through proxy"
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "protocol_status": "failed",
-          "exit_ip": null,
-          "exit_ip_agreement": 0,
-          "latency_ms": null,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 1730.6,
-          "error": "no valid public IP returned through proxy"
-        },
-        {
-          "round": 3,
-          "ok": false,
-          "protocol_status": "failed",
-          "exit_ip": null,
-          "exit_ip_agreement": 0,
-          "latency_ms": null,
-          "latency_ok": false,
-          "download_kbps": 0.0,
-          "upload_kbps": 1698.5,
-          "error": "no valid public IP returned through proxy"
-        }
-      ]
-    },
-    {
-      "id": "536017d3d2979a33",
+      "id": "1c922c01918c1ea6",
       "stable_status": "unstable",
       "successful_rounds": 1,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 203.7,
-      "median_download_kbps": 527.2,
-      "median_upload_kbps": 1492.0,
+      "median_latency_ms": 919.3,
+      "median_download_kbps": 158.0,
+      "median_upload_kbps": 1564.8,
       "rounds": [
         {
           "round": 1,
-          "ok": true,
+          "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "162.251.62.31",
+          "exit_ip": "77.93.89.2",
           "exit_ip_agreement": 3,
-          "latency_ms": 137.8,
-          "latency_ok": true,
-          "download_kbps": 1221.8,
-          "upload_kbps": 3260.8,
+          "latency_ms": 1086.3,
+          "latency_ok": false,
+          "download_kbps": 145.5,
+          "upload_kbps": 1584.5,
           "error": null
         },
         {
           "round": 2,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "162.251.62.31",
-          "exit_ip_agreement": 3,
-          "latency_ms": 143.2,
+          "exit_ip": "77.93.89.2",
+          "exit_ip_agreement": 2,
+          "latency_ms": 919.3,
           "latency_ok": true,
-          "download_kbps": 1303.0,
-          "upload_kbps": 3219.8,
+          "download_kbps": 158.0,
+          "upload_kbps": 1564.8,
           "error": null
         },
         {
           "round": 3,
           "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "51.222.136.236",
+          "exit_ip": "77.93.89.2",
           "exit_ip_agreement": 3,
-          "latency_ms": 765.8,
-          "latency_ok": true,
-          "download_kbps": 671.2,
-          "upload_kbps": 31.8,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": false,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.136.236",
-          "exit_ip_agreement": 3,
-          "latency_ms": 160.9,
-          "latency_ok": true,
-          "download_kbps": 905.1,
-          "upload_kbps": 17.4,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.136.236",
-          "exit_ip_agreement": 3,
-          "latency_ms": 203.7,
-          "latency_ok": true,
-          "download_kbps": 527.2,
-          "upload_kbps": 1492.0,
+          "latency_ms": 1029.9,
+          "latency_ok": false,
+          "download_kbps": 159.5,
+          "upload_kbps": 1308.2,
           "error": null
         }
       ]
     },
     {
-      "id": "99fe3323856506b5",
+      "id": "2b0b507f700c4c5e",
+      "stable_status": "unstable",
+      "successful_rounds": 0,
+      "total_rounds": 3,
+      "same_exit_ip": false,
+      "median_latency_ms": null,
+      "median_download_kbps": 0,
+      "median_upload_kbps": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "77.93.89.2",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1031.3,
+          "latency_ok": false,
+          "download_kbps": 141.6,
+          "upload_kbps": 1366.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "77.93.89.2",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1101.9,
+          "latency_ok": false,
+          "download_kbps": 149.7,
+          "upload_kbps": 1650.4,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "77.93.89.2",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1027.5,
+          "latency_ok": false,
+          "download_kbps": 149.9,
+          "upload_kbps": 1627.1,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "d753bede365e7df7",
+      "stable_status": "unstable",
+      "successful_rounds": 0,
+      "total_rounds": 3,
+      "same_exit_ip": false,
+      "median_latency_ms": null,
+      "median_download_kbps": 0,
+      "median_upload_kbps": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "103.6.234.216",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1325.7,
+          "latency_ok": false,
+          "download_kbps": 82.1,
+          "upload_kbps": 1345.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "103.6.234.216",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1386.5,
+          "latency_ok": false,
+          "download_kbps": 64.0,
+          "upload_kbps": 1476.6,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "103.6.234.216",
+          "exit_ip_agreement": 2,
+          "latency_ms": 1740.5,
+          "latency_ok": false,
+          "download_kbps": 88.5,
+          "upload_kbps": 1698.6,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "04b029d587fc3c0c",
       "stable_status": "degraded",
       "successful_rounds": 2,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 150.7,
-      "median_download_kbps": 991.3,
-      "median_upload_kbps": 1547.3,
+      "median_latency_ms": 951.0,
+      "median_download_kbps": 172.8,
+      "median_upload_kbps": 1451.5,
       "rounds": [
         {
           "round": 1,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
+          "exit_ip": "168.107.51.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 150.7,
+          "latency_ms": 927.8,
           "latency_ok": true,
-          "download_kbps": 300.6,
-          "upload_kbps": 1618.9,
+          "download_kbps": 161.6,
+          "upload_kbps": 1441.2,
           "error": null
         },
         {
           "round": 2,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.177",
+          "exit_ip": "168.107.51.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 203.3,
+          "latency_ms": 974.2,
           "latency_ok": true,
-          "download_kbps": 1045.3,
-          "upload_kbps": 1547.3,
+          "download_kbps": 183.9,
+          "upload_kbps": 1461.7,
           "error": null
         },
         {
           "round": 3,
-          "ok": true,
+          "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "185.195.57.173",
+          "exit_ip": "168.107.51.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 148.0,
-          "latency_ok": true,
-          "download_kbps": 991.3,
-          "upload_kbps": 52.0,
+          "latency_ms": 1043.3,
+          "latency_ok": false,
+          "download_kbps": 162.7,
+          "upload_kbps": 1655.0,
           "error": null
         }
       ]
     },
     {
-      "id": "bb1eb89e9941ad40",
-      "stable_status": "stable",
-      "successful_rounds": 3,
+      "id": "dc8bc1b21ba0ea10",
+      "stable_status": "unstable",
+      "successful_rounds": 0,
       "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 150.8,
-      "median_download_kbps": 790.6,
-      "median_upload_kbps": 1600.4,
-      "rounds": [
-        {
-          "round": 1,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.12.127",
-          "exit_ip_agreement": 3,
-          "latency_ms": 146.7,
-          "latency_ok": true,
-          "download_kbps": 1033.0,
-          "upload_kbps": 1621.5,
-          "error": null
-        },
-        {
-          "round": 2,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.12.127",
-          "exit_ip_agreement": 3,
-          "latency_ms": 159.5,
-          "latency_ok": true,
-          "download_kbps": 790.6,
-          "upload_kbps": 1600.4,
-          "error": null
-        },
-        {
-          "round": 3,
-          "ok": true,
-          "protocol_status": "verified",
-          "exit_ip": "51.222.12.127",
-          "exit_ip_agreement": 3,
-          "latency_ms": 150.8,
-          "latency_ok": true,
-          "download_kbps": 691.1,
-          "upload_kbps": 1585.2,
-          "error": null
-        }
-      ]
-    },
-    {
-      "id": "ef8c249654a6f257",
-      "stable_status": "stable",
-      "successful_rounds": 3,
-      "total_rounds": 3,
-      "same_exit_ip": true,
-      "median_latency_ms": 112.2,
-      "median_download_kbps": 967.1,
-      "median_upload_kbps": 1842.7,
+      "same_exit_ip": false,
+      "median_latency_ms": null,
+      "median_download_kbps": 0,
+      "median_upload_kbps": 0,
       "rounds": [
         {
           "round": 1,
           "ok": false,
           "protocol_status": "verified",
-          "exit_ip": "216.106.178.169",
+          "exit_ip": "103.6.234.216",
           "exit_ip_agreement": 3,
-          "latency_ms": 112.2,
+          "latency_ms": 2240.6,
+          "latency_ok": false,
+          "download_kbps": 129.8,
+          "upload_kbps": 1743.8,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "103.6.234.216",
+          "exit_ip_agreement": 2,
+          "latency_ms": 1276.2,
+          "latency_ok": false,
+          "download_kbps": 78.0,
+          "upload_kbps": 1374.8,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "103.6.234.216",
+          "exit_ip_agreement": 3,
+          "latency_ms": 1523.4,
+          "latency_ok": false,
+          "download_kbps": 92.0,
+          "upload_kbps": 1039.9,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "6b70839355ab1df5",
+      "stable_status": "degraded",
+      "successful_rounds": 2,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 117.1,
+      "median_download_kbps": 1063.9,
+      "median_upload_kbps": 1386.8,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 114.8,
           "latency_ok": true,
-          "download_kbps": 1150.4,
-          "upload_kbps": 1130.0,
+          "download_kbps": 0.0,
+          "upload_kbps": 1305.5,
           "error": null
         },
         {
           "round": 2,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "216.106.178.169",
+          "exit_ip": "156.146.38.168",
           "exit_ip_agreement": 3,
-          "latency_ms": 114.2,
+          "latency_ms": 117.4,
           "latency_ok": true,
-          "download_kbps": 313.6,
-          "upload_kbps": 1928.6,
+          "download_kbps": 757.8,
+          "upload_kbps": 1274.3,
           "error": null
         },
         {
           "round": 3,
           "ok": true,
           "protocol_status": "verified",
-          "exit_ip": "216.106.178.169",
+          "exit_ip": "156.146.38.168",
           "exit_ip_agreement": 3,
-          "latency_ms": 102.4,
+          "latency_ms": 116.8,
           "latency_ok": true,
-          "download_kbps": 967.1,
-          "upload_kbps": 1842.7,
+          "download_kbps": 1370.1,
+          "upload_kbps": 1499.3,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "3ce526a9cff8ef85",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 104.5,
+      "median_download_kbps": 1330.6,
+      "median_upload_kbps": 1530.8,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.170",
+          "exit_ip_agreement": 3,
+          "latency_ms": 83.7,
+          "latency_ok": true,
+          "download_kbps": 1340.5,
+          "upload_kbps": 1387.6,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.170",
+          "exit_ip_agreement": 3,
+          "latency_ms": 116.6,
+          "latency_ok": true,
+          "download_kbps": 1300.9,
+          "upload_kbps": 1530.8,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.170",
+          "exit_ip_agreement": 3,
+          "latency_ms": 104.5,
+          "latency_ok": true,
+          "download_kbps": 1330.6,
+          "upload_kbps": 1648.0,
           "error": null
         }
       ]
@@ -2685,9 +645,9 @@
       "successful_rounds": 3,
       "total_rounds": 3,
       "same_exit_ip": true,
-      "median_latency_ms": 113.4,
-      "median_download_kbps": 553.6,
-      "median_upload_kbps": 1762.9,
+      "median_latency_ms": 116.0,
+      "median_download_kbps": 1133.4,
+      "median_upload_kbps": 1435.2,
       "rounds": [
         {
           "round": 1,
@@ -2695,10 +655,10 @@
           "protocol_status": "verified",
           "exit_ip": "38.128.66.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 114.9,
+          "latency_ms": 116.0,
           "latency_ok": true,
-          "download_kbps": 604.8,
-          "upload_kbps": 1716.7,
+          "download_kbps": 314.0,
+          "upload_kbps": 1493.6,
           "error": null
         },
         {
@@ -2707,10 +667,10 @@
           "protocol_status": "verified",
           "exit_ip": "38.128.66.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 109.6,
+          "latency_ms": 118.7,
           "latency_ok": true,
-          "download_kbps": 553.6,
-          "upload_kbps": 1762.9,
+          "download_kbps": 1133.4,
+          "upload_kbps": 1435.2,
           "error": null
         },
         {
@@ -2719,10 +679,1066 @@
           "protocol_status": "verified",
           "exit_ip": "38.128.66.32",
           "exit_ip_agreement": 3,
-          "latency_ms": 113.4,
+          "latency_ms": 92.2,
           "latency_ok": true,
-          "download_kbps": 331.4,
-          "upload_kbps": 1899.5,
+          "download_kbps": 1216.3,
+          "upload_kbps": 1362.5,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ef8c249654a6f257",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 122.6,
+      "median_download_kbps": 1043.9,
+      "median_upload_kbps": 1517.9,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": false,
+          "protocol_status": "verified",
+          "exit_ip": "216.106.178.169",
+          "exit_ip_agreement": 3,
+          "latency_ms": 128.1,
+          "latency_ok": true,
+          "download_kbps": 1043.9,
+          "upload_kbps": 1562.2,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "216.106.178.169",
+          "exit_ip_agreement": 3,
+          "latency_ms": 112.6,
+          "latency_ok": true,
+          "download_kbps": 1411.6,
+          "upload_kbps": 1417.8,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "216.106.178.169",
+          "exit_ip_agreement": 3,
+          "latency_ms": 122.6,
+          "latency_ok": true,
+          "download_kbps": 330.1,
+          "upload_kbps": 1517.9,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "b71baee3d7060ac7",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 109.5,
+      "median_download_kbps": 1424.1,
+      "median_upload_kbps": 1553.9,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.169",
+          "exit_ip_agreement": 3,
+          "latency_ms": 101.8,
+          "latency_ok": true,
+          "download_kbps": 617.7,
+          "upload_kbps": 1537.6,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.169",
+          "exit_ip_agreement": 2,
+          "latency_ms": 109.5,
+          "latency_ok": true,
+          "download_kbps": 1424.1,
+          "upload_kbps": 1553.9,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "156.146.38.169",
+          "exit_ip_agreement": 3,
+          "latency_ms": 109.5,
+          "latency_ok": true,
+          "download_kbps": 1571.3,
+          "upload_kbps": 1557.5,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "a63565dd9990c798",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 141.1,
+      "median_download_kbps": 1014.7,
+      "median_upload_kbps": 1605.4,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "137.184.174.93",
+          "exit_ip_agreement": 3,
+          "latency_ms": 141.1,
+          "latency_ok": true,
+          "download_kbps": 1014.7,
+          "upload_kbps": 1081.0,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "137.184.174.93",
+          "exit_ip_agreement": 3,
+          "latency_ms": 111.7,
+          "latency_ok": true,
+          "download_kbps": 938.3,
+          "upload_kbps": 1734.0,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "137.184.174.93",
+          "exit_ip_agreement": 3,
+          "latency_ms": 143.3,
+          "latency_ok": true,
+          "download_kbps": 1111.4,
+          "upload_kbps": 1605.4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "c2f8ed209775fd03",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 101.2,
+      "median_download_kbps": 1030.0,
+      "median_upload_kbps": 1478.2,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.243",
+          "exit_ip_agreement": 3,
+          "latency_ms": 101.2,
+          "latency_ok": true,
+          "download_kbps": 1030.0,
+          "upload_kbps": 1478.2,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.243",
+          "exit_ip_agreement": 3,
+          "latency_ms": 115.8,
+          "latency_ok": true,
+          "download_kbps": 955.2,
+          "upload_kbps": 1669.0,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.243",
+          "exit_ip_agreement": 3,
+          "latency_ms": 98.5,
+          "latency_ok": true,
+          "download_kbps": 1063.7,
+          "upload_kbps": 1421.2,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "d9d39bb0f0697537",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 226.6,
+      "median_download_kbps": 550.8,
+      "median_upload_kbps": 1404.4,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 210.0,
+          "latency_ok": true,
+          "download_kbps": 671.1,
+          "upload_kbps": 1647.2,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 233.3,
+          "latency_ok": true,
+          "download_kbps": 550.8,
+          "upload_kbps": 1404.4,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 226.6,
+          "latency_ok": true,
+          "download_kbps": 215.9,
+          "upload_kbps": 192.0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "8d37d8c2852ea334",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 179.4,
+      "median_download_kbps": 696.6,
+      "median_upload_kbps": 1584.0,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.91.100.39",
+          "exit_ip_agreement": 3,
+          "latency_ms": 194.5,
+          "latency_ok": true,
+          "download_kbps": 624.2,
+          "upload_kbps": 1690.7,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.91.100.39",
+          "exit_ip_agreement": 3,
+          "latency_ms": 175.3,
+          "latency_ok": true,
+          "download_kbps": 860.2,
+          "upload_kbps": 873.1,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.91.100.39",
+          "exit_ip_agreement": 3,
+          "latency_ms": 179.4,
+          "latency_ok": true,
+          "download_kbps": 696.6,
+          "upload_kbps": 1584.0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "8bd4e32f90297e5b",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 194.5,
+      "median_download_kbps": 651.3,
+      "median_upload_kbps": 1537.4,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 221.7,
+          "latency_ok": true,
+          "download_kbps": 714.5,
+          "upload_kbps": 1537.4,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 159.1,
+          "latency_ok": true,
+          "download_kbps": 651.3,
+          "upload_kbps": 1439.9,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 194.5,
+          "latency_ok": true,
+          "download_kbps": 422.0,
+          "upload_kbps": 1621.0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "e23d4ef351efd502",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 232.1,
+      "median_download_kbps": 679.5,
+      "median_upload_kbps": 1500.5,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 251.4,
+          "latency_ok": true,
+          "download_kbps": 679.5,
+          "upload_kbps": 1500.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 232.1,
+          "latency_ok": true,
+          "download_kbps": 599.7,
+          "upload_kbps": 1419.9,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 173.8,
+          "latency_ok": true,
+          "download_kbps": 786.5,
+          "upload_kbps": 1536.4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "dd97dca48333aab2",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 110.2,
+      "median_download_kbps": 537.2,
+      "median_upload_kbps": 1260.8,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.236",
+          "exit_ip_agreement": 3,
+          "latency_ms": 116.6,
+          "latency_ok": true,
+          "download_kbps": 522.3,
+          "upload_kbps": 1260.8,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.236",
+          "exit_ip_agreement": 3,
+          "latency_ms": 110.2,
+          "latency_ok": true,
+          "download_kbps": 1108.7,
+          "upload_kbps": 705.0,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "37.19.198.236",
+          "exit_ip_agreement": 3,
+          "latency_ms": 100.6,
+          "latency_ok": true,
+          "download_kbps": 537.2,
+          "upload_kbps": 1634.7,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "f0a22eb7eb57c747",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 257.3,
+      "median_download_kbps": 609.2,
+      "median_upload_kbps": 1628.7,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 257.3,
+          "latency_ok": true,
+          "download_kbps": 571.1,
+          "upload_kbps": 1638.2,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 292.1,
+          "latency_ok": true,
+          "download_kbps": 804.2,
+          "upload_kbps": 1628.7,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 253.9,
+          "latency_ok": true,
+          "download_kbps": 609.2,
+          "upload_kbps": 1108.8,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "619f1963fb330fd8",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 221.1,
+      "median_download_kbps": 745.9,
+      "median_upload_kbps": 1490.4,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.121.43.225",
+          "exit_ip_agreement": 3,
+          "latency_ms": 221.1,
+          "latency_ok": true,
+          "download_kbps": 686.3,
+          "upload_kbps": 1490.4,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.121.43.225",
+          "exit_ip_agreement": 3,
+          "latency_ms": 212.4,
+          "latency_ok": true,
+          "download_kbps": 745.9,
+          "upload_kbps": 1541.3,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "38.121.43.225",
+          "exit_ip_agreement": 3,
+          "latency_ms": 222.1,
+          "latency_ok": true,
+          "download_kbps": 751.3,
+          "upload_kbps": 412.0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "99df50b52c2f5147",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 216.7,
+      "median_download_kbps": 775.9,
+      "median_upload_kbps": 1612.7,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 216.7,
+          "latency_ok": true,
+          "download_kbps": 299.3,
+          "upload_kbps": 1492.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 282.4,
+          "latency_ok": true,
+          "download_kbps": 775.9,
+          "upload_kbps": 1614.7,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 174.7,
+          "latency_ok": true,
+          "download_kbps": 821.0,
+          "upload_kbps": 1612.7,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "57eff1fb5969b44e",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 230.6,
+      "median_download_kbps": 573.3,
+      "median_upload_kbps": 1491.2,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 261.8,
+          "latency_ok": true,
+          "download_kbps": 583.4,
+          "upload_kbps": 1530.3,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 229.6,
+          "latency_ok": true,
+          "download_kbps": 445.3,
+          "upload_kbps": 1453.3,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 230.6,
+          "latency_ok": true,
+          "download_kbps": 573.3,
+          "upload_kbps": 1491.2,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "36632df8b6359fef",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 243.1,
+      "median_download_kbps": 617.5,
+      "median_upload_kbps": 1569.1,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 3,
+          "latency_ms": 201.3,
+          "latency_ok": true,
+          "download_kbps": 627.7,
+          "upload_kbps": 1616.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 3,
+          "latency_ms": 243.1,
+          "latency_ok": true,
+          "download_kbps": 617.5,
+          "upload_kbps": 1525.1,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 2,
+          "latency_ms": 311.1,
+          "latency_ok": true,
+          "download_kbps": 421.3,
+          "upload_kbps": 1569.1,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "f73a662d9d8fcd0d",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 303.3,
+      "median_download_kbps": 356.5,
+      "median_upload_kbps": 1412.5,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.84",
+          "exit_ip_agreement": 3,
+          "latency_ms": 404.6,
+          "latency_ok": true,
+          "download_kbps": 466.8,
+          "upload_kbps": 1412.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.84",
+          "exit_ip_agreement": 3,
+          "latency_ms": 303.3,
+          "latency_ok": true,
+          "download_kbps": 356.5,
+          "upload_kbps": 1445.8,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.84",
+          "exit_ip_agreement": 3,
+          "latency_ms": 207.2,
+          "latency_ok": true,
+          "download_kbps": 247.3,
+          "upload_kbps": 1401.9,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "57f04c124af646db",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 232.6,
+      "median_download_kbps": 715.9,
+      "median_upload_kbps": 1579.3,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 166.3,
+          "latency_ok": true,
+          "download_kbps": 786.8,
+          "upload_kbps": 1579.3,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 288.7,
+          "latency_ok": true,
+          "download_kbps": 715.9,
+          "upload_kbps": 1746.9,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.173",
+          "exit_ip_agreement": 3,
+          "latency_ms": 232.6,
+          "latency_ok": true,
+          "download_kbps": 304.3,
+          "upload_kbps": 1408.3,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "7c5e11096b539e5f",
+      "stable_status": "degraded",
+      "successful_rounds": 2,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 276.5,
+      "median_download_kbps": 703.5,
+      "median_upload_kbps": 1514.5,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 2,
+          "latency_ms": 291.1,
+          "latency_ok": true,
+          "download_kbps": 721.2,
+          "upload_kbps": 1437.7,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 3,
+          "latency_ms": 261.9,
+          "latency_ok": true,
+          "download_kbps": 685.8,
+          "upload_kbps": 1591.2,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": false,
+          "protocol_status": "partial",
+          "exit_ip": "45.144.112.55",
+          "exit_ip_agreement": 1,
+          "latency_ms": null,
+          "latency_ok": false,
+          "download_kbps": 549.3,
+          "upload_kbps": 1582.8,
+          "error": "fewer than two echo services agreed on exit IP"
+        }
+      ]
+    },
+    {
+      "id": "b0dcd075ecfabcf5",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 294.7,
+      "median_download_kbps": 682.9,
+      "median_upload_kbps": 1638.2,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 2,
+          "latency_ms": 691.8,
+          "latency_ok": true,
+          "download_kbps": 506.8,
+          "upload_kbps": 1638.2,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 225.1,
+          "latency_ok": true,
+          "download_kbps": 682.9,
+          "upload_kbps": 1708.0,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 294.7,
+          "latency_ok": true,
+          "download_kbps": 687.5,
+          "upload_kbps": 655.0,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "52f7258fbe88e490",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 239.4,
+      "median_download_kbps": 621.5,
+      "median_upload_kbps": 1429.7,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.88",
+          "exit_ip_agreement": 3,
+          "latency_ms": 255.9,
+          "latency_ok": true,
+          "download_kbps": 160.7,
+          "upload_kbps": 1445.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.88",
+          "exit_ip_agreement": 3,
+          "latency_ms": 239.4,
+          "latency_ok": true,
+          "download_kbps": 621.5,
+          "upload_kbps": 543.3,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "162.120.69.88",
+          "exit_ip_agreement": 3,
+          "latency_ms": 235.4,
+          "latency_ok": true,
+          "download_kbps": 743.0,
+          "upload_kbps": 1429.7,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "67509db674161bb0",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 258.2,
+      "median_download_kbps": 549.8,
+      "median_upload_kbps": 1563.9,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 258.2,
+          "latency_ok": true,
+          "download_kbps": 171.3,
+          "upload_kbps": 1563.9,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 237.1,
+          "latency_ok": true,
+          "download_kbps": 825.1,
+          "upload_kbps": 1562.9,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.175",
+          "exit_ip_agreement": 3,
+          "latency_ms": 273.9,
+          "latency_ok": true,
+          "download_kbps": 549.8,
+          "upload_kbps": 1685.1,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "fcdcef67b78ca613",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 235.3,
+      "median_download_kbps": 663.4,
+      "median_upload_kbps": 1615.5,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 283.5,
+          "latency_ok": true,
+          "download_kbps": 537.2,
+          "upload_kbps": 1615.5,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 235.3,
+          "latency_ok": true,
+          "download_kbps": 675.2,
+          "upload_kbps": 1496.7,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "185.195.57.168",
+          "exit_ip_agreement": 3,
+          "latency_ms": 215.2,
+          "latency_ok": true,
+          "download_kbps": 663.4,
+          "upload_kbps": 1712.4,
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "dbca2360fb3e2e64",
+      "stable_status": "stable",
+      "successful_rounds": 3,
+      "total_rounds": 3,
+      "same_exit_ip": true,
+      "median_latency_ms": 207.0,
+      "median_download_kbps": 746.6,
+      "median_upload_kbps": 1523.0,
+      "rounds": [
+        {
+          "round": 1,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "172.111.36.123",
+          "exit_ip_agreement": 3,
+          "latency_ms": 207.0,
+          "latency_ok": true,
+          "download_kbps": 706.1,
+          "upload_kbps": 1605.8,
+          "error": null
+        },
+        {
+          "round": 2,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "172.111.36.123",
+          "exit_ip_agreement": 3,
+          "latency_ms": 218.5,
+          "latency_ok": true,
+          "download_kbps": 746.6,
+          "upload_kbps": 1408.3,
+          "error": null
+        },
+        {
+          "round": 3,
+          "ok": true,
+          "protocol_status": "verified",
+          "exit_ip": "172.111.36.123",
+          "exit_ip_agreement": 3,
+          "latency_ms": 201.9,
+          "latency_ok": true,
+          "download_kbps": 765.9,
+          "upload_kbps": 1523.0,
           "error": null
         }
       ]
