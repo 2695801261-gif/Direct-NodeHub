@@ -138,7 +138,7 @@ def run(report_path: Path) -> dict[str, Any]:
         "fast_minimum_download_kbps": fast_download,
         "fast_minimum_upload_kbps": fast_upload,
         "fast_pool_reputation_filter": False,
-        "mainland_locally_verified_candidates": len(locally_verified),
+        "mainland_locally_verified_candidates": sum(1 for item in report.get("results", []) if item.get("status") == "reachable"),
         "maximum_mainland_latency_ms": max_latency,
         "meaning": "Only nodes that passed the actual local mainland-China tunnel and repeated transfer tests are included.",
     }
