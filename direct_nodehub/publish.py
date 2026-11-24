@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from direct_nodehub.protocol import network_of, worker_compatible_ws
+from direct_nodehub.protocol import network_of, worker_compatible_ws, worker_compatible_tcp_bridge
 
 import yaml
 
@@ -87,13 +87,24 @@ def run() -> dict[str, Any]:
     ws_worker_compatible_stable = [
         node for node in ws_verified_stable if worker_compatible_ws(node)
     ]
+    tcp_bridge_candidates = [node for node in nodes if worker_compatible_tcp_bridge(node)]
+    tcp_bridge_verified_stable = [
+        node for node in tcp_bridge_candidates
+        if node.get("protocol_status") == "verified" and node.get("stable_status") == "stable"
+    ]
     cloudflare_relay_status = {
         "websocket_candidates": len(ws_nodes),
         "protocol_verified_and_stable": len(ws_verified_stable),
         "worker_compatible_candidates": len(ws_worker_compatible),
         "worker_compatible_verified_and_stable": len(ws_worker_compatible_stable),
         "eligible_candidate_ids": [node["id"] for node in ws_worker_compatible_stable[:10]],
-        "meaning": "Eligibility only; Worker must still be deployed and tested from the actual client network. Requires TLS WebSocket with matching upstream server, SNI and Host.",
+        "meaning": "WebSocket-to-WebSocket relay eligibility only; Worker must still be deployed and tested from the actual client network.",
+    }
+    cloudflare_tcp_bridge_status = {
+        "eligible_tls_tcp_candidates": len(tcp_bridge_candidates),
+        "protocol_verified_and_stable": len(tcp_bridge_verified_stable),
+        "eligible_candidate_ids": [node["id"] for node in tcp_bridge_verified_stable[:10]],
+        "meaning": "TLS TCP VLESS/VMess/Trojan only; excludes Reality, XTLS Vision, UDP and upstream WebSocket. Worker must still be deployed and tested from the actual client network.",
     }
     limit = int(policy.get("publication", {}).get("max_nodes", 100))
     stability = policy.get("stability", {})
@@ -214,6 +225,7 @@ def run() -> dict[str, Any]:
         "stability": data.get("stability_summary"),
         "sources": data.get("sources", []),
         "cloudflare_ws_relay": cloudflare_relay_status,
+        "cloudflare_tcp_bridge": cloudflare_tcp_bridge_status,
     }
     (OUTPUT / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -249,7 +261,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const s=d.summary||{};
  document.getElementById('status').textContent=
- '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成；Cloudflare WS 中转合格候选 '+(d.cloudflare_ws_relay?.worker_compatible_verified_and_stable??0)+' 个。更新时间：'+(d.generated_at||'未知');
+ '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成；Cloudflare WS 中转合格候选 '+(d.cloudflare_ws_relay?.worker_compatible_verified_and_stable??0)+' 个；Cloudflare TCP 桥接合格候选 '+(d.cloudflare_tcp_bridge?.protocol_verified_and_stable??0)+' 个。更新时间：'+(d.generated_at||'未知');
  }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
 </script>
 </body></html>"""
