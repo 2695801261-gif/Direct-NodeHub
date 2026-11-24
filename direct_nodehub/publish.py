@@ -35,9 +35,9 @@ def run():
     screened=[n for n in stable if n.get("risk_status")=="unconfirmed" and n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool"]
     # Fast list intentionally does not require a positive reputation result, but known-bad exits remain excluded.
     fast_settings=policy.get("stability",{})
-fast_download=float(fast_settings.get("fast_pool_minimum_download_kbps",256))
-fast_upload=float(fast_settings.get("fast_pool_minimum_upload_kbps",64))
-fast=[n for n in stable if n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool" and float(n.get("median_download_kbps") or 0)>=fast_download and float(n.get("median_upload_kbps") or 0)>=fast_upload]
+    fast_download=float(fast_settings.get("fast_pool_minimum_download_kbps",256))
+    fast_upload=float(fast_settings.get("fast_pool_minimum_upload_kbps",64))
+    fast=[n for n in stable if n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool" and float(n.get("median_download_kbps") or 0)>=fast_download and float(n.get("median_upload_kbps") or 0)>=fast_upload]
     screened=screened[:limit]; fast=fast[:limit]
     configs=unique_configs(screened); names=[n["name"] for n in configs]
     standard={"mixed-port":7890,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":configs,
