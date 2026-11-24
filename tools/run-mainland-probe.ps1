@@ -84,7 +84,8 @@ Write-Host "刷新最新候选节点数据（如需 GitHub 代理，请在下一
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/2695801261-gif/Direct-NodeHub/main/public/candidates.json" -OutFile (Join-Path $RepoRoot "public\candidates.json")
 
 Write-Host ""
-Write-Host "请确认：电脑当前连接的是中国大陆本地网络，并已关闭所有 VPN、代理软件和系统代理。" -ForegroundColor Yellow
+Write-Host "候选数据下载完成后，请先关闭 VPN、代理软件和 Windows 系统代理，再确认下面的条件。" -ForegroundColor Yellow
+Write-Host "请确认：电脑当前连接的是中国大陆本地网络，且当前没有任何代理接管网络。" -ForegroundColor Yellow
 Write-Host "测试期间不要切换网络。该脚本只会测试仓库中已通过云端初筛的节点。"
 $confirm = Read-Host "确认以上条件后输入 MAINLAND 开始测试"
 if ($confirm -cne "MAINLAND") {
