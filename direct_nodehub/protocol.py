@@ -5,6 +5,7 @@ from typing import Any
 import requests, yaml
 ROOT=Path(__file__).resolve().parents[1]; CANDIDATES=ROOT/"public"/"candidates.json"; OUTPUT=ROOT/"public"/"protocol-results.json"; POLICY=ROOT/"config"/"policy.json"
 ECHO_URLS=["https://api.ipify.org","https://ifconfig.me/ip","https://icanhazip.com"]
+DOWNLOAD_URL="https://speed.cloudflare.com/__down?bytes=262144"
 def _b64(v):
     v += "="*((4-len(v)%4)%4); return base64.urlsafe_b64decode(v.encode())
 def _params(p): return {k:v[-1] for k,v in urllib.parse.parse_qs(p.query,keep_blank_values=True).items()}
@@ -85,10 +86,21 @@ def to_mihomo_proxy(c):
 def _egress(port):
     px={"http":f"http://127.0.0.1:{port}","https":f"http://127.0.0.1:{port}"}; s=requests.Session(); s.trust_env=False; ips=[]; checks=[]
     for url in ECHO_URLS:
+        started=time.perf_counter()
         try:
-            r=s.get(url,proxies=px,timeout=(2,4)); r.raise_for_status(); ip=r.text.strip().splitlines()[0]
-            import ipaddress; ipaddress.ip_address(ip); ips.append(ip); checks.append({"url":url,"status":"ok","ip":ip})
-        except Exception as e: checks.append({"url":url,"status":"failed","error":str(e)[:160]})
+            r=s.get(url,proxies=px,timeout=(3,6)); r.raise_for_status(); ip=r.text.strip().splitlines()[0]
+            import ipaddress; ipaddress.ip_address(ip); ips.append(ip); checks.append({"url":url,"status":"ok","ip":ip,"latency_ms":round((time.perf_counter()-started)*1000,1)})
+        except Exception as e: checks.append({"url":url,"status":"failed","latency_ms":round((time.perf_counter()-started)*1000,1),"error":str(e)[:160]})
+    started=time.perf_counter()
+    try:
+        with s.get(DOWNLOAD_URL,proxies=px,timeout=(3,8),stream=True) as response:
+            response.raise_for_status(); total=0
+            for chunk in response.iter_content(65536):
+                total+=len(chunk)
+                if total>=262144: break
+        elapsed=max(time.perf_counter()-started,0.001)
+        checks.append({"url":"cloudflare-256KiB-download","status":"ok" if total>=262144 else "partial","bytes":total,"duration_ms":round(elapsed*1000,1),"download_kbps":round(total/1024/elapsed,1)})
+    except Exception as e: checks.append({"url":"cloudflare-256KiB-download","status":"failed","error":str(e)[:160]})
     return ips,checks
 def verify_one(c,binary,preferred_port=19000):
     out={"id":c["id"],"protocol_status":"failed","exit_ip":None,"exit_ip_agreement":0,"http_checks":[],"error":None}
@@ -108,7 +120,7 @@ def verify_one(c,binary,preferred_port=19000):
             if check.returncode: raise RuntimeError(("mihomo config rejected: "+(check.stderr or check.stdout))[:300])
             proc=subprocess.Popen([binary,"-f",str(cfgpath),"-d",td],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             try:
-                deadline=time.time()+6
+                deadline=time.time()+10
                 while time.time()<deadline:
                     if proc.poll() is not None: raise RuntimeError("mihomo exited during startup")
                     try:
