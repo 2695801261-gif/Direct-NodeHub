@@ -1,6 +1,8 @@
 name: Refresh public node pool
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
   push:
     branches: [main]
     paths:
@@ -17,7 +19,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -67,6 +69,10 @@ jobs:
         run: python -m direct_nodehub.protocol
       - name: Check public exit-IP threat feeds
         run: python -m direct_nodehub.risk
+      - name: Repeat tunnel and download stability tests
+        run: python -m direct_nodehub.stability
+      - name: Generate subscriptions and chain template
+        run: python -m direct_nodehub.publish
       - name: Commit generated public data
         run: |
           if [ -n "$(git status --porcelain public)" ]; then
