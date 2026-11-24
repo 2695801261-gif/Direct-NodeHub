@@ -59,7 +59,8 @@ def parse_vmess(uri: str) -> dict[str, Any] | None:
             "name": str(data.get("ps") or f"vmess-{host}"),
             "type": "vmess",
             "server": host,
-            "port": port
+            "port": port,
+            "uri": uri
         }
     except (ValueError, TypeError, json.JSONDecodeError):
         return None
@@ -82,7 +83,8 @@ def parse_uri(uri: str) -> dict[str, Any] | None:
             "name": name[:100],
             "type": "socks5" if scheme == "socks" else scheme,
             "server": parsed.hostname,
-            "port": port
+            "port": port,
+            "uri": uri
         }
     except ValueError:
         return None
@@ -111,7 +113,8 @@ def parse_clash_yaml(text: str) -> list[dict[str, Any]]:
             "name": str(item.get("name") or f"{kind}-{host}")[:100],
             "type": "socks5" if kind == "socks" else kind,
             "server": host,
-            "port": port
+            "port": port,
+            "config": {k: v for k, v in item.items() if k != "name"}
         })
     return result
 
@@ -141,7 +144,21 @@ def extract_candidates(raw: str) -> list[dict[str, Any]]:
 
 
 def candidate_id(node: dict[str, Any]) -> str:
-    stable = "|".join((node["type"], node["server"].lower(), str(node["port"])))
+    if node.get("uri"):
+        uri = node["uri"]
+        if uri.startswith("vmess://"):
+            decoded = decode_base64_text(uri[8:])
+            try:
+                payload = json.loads(decoded or "{}")
+                payload.pop("ps", None)
+                stable = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+            except Exception:
+                stable = uri.split("#", 1)[0]
+        else:
+            stable = uri.split("#", 1)[0]
+    else:
+        config = dict(node.get("config") or {})
+        stable = json.dumps(config, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(stable.encode("utf-8")).hexdigest()[:16]
 
 
