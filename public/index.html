@@ -29,7 +29,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const s=d.summary||{};
  document.getElementById('status').textContent=
- '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
+ '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成；Cloudflare WS 中转合格候选 '+(d.cloudflare_ws_relay?.worker_compatible_verified_and_stable??0)+' 个。更新时间：'+(d.generated_at||'未知');
  }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
 </script>
 </body></html>

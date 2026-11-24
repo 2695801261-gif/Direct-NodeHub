@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T11:21:50Z",
+  "generated_at": "2026-11-24T11:25:23Z",
   "summary": {
     "total": 938,
     "blocked": 0,
-    "unconfirmed": 59,
-    "unknown": 879,
+    "unconfirmed": 56,
+    "unknown": 882,
     "feeds": {
       "ipsum": {
         "status": "ok",
@@ -68,12 +68,12 @@
     },
     {
       "id": "108c92be8f666767",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "7f5fe84f30150bf0",
@@ -95,12 +95,12 @@
     },
     {
       "id": "2c2d7aff0b3d038c",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "30de388ccc0f1a43",
@@ -113,39 +113,39 @@
     },
     {
       "id": "619f1963fb330fd8",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "088410c3e4c7b0ed",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "dbca2360fb3e2e64",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "33285b6553ff02af",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "0c969137f3faf949",
@@ -158,12 +158,12 @@
     },
     {
       "id": "3b65158fe5ae45df",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "0cb2aad8f6f057f3",
@@ -176,12 +176,12 @@
     },
     {
       "id": "4b6b77b6c6d0933a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "539e8b3395adb75c",
@@ -203,12 +203,12 @@
     },
     {
       "id": "87ba47134ac2a09d",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "6c214af72224a866",
@@ -284,12 +284,12 @@
     },
     {
       "id": "349722693abe6827",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "1d8258e0063b7535",
@@ -347,12 +347,12 @@
     },
     {
       "id": "b71baee3d7060ac7",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "90f8716efe372560",
@@ -383,12 +383,12 @@
     },
     {
       "id": "51f7af5f660202d9",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "4109474a7801d341",
@@ -482,12 +482,12 @@
     },
     {
       "id": "6b70839355ab1df5",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "def29fc641e2f217",
@@ -995,12 +995,12 @@
     },
     {
       "id": "a1c76ccea552331f",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "c6f5053f0eec6ad8",
@@ -1121,12 +1121,12 @@
     },
     {
       "id": "02e5372a90fa5ee8",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "0f6122fd761f05bc",
@@ -1166,21 +1166,21 @@
     },
     {
       "id": "536017d3d2979a33",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "bb1eb89e9941ad40",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "76bfc621d86906fe",
@@ -1805,12 +1805,12 @@
     },
     {
       "id": "67866c4c33fe7af3",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "aec537b6bcb05a4f",
@@ -3875,12 +3875,12 @@
     },
     {
       "id": "215c16b798406d60",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "4b8eda038ba5aa15",
@@ -4982,12 +4982,12 @@
     },
     {
       "id": "0c60ffd77bfa6d5a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "d94a0f0f3ef609e1",
@@ -5441,12 +5441,12 @@
     },
     {
       "id": "e23d4ef351efd502",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "a5ab08925a762612",
@@ -5675,12 +5675,12 @@
     },
     {
       "id": "48cab99de8ba090c",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "155b099d5fd02590",
@@ -6620,12 +6620,12 @@
     },
     {
       "id": "99df50b52c2f5147",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "98ea4f098f6a372a",
@@ -7178,12 +7178,12 @@
     },
     {
       "id": "b0dcd075ecfabcf5",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "4a4f778c41e84b73",
@@ -7295,12 +7295,21 @@
     },
     {
       "id": "67509db674161bb0",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "8bd4e32f90297e5b",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "8bd4e32f90297e5b",
@@ -7493,21 +7502,21 @@
     },
     {
       "id": "1d922930e8593270",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "fcdcef67b78ca613",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "237c4f53b8afcc45",
