@@ -33,5 +33,6 @@
     "fast_pool_minimum_download_kbps": 512,
     "fast_pool_minimum_upload_kbps": 128,
     "max_candidates": 60
-  }
+  },
+  "mainland_max_latency_ms": 1200
 }
