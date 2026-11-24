@@ -72,9 +72,11 @@ if ($actualHash -ne $expectedHash) {
 }
 if (Test-Path $extractDir) { Remove-Item $extractDir -Recurse -Force }
 Expand-Archive -Path $zipPath -DestinationPath $extractDir -Force
-$mihomo = Get-ChildItem -Path $extractDir -Filter "mihomo.exe" -Recurse | Select-Object -First 1
-if (-not $mihomo) { throw "压缩包中没有找到 mihomo.exe。" }
-$env:MIHOMO_BIN = $mihomo.FullName
+$mihomo = Get-ChildItem -Path $extractDir -Filter "mihomo*.exe" -Recurse | Select-Object -First 1
+if (-not $mihomo) { throw "压缩包中没有找到 Mihomo Windows 可执行文件。" }
+$normalizedMihomo = Join-Path $Tools "mihomo.exe"
+Copy-Item -Path $mihomo.FullName -Destination $normalizedMihomo -Force
+$env:MIHOMO_BIN = $normalizedMihomo
 & $env:MIHOMO_BIN -v
 
 Write-Host ""
