@@ -10,8 +10,7 @@ function closeSafely(socket, code = 1000, reason = "") {
     if (socket && socket.readyState < WebSocket.CLOSING) {
       // Keep close() compatible with strict WebSocket implementations:
       // only 1000 and application/private-use codes 3000-4999 are sent.
-      const valid = code === 1000 || (Number.isInteger(code) && code >= 3000 && code < 5000 &&
-        ![3004, 3005, 3006, 3015].includes(code));
+      const valid = code === 1000 || (Number.isInteger(code) && code >= 3000 && code < 5000);
       if (valid) socket.close(code, String(reason).slice(0, 100));
       else socket.close();
     }
