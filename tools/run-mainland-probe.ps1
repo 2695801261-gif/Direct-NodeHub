@@ -33,7 +33,7 @@ $pythonPrefix = $pyInfo.Prefix
 
 function Invoke-ProjectPython {
     param([string[]]$Arguments)
-     $allArgs = @()\n    if ($script:pythonPrefix) { $allArgs += $script:pythonPrefix }\n    $allArgs += $Arguments\n    & $script:pythonCommand @allArgs
+        $allArgs = @()\n    if ($script:pythonPrefix) { $allArgs += $script:pythonPrefix }\n    $allArgs += $Arguments\n    & $script:pythonCommand @allArgs
     if ($LASTEXITCODE -ne 0) {
         throw "Python 命令失败，退出码：$LASTEXITCODE"
     }
