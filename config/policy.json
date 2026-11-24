@@ -6,7 +6,7 @@
   "read_timeout_seconds": 10,
   "minimum_successful_probes": 2,
   "minimum_exit_ip_agreement": 2,
-  "max_cloud_latency_ms": 2500,
+  "max_cloud_latency_ms": 1000,
   "protocol_probe": {
     "max_candidates": 80,
     "mihomo_version": "v1.19.34"
@@ -27,10 +27,11 @@
   "stability": {
     "rounds": 3,
     "required_successful_rounds": 3,
-    "minimum_download_kbps": 64,
-    "minimum_upload_kbps": 16,
-    "fast_pool_minimum_download_kbps": 256,
-    "fast_pool_minimum_upload_kbps": 64,
+    "max_latency_ms": 1000,
+    "minimum_download_kbps": 128,
+    "minimum_upload_kbps": 32,
+    "fast_pool_minimum_download_kbps": 512,
+    "fast_pool_minimum_upload_kbps": 128,
     "max_candidates": 60
   }
 }
