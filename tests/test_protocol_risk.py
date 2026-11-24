@@ -40,6 +40,37 @@ class ProtocolRiskTests(unittest.TestCase):
         self.assertTrue(node["tls"])
         self.assertEqual(node["reality-opts"]["public-key"], "PUBKEY")
 
+    def test_publish_deduplicates_identical_proxy_configs(self):
+        nodes = [
+            {
+                "id": "one",
+                "name": "source-one",
+                "config": {
+                    "type": "ss", "server": "203.0.113.10", "port": 443,
+                    "cipher": "aes-128-gcm", "password": "secret",
+                },
+            },
+            {
+                "id": "two",
+                "name": "source-two",
+                "config": {
+                    "password": "secret", "cipher": "aes-128-gcm",
+                    "port": 443, "server": "203.0.113.10", "type": "ss",
+                },
+            },
+            {
+                "id": "three",
+                "name": "different-password",
+                "config": {
+                    "type": "ss", "server": "203.0.113.10", "port": 443,
+                    "cipher": "aes-128-gcm", "password": "different",
+                },
+            },
+        ]
+        published = publish.unique_configs(nodes)
+        self.assertEqual(len(published), 2)
+        self.assertEqual({item["name"] for item in published}, {"source-one", "different-password"})
+
     def test_yaml_config_preserved(self):
         node = to_mihomo_proxy({
             "id": "a",
