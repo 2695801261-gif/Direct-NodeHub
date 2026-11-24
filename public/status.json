@@ -81,9 +81,9 @@
     "unstable": 9,
     "rounds": 3,
     "required_successful_rounds": 3,
-    "minimum_download_kbps": 128.0,
-    "minimum_upload_kbps": 32.0,
-    "maximum_cloud_latency_ms": 1000.0,
+    "minimum_download_kbps": 128,
+    "minimum_upload_kbps": 32,
+    "maximum_cloud_latency_ms": 1000,
     "test_region": "github-hosted-runner (region not guaranteed)",
     "meaning": "Repeated Mihomo tunnel, consistent exit IP, latency, HTTPS download and upload from GitHub-hosted runner only; not a mainland China measurement."
   },
@@ -174,5 +174,7 @@
       "da88934d1e27454c"
     ],
     "meaning": "TLS TCP VLESS/VMess/Trojan only; excludes Reality, XTLS Vision, UDP and upstream WebSocket. Worker must still be deployed and tested from the actual client network."
-  }
+  },
+  "cloudflare_relay_deployment": "disabled_self_serve_terms",
+  "cloudflare_relay_notice": "Worker compatibility counts are research-only. Do not deploy as a VPN/proxy using a Cloudflare self-serve account; see cloudflare/README.md and the Cloudflare Self-Serve Subscription Agreement."
 }
