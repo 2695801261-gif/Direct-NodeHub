@@ -165,6 +165,9 @@ def worker_compatible_ws(candidate):
         return False
     if str(proxy.get("network") or "tcp").lower() != "ws" or not proxy.get("tls"):
         return False
+    # The Worker fetch API controls its own TLS fingerprint and ALPN.
+    if proxy.get("client-fingerprint") or proxy.get("alpn"):
+        return False
     server = str(proxy.get("server") or "").strip().lower()
     sni = str(proxy.get("servername") or proxy.get("sni") or server).strip().lower()
     ws_opts = proxy.get("ws-opts") if isinstance(proxy.get("ws-opts"), dict) else {}
