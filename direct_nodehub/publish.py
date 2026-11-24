@@ -282,6 +282,10 @@ li{margin:10px 0}.warn{color:#ffd18a}
 </ul>
 <p class="muted">实测前必须关闭其他 VPN、代理客户端和系统代理；不要把云端延迟当作大陆延迟。</p>
 </section>
+<section><h2>Cloudflare 中转实验</h2>
+<p>只有通过协议、稳定性和上游兼容性筛选的节点才会列为中转候选。中转不会改变出口 IP，也不保证降低延迟；请先阅读部署限制并在实际网络测试。</p>
+<ul><li><a href="https://github.com/2695801261-gif/Direct-NodeHub/blob/main/cloudflare/README.md">Cloudflare WS 中转与 TCP 桥接说明</a></li></ul>
+</section>
 <section><h2>本轮数据</h2><p id="status">正在读取状态…</p></section>
 <script>
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
