@@ -37,7 +37,7 @@ def run():
     fast_settings=policy.get("stability",{})
 fast_download=float(fast_settings.get("fast_pool_minimum_download_kbps",256))
 fast_upload=float(fast_settings.get("fast_pool_minimum_upload_kbps",64))
-fast=[n for n in stable if float(n.get("median_download_kbps") or 0)>=fast_download and float(n.get("median_upload_kbps") or 0)>=fast_upload]
+fast=[n for n in stable if n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool" and float(n.get("median_download_kbps") or 0)>=fast_download and float(n.get("median_upload_kbps") or 0)>=fast_upload]
     screened=screened[:limit]; fast=fast[:limit]
     configs=unique_configs(screened); names=[n["name"] for n in configs]
     standard={"mixed-port":7890,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":configs,
@@ -57,7 +57,7 @@ fast=[n for n in stable if float(n.get("median_download_kbps") or 0)>=fast_downl
       "rules":["MATCH,PROXY"]}
     (OUTPUT/"fast.yaml").write_text(yaml.safe_dump(fast_yaml,allow_unicode=True,sort_keys=False),encoding="utf-8")
     # Chain direction: public node is the first hop; the user's own home endpoint is the final hop.
-    chain_eligible=[n for n in stable if n.get("risk_status")!="blocked"]
+    chain_eligible=[n for n in stable if n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool"]
     chainconfigs=unique_configs(chain_eligible[:limit]); chainnames=[n["name"] for n in chainconfigs]
     home={"name":"HOME-RESIDENTIAL-REPLACE-ME","type":"socks5","server":"YOUR_HOME_HOST","port":1080,"username":"YOUR_USERNAME","password":"YOUR_PASSWORD","dialer-proxy":"ENTRY-AUTO"}
     chain={"mixed-port":7892,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":chainconfigs+[home],
