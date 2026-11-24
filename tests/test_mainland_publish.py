@@ -69,16 +69,21 @@ class MainlandPublishTests(unittest.TestCase):
             ],
         }
 
-    def test_only_stable_risk_eligible_mainland_nodes_publish(self):
+    def test_local_three_round_pass_overrides_cloud_degraded_status(self):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
-        self.assertEqual([node["id"] for node in standard], ["stable-a"])
-        self.assertEqual([node["id"] for node in fast], ["blocked-c", "stable-a"])
+        self.assertEqual([node["id"] for node in standard], ["unstable-b", "stable-a"])
+        self.assertEqual([node["id"] for node in fast], ["blocked-c", "unstable-b", "stable-a"])
         self.assertEqual(standard[0]["mainland_status"], "reachable")
 
     def test_fast_pool_uses_local_speed_thresholds(self):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 1000, 128)
-        self.assertEqual([node["id"] for node in standard], ["stable-a"])
-        self.assertEqual([node["id"] for node in fast], ["blocked-c"])
+        self.assertEqual([node["id"] for node in standard], ["unstable-b", "stable-a"])
+        self.assertEqual([node["id"] for node in fast], ["blocked-c", "unstable-b"])
+
+    def test_mainland_pool_uses_local_stability_not_cloud_stability(self):
+        standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
+        self.assertIn("unstable-b", [node["id"] for node in standard])
+        self.assertEqual(self.candidates[1]["stable_status"], "degraded")
 
     def test_fast_pool_does_not_apply_reputation_filter(self):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
