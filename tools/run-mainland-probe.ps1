@@ -62,19 +62,11 @@ Write-Host "1/4 安装项目依赖…" -ForegroundColor Cyan
 Invoke-ProjectPython -Arguments @("-m", "pip", "install", "-r", (Join-Path $RepoRoot "requirements.txt"))
 
 Write-Host "2/4 下载并校验官方 Mihomo…" -ForegroundColor Cyan
-$releaseUrl = "https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/$Version"
-$release = Invoke-RestMethod -Uri $releaseUrl -Headers @{ "User-Agent" = "Direct-NodeHub-Mainland-Probe" }
-$asset = $release.assets | Where-Object { $_.name -eq "mihomo-windows-amd64-compatible-$Version.zip" } | Select-Object -First 1
-if (-not $asset) {
-    $asset = $release.assets | Where-Object { $_.name -match "^mihomo-windows-amd64.*\.zip$" } | Select-Object -First 1
-}
-if (-not $asset -or -not $asset.digest -or $asset.digest -notmatch "^sha256:(.+)$") {
-    throw "官方发布包缺少 SHA-256 摘要，拒绝下载未校验的 Mihomo。"
-}
+$assetUrl = "https://github.com/MetaCubeX/mihomo/releases/download/$Version/mihomo-windows-amd64-compatible-$Version.zip"
+$expectedHash = "cd6738d4648cc1a5f48049a1343b697ab510889d648f045c5c780fc1ab443a79"
 $zipPath = Join-Path $WorkDir "mihomo.zip"
 $extractDir = Join-Path $WorkDir "mihomo"
-Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zipPath
-$expectedHash = $asset.digest.Substring(7).ToLowerInvariant()
+Invoke-WebRequest -Uri $assetUrl -OutFile $zipPath
 $actualHash = (Get-FileHash -Path $zipPath -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($actualHash -ne $expectedHash) {
     throw "Mihomo SHA-256 校验失败，已停止。"
