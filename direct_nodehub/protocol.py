@@ -1,0 +1,128 @@
+from __future__ import annotations
+import base64, json, os, shutil, socket, subprocess, tempfile, time, urllib.parse
+from pathlib import Path
+from typing import Any
+import requests, yaml
+ROOT=Path(__file__).resolve().parents[1]; CANDIDATES=ROOT/"public"/"candidates.json"; OUTPUT=ROOT/"public"/"protocol-results.json"; POLICY=ROOT/"config"/"policy.json"
+ECHO_URLS=["https://api.ipify.org","https://ifconfig.me/ip","https://icanhazip.com"]
+def _b64(v):
+    v += "="*((4-len(v)%4)%4); return base64.urlsafe_b64decode(v.encode())
+def _params(p): return {k:v[-1] for k,v in urllib.parse.parse_qs(p.query,keep_blank_values=True).items()}
+def _from_uri(uri,name):
+    p=urllib.parse.urlsplit(uri); scheme=p.scheme.lower(); q=_params(p)
+    if scheme=="vmess":
+        d=json.loads(_b64(uri[8:]).decode()); n={"name":name,"type":"vmess","server":d["add"],"port":int(d["port"]),"uuid":d["id"],"alterId":int(d.get("aid",0)),"cipher":d.get("scy") or "auto"}
+        net=(d.get("net") or "tcp").lower()
+        if net not in {"tcp","ws","grpc","http","h2"}: raise ValueError("unsupported VMess transport")
+        if net!="tcp": n["network"]=net
+        if net=="ws":
+            n["ws-opts"]={"path":d.get("path") or "/"}
+            if d.get("host"): n["ws-opts"]["headers"]={"Host":d["host"]}
+        if d.get("tls") in ("tls","true",True): n["tls"]=True; n["servername"]=d.get("sni") or d.get("host") or d["add"]
+        return n
+    host=p.hostname; port=p.port
+    if not host or not port: raise ValueError("missing server or port")
+    if scheme=="ss":
+        user=urllib.parse.unquote(p.username or ""); password=urllib.parse.unquote(p.password or "")
+        if not password and user:
+            decoded=_b64(user).decode()
+            if ":" not in decoded: raise ValueError("invalid Shadowsocks credentials")
+            user,password=decoded.split(":",1)
+        if ":" in user: method,password=user.split(":",1)
+        elif user and password: method=user
+        else: raise ValueError("unsupported Shadowsocks URI form")
+        return {"name":name,"type":"ss","server":host,"port":port,"cipher":method,"password":password,"udp":True}
+    if scheme in {"socks","socks5","http","https"}:
+        n={"name":name,"type":"socks5" if scheme in {"socks","socks5"} else "http","server":host,"port":port}
+        if p.username is not None: n["username"]=urllib.parse.unquote(p.username); n["password"]=urllib.parse.unquote(p.password or "")
+        if scheme=="https": n["tls"]=True
+        return n
+    if scheme not in {"vless","trojan"}: raise ValueError("unsupported scheme")
+    user=urllib.parse.unquote(p.username or ""); n={"name":name,"type":scheme,"server":host,"port":port}
+    if scheme=="vless":
+        n["uuid"]=user
+        if q.get("encryption") not in (None,"","none"): raise ValueError("unsupported VLESS encryption")
+        if q.get("flow"): n["flow"]=q["flow"]
+    else: n["password"]=user
+    net=q.get("type",q.get("network","tcp")).lower()
+    if net not in {"tcp","ws","grpc","http","h2"}: raise ValueError("unsupported transport")
+    if net!="tcp": n["network"]=net
+    if net=="ws":
+        n["ws-opts"]={"path":urllib.parse.unquote(q.get("path","/"))}
+        if q.get("host"): n["ws-opts"]["headers"]={"Host":q["host"]}
+    if net=="grpc": n["grpc-opts"]={"grpc-service-name":q.get("serviceName",q.get("service_name",""))}
+    security=q.get("security","")
+    if security in {"tls","reality"} or q.get("sni"):
+        n["tls"]=True; n["servername"]=q.get("sni") or q.get("host") or host
+        if q.get("alpn"): n["alpn"]=q["alpn"].split(",")
+        if q.get("fp"): n["client-fingerprint"]=q["fp"]
+    if security=="reality":
+        key=q.get("pbk") or q.get("publicKey")
+        if not key: raise ValueError("Reality URI missing public key")
+        n["reality-opts"]={"public-key":key,"short-id":q.get("sid","")}; n["client-fingerprint"]=q.get("fp","chrome")
+    if q.get("allowInsecure","").lower()=="true": n["skip-cert-verify"]=True
+    return n
+def to_mihomo_proxy(c):
+    if isinstance(c.get("config"),dict):
+        n=dict(c["config"]); n["name"]=c.get("name") or c["id"]; return n
+    if not c.get("uri"): raise ValueError("candidate has no complete URI or proxy config")
+    return _from_uri(c["uri"],c.get("name") or c["id"])
+def _egress(port):
+    px={"http":f"http://127.0.0.1:{port}","https":f"http://127.0.0.1:{port}"}; s=requests.Session(); s.trust_env=False; ips=[]; checks=[]
+    for url in ECHO_URLS:
+        try:
+            r=s.get(url,proxies=px,timeout=(5,9)); r.raise_for_status(); ip=r.text.strip().splitlines()[0]
+            import ipaddress; ipaddress.ip_address(ip); ips.append(ip); checks.append({"url":url,"status":"ok","ip":ip})
+        except Exception as e: checks.append({"url":url,"status":"failed","error":str(e)[:160]})
+    return ips,checks
+def verify_one(c,binary):
+    out={"id":c["id"],"protocol_status":"failed","exit_ip":None,"exit_ip_agreement":0,"http_checks":[],"error":None}
+    try:
+        proxy=to_mihomo_proxy(c)
+        with tempfile.TemporaryDirectory(prefix="dnh-") as td:
+            cfgpath=Path(td)/"config.yaml"; port=19000
+            while True:
+                with socket.socket() as sock:
+                    try: sock.bind(("127.0.0.1",port)); break
+                    except OSError:
+                        port+=1
+                        if port>25000: raise RuntimeError("no local port available")
+            cfg={"mixed-port":port,"allow-lan":False,"mode":"global","log-level":"error","ipv6":False,"proxies":[proxy],"proxy-groups":[{"name":"GLOBAL","type":"select","proxies":[proxy["name"]]}],"rules":["MATCH,GLOBAL"]}
+            cfgpath.write_text(yaml.safe_dump(cfg,allow_unicode=True,sort_keys=False),encoding="utf-8")
+            check=subprocess.run([binary,"-t","-f",str(cfgpath),"-d",td],capture_output=True,text=True,timeout=8)
+            if check.returncode: raise RuntimeError(("mihomo config rejected: "+(check.stderr or check.stdout))[:300])
+            proc=subprocess.Popen([binary,"-f",str(cfgpath),"-d",td],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+            try:
+                deadline=time.time()+6
+                while time.time()<deadline:
+                    if proc.poll() is not None: raise RuntimeError("mihomo exited during startup")
+                    try:
+                        with socket.create_connection(("127.0.0.1",port),timeout=.3): break
+                    except OSError: time.sleep(.25)
+                ips,checks=_egress(port); out["http_checks"]=checks
+                if not ips: raise RuntimeError("no valid public IP returned through proxy")
+                counts={ip:ips.count(ip) for ip in set(ips)}; best,agreement=max(counts.items(),key=lambda x:x[1]); out["exit_ip"]=best; out["exit_ip_agreement"]=agreement
+                out["protocol_status"]="verified" if agreement>=2 else "partial"
+                if agreement<2: out["error"]="fewer than two echo services agreed on exit IP"
+            finally:
+                proc.terminate()
+                try: proc.wait(timeout=3)
+                except subprocess.TimeoutExpired: proc.kill()
+    except Exception as e: out["error"]=str(e)[:300]
+    return out
+def run():
+    if not CANDIDATES.exists(): raise FileNotFoundError("run collector first")
+    binary=os.environ.get("MIHOMO_BIN") or shutil.which("mihomo")
+    if not binary: raise RuntimeError("mihomo binary not found")
+    policy=json.loads(POLICY.read_text()); data=json.loads(CANDIDATES.read_text()); tcp=[n for n in data.get("candidates",[]) if n.get("cloud_tcp")=="reachable"]
+    tcp.sort(key=lambda n:n.get("cloud_tcp_latency_ms") or 999999); tested=[verify_one(n,binary) for n in tcp[:int(policy.get("protocol_probe",{}).get("max_candidates",80))]]; byid={r["id"]:r for r in tested}
+    for n in data.get("candidates",[]):
+        r=byid.get(n["id"])
+        if r: n.update({"protocol_status":r["protocol_status"],"exit_ip":r["exit_ip"],"exit_ip_agreement":r["exit_ip_agreement"],"protocol_error":r["error"]})
+        else: n.setdefault("protocol_status","not_tested")
+        n["mainland_status"]="not_tested"
+    summary={"total_tcp_reachable":len(tcp),"tested":len(tested),"verified":sum(r["protocol_status"]=="verified" for r in tested),"partial":sum(r["protocol_status"]=="partial" for r in tested),"failed":sum(r["protocol_status"]=="failed" for r in tested),"region":"github-hosted-runner (region not guaranteed)","meaning":"Mihomo tunnel and HTTP egress from cloud; not a mainland China test."}
+    stamp=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()); data["protocol_tested_at"]=stamp; data["protocol_summary"]=summary; CANDIDATES.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
+    OUTPUT.parent.mkdir(parents=True,exist_ok=True); OUTPUT.write_text(json.dumps({"schema_version":1,"generated_at":stamp,"summary":summary,"results":tested},ensure_ascii=False,indent=2)+"\n")
+    print(json.dumps(summary,ensure_ascii=False,indent=2)); return summary
+if __name__=="__main__": run()
