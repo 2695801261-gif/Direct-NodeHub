@@ -34,17 +34,30 @@ def build_config(node: dict[str, Any]) -> dict[str, Any]:
 
 def unique_configs(nodes: list[dict[str, Any]]) -> list[dict[str, Any]]:
     result = []
-    used = set()
+    used_names = set()
+    seen_configs = set()
     for node in nodes:
         config = build_config(node)
+        # Different source labels/fragments can describe the exact same proxy.
+        # Remove exact duplicates before publishing so clients do not show
+        # multiple identical entries as if they were independent working nodes.
+        fingerprint_data = dict(config)
+        fingerprint_data.pop("name", None)
+        fingerprint = json.dumps(
+            fingerprint_data, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+        )
+        if fingerprint in seen_configs:
+            continue
+        seen_configs.add(fingerprint)
+
         base = config["name"]
         name = base
         index = 2
-        while name in used:
+        while name in used_names:
             name = f"{base}-{index}"
             index += 1
         config["name"] = name
-        used.add(name)
+        used_names.add(name)
         result.append(config)
     return result
 
