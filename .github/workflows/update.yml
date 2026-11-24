@@ -62,7 +62,9 @@ jobs:
           /tmp/mihomo -v
           echo "MIHOMO_BIN=/tmp/mihomo" >> "$GITHUB_ENV"
       - name: Run parser and module regression tests
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m unittest discover -s tests -v
+          python -m py_compile tools/build-cloudflare-ws-config.py
       - name: Check Cloudflare Worker JavaScript syntax
         run: node --check cloudflare/worker-ws-relay.js
       - name: Check TCP bridge JavaScript syntax
