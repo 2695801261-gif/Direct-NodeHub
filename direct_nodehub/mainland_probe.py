@@ -84,6 +84,12 @@ def run(args: argparse.Namespace) -> Path:
     candidates = [n for n in data.get("candidates", [])
                   if n.get("protocol_status") == "verified" and n.get("stable_status") == "stable"
                   and n.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"]
+    # Cloud ranking is only a test-order hint, never a mainland latency claim.
+    candidates.sort(key=lambda n: (
+        float(n.get("median_latency_ms") or 1e9),
+        -float(n.get("median_download_kbps") or 0),
+        -float(n.get("median_upload_kbps") or 0),
+    ))
     candidates = candidates[:max(1, min(int(args.limit), 60))]
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
