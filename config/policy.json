@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "schedule_hours": 6,
+  "max_candidates_per_source": 300,
+  "connect_timeout_seconds": 8,
+  "read_timeout_seconds": 10,
+  "minimum_successful_probes": 2,
+  "minimum_exit_ip_agreement": 2,
+  "max_cloud_latency_ms": 2500,
+  "risk_policy": {
+    "deny_known_abuse": true,
+    "deny_tor_exit": true,
+    "deny_open_proxy_abuse_reports": true,
+    "quarantine_unknown_reputation": true,
+    "require_exit_ip_verification": true
+  },
+  "publication": {
+    "format": "mihomo",
+    "include_cloud_latency_as_china_latency": false,
+    "label_cloud_probe_location": true,
+    "max_nodes": 100
+  }
+}
