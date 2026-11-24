@@ -85,6 +85,9 @@ if ($confirm -cne "MAINLAND") {
     throw "未确认大陆直连环境，已停止。"
 }
 
+Write-Host "刷新最新候选节点数据…" -ForegroundColor Cyan
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/2695801261-gif/Direct-NodeHub/main/public/candidates.json" -OutFile (Join-Path $RepoRoot "public\candidates.json")
+
 Write-Host "3/4 执行大陆本地协议、延迟和双向速度测试（最多 30 个节点，每个节点 3 轮）…" -ForegroundColor Cyan
 Push-Location $RepoRoot
 try {
@@ -102,10 +105,12 @@ try {
     $destination = Join-Path $desktop "Direct-NodeHub-Mainland"
     if (Test-Path $destination) { Remove-Item $destination -Recurse -Force }
     Copy-Item -Path $outputDir -Destination $destination -Recurse -Force
+    Copy-Item -Path $report.FullName -Destination (Join-Path $destination "mainland-report.json") -Force
 
     Write-Host ""
-    Write-Host "完成。大陆实测订阅已放到桌面：" -ForegroundColor Green
+    Write-Host "完成。大陆实测订阅和报告已放到桌面：" -ForegroundColor Green
     Write-Host $destination
+    Write-Host "报告文件：" (Join-Path $destination "mainland-report.json")
     Write-Host "clash-mainland.yaml = 大陆实测稳定池"
     Write-Host "fast-mainland.yaml  = 大陆实测高速池"
     Write-Host "如果结果为 0 个节点，代表本轮没有节点通过大陆实测，不会用云端结果冒充可用节点。"
