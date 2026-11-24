@@ -1,5 +1,5 @@
 from __future__ import annotations
-import base64, concurrent.futures, json, os, shutil, socket, subprocess, tempfile, time, urllib.parse
+import base64, concurrent.futures, ipaddress, json, os, shutil, socket, subprocess, tempfile, time, urllib.parse
 from pathlib import Path
 from typing import Any
 import requests, yaml
@@ -182,13 +182,42 @@ def worker_compatible_ws(candidate):
     )
 
 
+def worker_compatible_tcp_bridge(candidate):
+    """TLS TCP candidates that can be safely wrapped in a Worker WebSocket tunnel."""
+    try:
+        proxy = to_mihomo_proxy(candidate)
+    except Exception:
+        return False
+    kind = str(proxy.get("type") or "").lower()
+    network = str(proxy.get("network") or "tcp").lower()
+    if kind not in {"vless", "vmess", "trojan"} or network != "tcp":
+        return False
+    if proxy.get("flow") or proxy.get("reality-opts") or proxy.get("skip-cert-verify"):
+        return False
+    server = str(proxy.get("server") or "").strip().lower()
+    if not server:
+        return False
+    try:
+        ipaddress.ip_address(server)
+        return False
+    except ValueError:
+        pass
+    sni = str(proxy.get("servername") or proxy.get("sni") or server).strip().lower()
+    tls_enabled = bool(proxy.get("tls")) or kind == "trojan"
+    return tls_enabled and sni == server
+
+
 def select_protocol_candidates(nodes, max_candidates=80, websocket_quota=20):
     ranked = sorted(nodes, key=lambda n: n.get("cloud_tcp_latency_ms") or 999999)
     websocket = [node for node in ranked if network_of(node) == "ws"]
     other = [node for node in ranked if network_of(node) != "ws"]
-    # Prioritize WS nodes that can actually be used by the fixed-origin Worker relay.
+    # Prioritize candidates compatible with either fixed-origin Worker bridge.
     websocket.sort(key=lambda node: (
         not worker_compatible_ws(node),
+        float(node.get("cloud_tcp_latency_ms") or 999999),
+    ))
+    other.sort(key=lambda node: (
+        not worker_compatible_tcp_bridge(node),
         float(node.get("cloud_tcp_latency_ms") or 999999),
     ))
     ws_limit = min(max(0, int(websocket_quota)), max(0, int(max_candidates)))
