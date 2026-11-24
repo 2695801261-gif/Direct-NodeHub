@@ -21,7 +21,7 @@ USER_AGENT = "Direct-NodeHub/0.1 (+https://github.com/2695801261-gif/Direct-Node
 
 
 def decode_base64_text(value: str) -> str | None:
-    value = re.sub(r"\\s+", "", value)
+    value = re.sub(r"\s+", "", value)
     if not value:
         return None
     value += "=" * ((4 - len(value) % 4) % 4)
