@@ -6,7 +6,6 @@ import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlsplit
 
 import yaml
 
