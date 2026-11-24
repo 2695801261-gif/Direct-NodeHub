@@ -26,11 +26,20 @@ def select_mainland_nodes(
     contract = report.get("test_contract", {})
     if contract.get("vpn_disabled_attested") is not True:
         raise ValueError("report does not attest that VPN/proxy was disabled")
+    if int(contract.get("rounds", 0)) < 3:
+        raise ValueError("mainland report must contain at least three test rounds")
 
+    # Do not trust a summary status alone: require the underlying report to
+    # show every round passed and the exit IP stayed consistent.
     result_map = {
         item["id"]: item
         for item in report.get("results", [])
         if item.get("status") == "reachable"
+        and int(item.get("total_rounds", 0)) >= 3
+        and int(item.get("successful_rounds", 0)) == int(item.get("total_rounds", 0))
+        and item.get("same_exit_ip") is True
+        and isinstance(item.get("exit_ip"), str)
+        and bool(item.get("exit_ip"))
     }
     locally_verified = []
     for candidate in candidates:
@@ -101,6 +110,13 @@ def run(report_path: Path) -> dict[str, Any]:
         raise FileNotFoundError("public/candidates.json is missing; use the current repository snapshot")
     report = json.loads(report_path.read_text(encoding="utf-8"))
     candidates_data = json.loads(CANDIDATES.read_text(encoding="utf-8"))
+    snapshot = report.get("candidate_snapshot_generated_at")
+    current_snapshot = candidates_data.get("generated_at")
+    if snapshot and current_snapshot and snapshot != current_snapshot:
+        raise ValueError(
+            "mainland report was generated from a different candidate snapshot; "
+            "rerun the local probe against the current public/candidates.json"
+        )
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
     stability = policy.get("stability", {})
     fast_download = float(stability.get("fast_pool_minimum_download_kbps", 512))
