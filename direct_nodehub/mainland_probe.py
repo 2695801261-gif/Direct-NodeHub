@@ -28,7 +28,9 @@ def result_metrics(result: dict[str, Any]) -> tuple[float, float, float]:
     latencies = [float(x["latency_ms"]) for x in checks
                  if x.get("url") in {"https://api.ipify.org", "https://ifconfig.me/ip", "https://icanhazip.com"}
                  and x.get("status") == "ok" and isinstance(x.get("latency_ms"), (int, float))]
-    latency = statistics.median(latencies) if latencies else 0.0
+    # Match the cloud stability gate: a single echo service is not enough
+    # to establish a trustworthy round-trip latency measurement.
+    latency = statistics.median(latencies) if len(latencies) >= 2 else 0.0
     return latency, download, upload
 
 
