@@ -137,16 +137,16 @@ def run() -> dict[str, Any]:
         if node.get("risk_status") != "blocked"
         and node.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"
     ]
+    stable.sort(key=lambda node: (latency_of(node), -download_of(node), -upload_of(node)))
     screened = [node for node in stable if node.get("risk_status") == "unconfirmed"]
     fast = [
         node for node in cloud_stable
         if download_of(node) >= fast_download and upload_of(node) >= fast_upload
     ]
     fast.sort(key=lambda node: (-download_of(node), latency_of(node), -upload_of(node)))
-    screened = screened[:limit]
-    fast = fast[:limit]
-
-    configs = unique_configs(screened)
+    # Deduplicate before applying the publication cap so repeated source
+    # entries do not crowd out distinct working configurations.
+    configs = unique_configs(screened)[:limit]
     names = [node["name"] for node in configs]
     standard = {
         "mixed-port": 7890,
@@ -167,7 +167,7 @@ def run() -> dict[str, Any]:
         yaml.safe_dump(standard, allow_unicode=True, sort_keys=False), encoding="utf-8"
     )
 
-    fast_configs = unique_configs(fast)
+    fast_configs = unique_configs(fast)[:limit]
     fast_names = [node["name"] for node in fast_configs]
     fast_yaml = {
         "mixed-port": 7891,
@@ -187,8 +187,7 @@ def run() -> dict[str, Any]:
         yaml.safe_dump(fast_yaml, allow_unicode=True, sort_keys=False), encoding="utf-8"
     )
 
-    chain_nodes = stable[:limit]
-    chain_configs = unique_configs(chain_nodes)
+    chain_configs = unique_configs(stable)[:limit]
     chain_names = [node["name"] for node in chain_configs]
     home = {
         "name": "HOME-RESIDENTIAL-REPLACE-ME",
