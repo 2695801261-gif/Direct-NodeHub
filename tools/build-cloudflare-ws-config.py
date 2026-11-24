@@ -63,7 +63,7 @@ def main() -> int:
             "upstream_exit_ip": selected.get("exit_ip"),
             "cloud_latency_ms": selected.get("median_latency_ms"),
             "upstream_url_for_cloudflare_worker": upstream_url,
-            "next": "Create the Worker, set UPSTREAM_URL to the value above, set UPSTREAM_TLS=true, and add a private RELAY_TOKEN. Then rerun this script with --worker-host.",
+            "next": "Create a Worker from cloudflare/worker-ws-relay.js, set UPSTREAM_URL to the value above, and add a private RELAY_TOKEN. Then rerun this script with --worker-host.",
         }, ensure_ascii=False, indent=2))
         return 0
 
