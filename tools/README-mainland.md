@@ -13,12 +13,11 @@
 
 1. 打开仓库主页： https://github.com/2695801261-gif/Direct-NodeHub
 2. 点击绿色 Code → Download ZIP，下载并解压整个仓库。
-3. 在解压目录中找到 tools 文件夹。
-4. 在该目录空白处打开 PowerShell，或者先打开 PowerShell 再用 cd 进入解压目录。
-5. 执行：
+3. 在解压后的仓库根目录（能看到 direct_nodehub、public、tools 这些文件夹的那一层）打开 PowerShell。
+4. 执行：
    powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\run-mainland-probe.ps1
-6. 确认电脑已处于大陆直连环境后，输入 MAINLAND。
-7. 等待脚本完成。它会在桌面创建 Direct-NodeHub-Mainland 文件夹。
+5. 确认电脑已处于大陆直连环境后，输入 MAINLAND。
+6. 等待脚本完成。它会在桌面创建 Direct-NodeHub-Mainland 文件夹。
 
 ## 输出文件
 
