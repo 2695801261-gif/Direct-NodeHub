@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T11:36:06Z",
+  "generated_at": "2026-11-24T11:40:12Z",
   "summary": {
-    "total_tcp_reachable": 700,
+    "total_tcp_reachable": 701,
     "tested": 80,
-    "verified": 46,
+    "verified": 45,
     "partial": 0,
-    "failed": 34,
+    "failed": 35,
     "selected_transports": {
       "ws": 20,
       "tcp": 59,
@@ -14,25 +14,25 @@
     },
     "selected_websocket_count": 20,
     "selected_websocket_ids": [
-      "e8c64593fb66d694",
-      "89df60f41a60bb3b",
-      "620a02e11aa2f61a",
-      "2459dac0b8270dbd",
-      "cf8a3905efdcff9f",
-      "f7c22b900cd07e5e",
-      "aec537b6bcb05a4f",
-      "e0c1d8b971c60515",
       "a628d1c6aefaa2dc",
-      "3a3e0cf98463947a",
       "d80c3cb312051298",
-      "3c6eb64304b538da",
-      "8a12ac6ee27379f0",
-      "9a0bc17600838b1f",
-      "3abb9000a9cff8e5",
-      "79d8249c115bb0b6",
-      "c69832ee55a4bdd1",
-      "d55031ee7233ed7e",
+      "2459dac0b8270dbd",
+      "e8c64593fb66d694",
       "11337827a232d8e4",
+      "3a3e0cf98463947a",
+      "cf8a3905efdcff9f",
+      "e0c1d8b971c60515",
+      "aec537b6bcb05a4f",
+      "620a02e11aa2f61a",
+      "f7c22b900cd07e5e",
+      "3c6eb64304b538da",
+      "9a0bc17600838b1f",
+      "c69832ee55a4bdd1",
+      "3abb9000a9cff8e5",
+      "d55031ee7233ed7e",
+      "79d8249c115bb0b6",
+      "8a12ac6ee27379f0",
+      "89df60f41a60bb3b",
       "54af118b0a686dc9"
     ],
     "region": "github-hosted-runner (region not guaranteed)",
@@ -40,7 +40,7 @@
   },
   "results": [
     {
-      "id": "e8c64593fb66d694",
+      "id": "a628d1c6aefaa2dc",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -48,19 +48,19 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3004.2,
+          "latency_ms": 3006.5,
           "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3004.4,
+          "latency_ms": 3004.9,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 3004.5,
+          "latency_ms": 3003.9,
           "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -72,53 +72,14 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.7,
-          "upload_kbps": 1213.6
+          "duration_ms": 47.2,
+          "upload_kbps": 1356.7
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "89df60f41a60bb3b",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3005.5,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3005.9,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.6,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 64.9,
-          "upload_kbps": 985.7
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "620a02e11aa2f61a",
+      "id": "d80c3cb312051298",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -132,13 +93,13 @@
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3003.8,
+          "latency_ms": 3003.0,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 3003.3,
+          "latency_ms": 3003.0,
           "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -150,8 +111,8 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 63.3,
-          "upload_kbps": 1011.4
+          "duration_ms": 32.9,
+          "upload_kbps": 1944.4
         }
       ],
       "error": "no valid public IP returned through proxy"
@@ -165,13 +126,13 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3004.3,
+          "latency_ms": 3005.9,
           "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3004.5,
+          "latency_ms": 3002.8,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -189,14 +150,14 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 65.2,
-          "upload_kbps": 981.6
+          "duration_ms": 56.8,
+          "upload_kbps": 1126.4
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "cf8a3905efdcff9f",
+      "id": "e8c64593fb66d694",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -204,13 +165,13 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3004.8,
+          "latency_ms": 3003.9,
           "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3003.7,
+          "latency_ms": 3002.7,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -228,14 +189,14 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 146.2,
-          "upload_kbps": 437.7
+          "duration_ms": 43.2,
+          "upload_kbps": 1481.0
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "f7c22b900cd07e5e",
+      "id": "11337827a232d8e4",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -243,19 +204,19 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3004.1,
+          "latency_ms": 3003.7,
           "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3005.3,
+          "latency_ms": 3003.0,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 3004.7,
+          "latency_ms": 3003.0,
           "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -267,8 +228,125 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 64.8,
-          "upload_kbps": 987.9
+          "duration_ms": 55.2,
+          "upload_kbps": 1160.1
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "3a3e0cf98463947a",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3005.6,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3001.2,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 42.4,
+          "upload_kbps": 1508.7
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "cf8a3905efdcff9f",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3003.6,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3003.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 46.7,
+          "upload_kbps": 1371.0
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "e0c1d8b971c60515",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3003.7,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3005.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 31.6,
+          "upload_kbps": 2023.2
         }
       ],
       "error": "no valid public IP returned through proxy"
@@ -288,442 +366,7 @@
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3003.0,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 57.8,
-          "upload_kbps": 1107.7
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "e0c1d8b971c60515",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.9,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.6,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3002.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 65.7,
-          "upload_kbps": 974.8
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "a628d1c6aefaa2dc",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 57.2,
-          "upload_kbps": 1118.7
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "3a3e0cf98463947a",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.3,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3001.6,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3003.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1292.6
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "d80c3cb312051298",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.2,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3003.1,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3003.9,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.4,
-          "upload_kbps": 1296.4
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "3c6eb64304b538da",
-      "protocol_status": "verified",
-      "exit_ip": "88.216.182.53",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "88.216.182.53",
-          "latency_ms": 779.8
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "88.216.182.53",
-          "latency_ms": 805.6
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "88.216.182.53",
-          "latency_ms": 683.6
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1217.4,
-          "download_kbps": 210.3
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1294.1
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "8a12ac6ee27379f0",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.7,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3003.8,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3003.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.1,
-          "upload_kbps": 1303.6
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "9a0bc17600838b1f",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3005.2,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.5,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3003.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 53.0,
-          "upload_kbps": 1206.9
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "3abb9000a9cff8e5",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3005.2,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 2721.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 2750.7,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.0,
-          "upload_kbps": 1279.2
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "79d8249c115bb0b6",
-      "protocol_status": "verified",
-      "exit_ip": "47.86.90.31",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "47.86.90.31",
-          "latency_ms": 1030.4
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "47.86.90.31",
-          "latency_ms": 1169.5
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "47.86.90.31",
-          "latency_ms": 995.0
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 12745.4,
-          "download_kbps": 20.1
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.8,
-          "upload_kbps": 1285.8
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "c69832ee55a4bdd1",
-      "protocol_status": "verified",
-      "exit_ip": "2a14:a087:3:80::2",
-      "exit_ip_agreement": 2,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "185.126.67.41",
-          "latency_ms": 2013.6
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "2a14:a087:3:80::2",
-          "latency_ms": 2906.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "2a14:a087:3:80::2",
-          "latency_ms": 1637.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 3501.1,
-          "download_kbps": 73.1
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.1,
-          "upload_kbps": 1277.0
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "d55031ee7233ed7e",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3002.9,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3003.3,
+          "latency_ms": 3004.1,
           "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -741,855 +384,14 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 50.7,
-          "upload_kbps": 1262.7
+          "duration_ms": 35.8,
+          "upload_kbps": 1787.8
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "11337827a232d8e4",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3003.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 52.3,
-          "upload_kbps": 1222.8
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "54af118b0a686dc9",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.6,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1294.2
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "068495ab2cd8851a",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 37.1,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 32.2,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 34.7,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1292.6
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "7aa9c249d552991c",
-      "protocol_status": "verified",
-      "exit_ip": "216.106.185.141",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "216.106.185.141",
-          "latency_ms": 207.8
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "216.106.185.141",
-          "latency_ms": 169.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "216.106.185.141",
-          "latency_ms": 122.6
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 296.0,
-          "download_kbps": 864.8
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.1,
-          "upload_kbps": 1277.9
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "f30dadad7d31cce5",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 383.3,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 330.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 331.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 53.8,
-          "upload_kbps": 1190.3
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "202dd2a403e71e02",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.0,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 80.8,
-          "upload_kbps": 792.6
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "6ba53b88a436085d",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 597.4,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 524.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 491.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.0,
-          "upload_kbps": 1281.1
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "6311b555e272a610",
-      "protocol_status": "verified",
-      "exit_ip": "103.6.234.216",
-      "exit_ip_agreement": 2,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "103.6.234.216",
-          "latency_ms": 1237.1
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "103.6.234.216",
-          "latency_ms": 1097.9
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1626.5,
-          "download_kbps": 157.4
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.0,
-          "upload_kbps": 1279.8
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "67ee6d87448992c2",
-      "protocol_status": "verified",
-      "exit_ip": "77.93.89.2",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "77.93.89.2",
-          "latency_ms": 1714.6
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "77.93.89.2",
-          "latency_ms": 978.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "77.93.89.2",
-          "latency_ms": 819.8
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1765.6,
-          "download_kbps": 145.0
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.3,
-          "upload_kbps": 1297.9
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "b8a65ae5d486a3d8",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3002.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.5,
-          "upload_kbps": 1268.4
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "da88934d1e27454c",
-      "protocol_status": "verified",
-      "exit_ip": "168.107.51.32",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "168.107.51.32",
-          "latency_ms": 809.2
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "168.107.51.32",
-          "latency_ms": 848.9
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "168.107.51.32",
-          "latency_ms": 603.3
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1139.0,
-          "download_kbps": 224.7
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 104.9,
-          "upload_kbps": 609.9
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "d777dc47900c98cb",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.3,
-          "upload_kbps": 1272.5
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "76baeeddbc0b4e6d",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.6,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.0,
-          "upload_kbps": 1256.1
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "9ba0b4499f38e086",
-      "protocol_status": "verified",
-      "exit_ip": "94.103.168.62",
-      "exit_ip_agreement": 2,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "94.103.168.62",
-          "latency_ms": 663.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 664.2,
-          "error": "403 Client Error: Forbidden for url: https://ifconfig.me/ip"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "94.103.168.62",
-          "latency_ms": 569.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1161.6,
-          "download_kbps": 220.4
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 57.8,
-          "upload_kbps": 1107.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "0596fa55719519e6",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 8.1,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 8.1,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 9.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.0,
-          "upload_kbps": 1255.1
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "254a104c3859dd0f",
-      "protocol_status": "verified",
-      "exit_ip": "129.146.200.42",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "129.146.200.42",
-          "latency_ms": 170.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "129.146.200.42",
-          "latency_ms": 105.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "129.146.200.42",
-          "latency_ms": 68.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 137.1,
-          "download_kbps": 1867.7
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.3,
-          "upload_kbps": 1272.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "7ec51cfbb0164f24",
-      "protocol_status": "verified",
-      "exit_ip": "95.215.201.143",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "95.215.201.143",
-          "latency_ms": 167.2
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "95.215.201.143",
-          "latency_ms": 107.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "95.215.201.143",
-          "latency_ms": 80.0
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 392.6,
-          "download_kbps": 652.1
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.6,
-          "upload_kbps": 1264.4
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "e4d245d8d354349a",
-      "protocol_status": "verified",
-      "exit_ip": "138.199.35.211",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "138.199.35.211",
-          "latency_ms": 124.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "138.199.35.211",
-          "latency_ms": 140.7
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "138.199.35.211",
-          "latency_ms": 60.1
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 123.8,
-          "download_kbps": 2068.3
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 52.5,
-          "upload_kbps": 1217.9
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "2334a68b6086340a",
-      "protocol_status": "verified",
-      "exit_ip": "138.199.35.196",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "138.199.35.196",
-          "latency_ms": 134.0
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "138.199.35.196",
-          "latency_ms": 143.1
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "138.199.35.196",
-          "latency_ms": 64.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 125.6,
-          "download_kbps": 2037.6
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.4,
-          "upload_kbps": 1270.8
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "eb2215d0fe406617",
-      "protocol_status": "verified",
-      "exit_ip": "138.199.35.201",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "138.199.35.201",
-          "latency_ms": 159.3
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "138.199.35.201",
-          "latency_ms": 101.6
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "138.199.35.201",
-          "latency_ms": 61.7
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 216.9,
-          "download_kbps": 1180.4
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 78.6,
-          "upload_kbps": 814.0
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "147ac4cf61b9a1fd",
-      "protocol_status": "verified",
-      "exit_ip": "138.199.35.199",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "138.199.35.199",
-          "latency_ms": 119.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "138.199.35.199",
-          "latency_ms": 103.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "138.199.35.199",
-          "latency_ms": 100.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 159.2,
-          "download_kbps": 1608.0
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 54.1,
-          "upload_kbps": 1182.7
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "7d770133ce70db0a",
+      "id": "620a02e11aa2f61a",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -1603,14 +405,14 @@
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 2659.8,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+          "latency_ms": 3003.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 2968.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "cloudflare-256KiB-download",
@@ -1621,14 +423,14 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 49.9,
-          "upload_kbps": 1282.1
+          "duration_ms": 121.5,
+          "upload_kbps": 526.9
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "919eb0c029dafb84",
+      "id": "f7c22b900cd07e5e",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -1636,7 +438,87 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3003.8,
+          "latency_ms": 3004.5,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3003.7,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 168.9,
+          "upload_kbps": 379.0
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "3c6eb64304b538da",
+      "protocol_status": "verified",
+      "exit_ip": "88.216.182.53",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "88.216.182.53",
+          "latency_ms": 869.2
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "88.216.182.53",
+          "latency_ms": 894.1
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "88.216.182.53",
+          "latency_ms": 819.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 1361.2,
+          "download_kbps": 188.1
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.4,
+          "upload_kbps": 1760.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "9a0bc17600838b1f",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.1,
           "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
@@ -1648,8 +530,361 @@
         {
           "url": "https://icanhazip.com",
           "status": "failed",
+          "latency_ms": 3003.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.7,
+          "upload_kbps": 1793.2
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "c69832ee55a4bdd1",
+      "protocol_status": "verified",
+      "exit_ip": "2a14:a087:3:80::2",
+      "exit_ip_agreement": 2,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "185.126.67.41",
+          "latency_ms": 2044.9
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "2a14:a087:3:80::2",
+          "latency_ms": 1780.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "2a14:a087:3:80::2",
+          "latency_ms": 1419.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 2800.0,
+          "download_kbps": 91.4
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.6,
+          "upload_kbps": 1795.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "3abb9000a9cff8e5",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.3,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 2783.3,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 45.2,
+          "upload_kbps": 1414.9
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "d55031ee7233ed7e",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
           "latency_ms": 3004.2,
           "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 32.5,
+          "upload_kbps": 1968.7
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "79d8249c115bb0b6",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.9,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3003.4,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.6,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 34.7,
+          "upload_kbps": 1842.9
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "8a12ac6ee27379f0",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.6,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3001.6,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.2,
+          "upload_kbps": 1926.5
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "89df60f41a60bb3b",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.8,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 40.5,
+          "upload_kbps": 1580.6
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "54af118b0a686dc9",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3003.9,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 40.9,
+          "upload_kbps": 1564.2
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "202dd2a403e71e02",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3003.9,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.2,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 93.9,
+          "upload_kbps": 681.6
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "f30dadad7d31cce5",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 347.7,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 298.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 300.5,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
         },
         {
           "url": "cloudflare-256KiB-download",
@@ -1660,55 +895,55 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.9,
-          "upload_kbps": 1210.8
+          "duration_ms": 273.6,
+          "upload_kbps": 233.9
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "9d2b4468c1e66ed6",
+      "id": "67ee6d87448992c2",
       "protocol_status": "verified",
-      "exit_ip": "103.232.93.17",
+      "exit_ip": "77.93.89.2",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "103.232.93.17",
-          "latency_ms": 534.0
+          "ip": "77.93.89.2",
+          "latency_ms": 963.4
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "103.232.93.17",
-          "latency_ms": 1287.6
+          "ip": "77.93.89.2",
+          "latency_ms": 887.4
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "103.232.93.17",
-          "latency_ms": 1502.9
+          "ip": "77.93.89.2",
+          "latency_ms": 681.9
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 525.8,
-          "download_kbps": 486.8
+          "duration_ms": 1325.8,
+          "download_kbps": 193.1
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 50.9,
-          "upload_kbps": 1257.1
+          "duration_ms": 82.1,
+          "upload_kbps": 779.2
         }
       ],
       "error": null
     },
     {
-      "id": "99698e76e7391a84",
+      "id": "b8a65ae5d486a3d8",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -1716,241 +951,79 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 34.6,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+          "latency_ms": 3003.9,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 32.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+          "latency_ms": 3004.3,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 32.1,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+          "latency_ms": 3003.7,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 53.0,
-          "upload_kbps": 1206.7
+          "duration_ms": 37.4,
+          "upload_kbps": 1709.4
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "305789abe1629813",
+      "id": "6311b555e272a610",
       "protocol_status": "verified",
-      "exit_ip": "23.150.152.38",
+      "exit_ip": "103.6.234.216",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "23.150.152.38",
-          "latency_ms": 146.6
+          "ip": "103.6.234.216",
+          "latency_ms": 1269.9
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "23.150.152.38",
-          "latency_ms": 129.7
+          "ip": "103.6.234.216",
+          "latency_ms": 1118.8
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "23.150.152.38",
-          "latency_ms": 89.1
+          "ip": "103.6.234.216",
+          "latency_ms": 933.3
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 164.7,
-          "download_kbps": 1553.9
+          "duration_ms": 1618.3,
+          "download_kbps": 158.2
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.3,
-          "upload_kbps": 1224.7
+          "duration_ms": 39.0,
+          "upload_kbps": 1642.5
         }
       ],
       "error": null
     },
     {
-      "id": "47c2171fea926e72",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 39.2,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 38.7,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 42.0,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 53.4,
-          "upload_kbps": 1198.4
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "4fe2d1c7784b5224",
-      "protocol_status": "verified",
-      "exit_ip": "198.200.57.153",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "198.200.57.153",
-          "latency_ms": 2328.3
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "198.200.57.153",
-          "latency_ms": 1963.3
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "198.200.57.153",
-          "latency_ms": 1468.1
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 2084.8,
-          "download_kbps": 122.8
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.1,
-          "upload_kbps": 1278.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "06641219b3b32489",
-      "protocol_status": "verified",
-      "exit_ip": "162.243.146.243",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "162.243.146.243",
-          "latency_ms": 223.7
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "162.243.146.243",
-          "latency_ms": 183.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "162.243.146.243",
-          "latency_ms": 125.8
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 213.3,
-          "download_kbps": 1200.4
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.5,
-          "upload_kbps": 1242.1
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "b62bea8cbad3b8fc",
-      "protocol_status": "verified",
-      "exit_ip": "169.197.142.68",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "169.197.142.68",
-          "latency_ms": 171.0
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "169.197.142.68",
-          "latency_ms": 135.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "169.197.142.68",
-          "latency_ms": 99.3
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 196.1,
-          "download_kbps": 1305.5
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.6,
-          "upload_kbps": 1239.1
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "947706657f4ee9c3",
+      "id": "7aa9c249d552991c",
       "protocol_status": "verified",
       "exit_ip": "216.106.185.141",
       "exit_ip_agreement": 3,
@@ -1959,162 +1032,39 @@
           "url": "https://api.ipify.org",
           "status": "ok",
           "ip": "216.106.185.141",
-          "latency_ms": 179.7
+          "latency_ms": 212.9
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
           "ip": "216.106.185.141",
-          "latency_ms": 165.5
+          "latency_ms": 250.1
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
           "ip": "216.106.185.141",
-          "latency_ms": 126.6
+          "latency_ms": 197.9
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 250.7,
-          "download_kbps": 1021.0
+          "duration_ms": 296.2,
+          "download_kbps": 864.3
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 50.8,
-          "upload_kbps": 1260.0
+          "duration_ms": 34.0,
+          "upload_kbps": 1881.3
         }
       ],
       "error": null
     },
     {
-      "id": "36e80422b6a2cbee",
-      "protocol_status": "verified",
-      "exit_ip": "173.244.56.9",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "173.244.56.9",
-          "latency_ms": 170.8
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "173.244.56.9",
-          "latency_ms": 117.1
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "173.244.56.9",
-          "latency_ms": 110.3
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 219.3,
-          "download_kbps": 1167.3
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.6,
-          "upload_kbps": 1239.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "a12b5cdc609498fb",
-      "protocol_status": "verified",
-      "exit_ip": "137.184.89.151",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "137.184.89.151",
-          "latency_ms": 137.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "137.184.89.151",
-          "latency_ms": 138.4
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "137.184.89.151",
-          "latency_ms": 72.6
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 242.7,
-          "download_kbps": 1054.8
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 55.3,
-          "upload_kbps": 1157.8
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "54e0172686dfe4e6",
-      "protocol_status": "verified",
-      "exit_ip": "173.244.56.6",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "173.244.56.6",
-          "latency_ms": 190.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "173.244.56.6",
-          "latency_ms": 117.2
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "173.244.56.6",
-          "latency_ms": 116.5
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 210.9,
-          "download_kbps": 1213.7
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.7,
-          "upload_kbps": 1263.6
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "7ec5e9a7f48d1a14",
+      "id": "6ba53b88a436085d",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -2122,807 +1072,38 @@
         {
           "url": "https://api.ipify.org",
           "status": "failed",
-          "latency_ms": 3004.5,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+          "latency_ms": 502.0,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+          "latency_ms": 476.5,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
         },
         {
           "url": "https://icanhazip.com",
           "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+          "latency_ms": 477.3,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 51.4,
-          "upload_kbps": 1245.0
+          "duration_ms": 37.4,
+          "upload_kbps": 1710.2
         }
       ],
       "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "44410bbbcb074bac",
-      "protocol_status": "verified",
-      "exit_ip": "156.146.38.170",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "156.146.38.170",
-          "latency_ms": 131.6
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "156.146.38.170",
-          "latency_ms": 101.7
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "156.146.38.170",
-          "latency_ms": 85.9
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 217.3,
-          "download_kbps": 1178.2
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.8,
-          "upload_kbps": 1234.7
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "60b18e513b0901e7",
-      "protocol_status": "verified",
-      "exit_ip": "156.146.38.168",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "156.146.38.168",
-          "latency_ms": 133.4
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "156.146.38.168",
-          "latency_ms": 102.3
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "156.146.38.168",
-          "latency_ms": 88.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 358.7,
-          "download_kbps": 713.6
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.4,
-          "upload_kbps": 1270.6
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "fdf00a982c49bfd6",
-      "protocol_status": "verified",
-      "exit_ip": "173.214.164.110",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "173.214.164.110",
-          "latency_ms": 1687.1
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "173.214.164.110",
-          "latency_ms": 1120.5
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "173.214.164.110",
-          "latency_ms": 333.6
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 1486.0,
-          "download_kbps": 172.3
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.3,
-          "upload_kbps": 1272.4
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "2b322b68c292c039",
-      "protocol_status": "verified",
-      "exit_ip": "156.146.38.169",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "156.146.38.169",
-          "latency_ms": 143.0
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "156.146.38.169",
-          "latency_ms": 103.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "156.146.38.169",
-          "latency_ms": 84.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 206.5,
-          "download_kbps": 1239.9
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.9,
-          "upload_kbps": 1232.1
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "ada963f801b6c2ab",
-      "protocol_status": "verified",
-      "exit_ip": "167.88.63.99",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "167.88.63.99",
-          "latency_ms": 255.3
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "167.88.63.99",
-          "latency_ms": 280.4
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "167.88.63.99",
-          "latency_ms": 222.3
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=8)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 53.6,
-          "upload_kbps": 1193.7
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "2471547036f1a1e7",
-      "protocol_status": "verified",
-      "exit_ip": "38.121.43.18",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.121.43.18",
-          "latency_ms": 249.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.121.43.18",
-          "latency_ms": 278.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.121.43.18",
-          "latency_ms": 209.6
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 532.6,
-          "download_kbps": 480.7
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 56.3,
-          "upload_kbps": 1136.5
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "0dca4ac87138cf06",
-      "protocol_status": "verified",
-      "exit_ip": "38.121.43.225",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.121.43.225",
-          "latency_ms": 254.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.121.43.225",
-          "latency_ms": 272.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.121.43.225",
-          "latency_ms": 222.1
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=8)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.0,
-          "upload_kbps": 1253.7
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "7a868eb635dacfeb",
-      "protocol_status": "verified",
-      "exit_ip": "38.22.17.129",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.22.17.129",
-          "latency_ms": 263.6
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.22.17.129",
-          "latency_ms": 278.8
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.22.17.129",
-          "latency_ms": 212.1
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 5815.0,
-          "download_kbps": 44.0
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 57.4,
-          "upload_kbps": 1115.6
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "ee6283507d3e4e9a",
-      "protocol_status": "verified",
-      "exit_ip": "172.111.36.123",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "172.111.36.123",
-          "latency_ms": 247.6
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "172.111.36.123",
-          "latency_ms": 274.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "172.111.36.123",
-          "latency_ms": 232.8
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 432.6,
-          "download_kbps": 591.8
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.6,
-          "upload_kbps": 1264.5
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "e4d978344c147b4d",
-      "protocol_status": "verified",
-      "exit_ip": "38.121.43.231",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.121.43.231",
-          "latency_ms": 254.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.121.43.231",
-          "latency_ms": 279.6
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.121.43.231",
-          "latency_ms": 214.2
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 955.2,
-          "download_kbps": 268.0
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.2,
-          "upload_kbps": 1251.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "1197501f651ed192",
-      "protocol_status": "verified",
-      "exit_ip": "38.22.17.219",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.22.17.219",
-          "latency_ms": 255.8
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.22.17.219",
-          "latency_ms": 276.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.22.17.219",
-          "latency_ms": 210.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 657.0,
-          "download_kbps": 389.7
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 51.9,
-          "upload_kbps": 1233.5
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "bb1acc6930d219ac",
-      "protocol_status": "verified",
-      "exit_ip": "149.40.57.134",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "149.40.57.134",
-          "latency_ms": 168.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "149.40.57.134",
-          "latency_ms": 169.5
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "149.40.57.134",
-          "latency_ms": 143.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 565.8,
-          "download_kbps": 452.5
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.7,
-          "upload_kbps": 1261.8
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "0492cfa136bc919b",
-      "protocol_status": "verified",
-      "exit_ip": "149.40.57.138",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "149.40.57.138",
-          "latency_ms": 164.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "149.40.57.138",
-          "latency_ms": 168.1
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "149.40.57.138",
-          "latency_ms": 143.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 359.9,
-          "download_kbps": 711.3
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.1,
-          "upload_kbps": 1277.5
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "e71669b78cd081ed",
-      "protocol_status": "verified",
-      "exit_ip": "149.40.57.133",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "149.40.57.133",
-          "latency_ms": 166.3
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "149.40.57.133",
-          "latency_ms": 171.4
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "149.40.57.133",
-          "latency_ms": 149.1
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 360.3,
-          "download_kbps": 710.6
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.3,
-          "upload_kbps": 1272.2
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "24ac8f8d6bb65548",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.5,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 49.0,
-          "upload_kbps": 1307.0
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "c06c4e01a2e478a2",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3004.5,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.5,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 53.6,
-          "upload_kbps": 1193.6
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "da2e4974b729b29d",
-      "protocol_status": "verified",
-      "exit_ip": "216.106.178.169",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "216.106.178.169",
-          "latency_ms": 181.5
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "216.106.178.169",
-          "latency_ms": 236.9
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "216.106.178.169",
-          "latency_ms": 183.8
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 430.6,
-          "download_kbps": 594.6
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 52.0,
-          "upload_kbps": 1230.0
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "14ee935123cc92ca",
-      "protocol_status": "verified",
-      "exit_ip": "38.128.66.32",
-      "exit_ip_agreement": 3,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "38.128.66.32",
-          "latency_ms": 173.9
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "38.128.66.32",
-          "latency_ms": 234.0
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "38.128.66.32",
-          "latency_ms": 169.4
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 664.2,
-          "download_kbps": 385.4
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 52.5,
-          "upload_kbps": 1219.5
-        }
-      ],
-      "error": null
-    },
-    {
-      "id": "12f092b689131f60",
-      "protocol_status": "failed",
-      "exit_ip": null,
-      "exit_ip_agreement": 0,
-      "http_checks": [
-        {
-          "url": "https://api.ipify.org",
-          "status": "failed",
-          "latency_ms": 3003.5,
-          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://ifconfig.me/ip",
-          "status": "failed",
-          "latency_ms": 3004.3,
-          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "https://icanhazip.com",
-          "status": "failed",
-          "latency_ms": 3004.4,
-          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-256KiB-download",
-          "status": "failed",
-          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
-        },
-        {
-          "url": "cloudflare-64KiB-upload",
-          "status": "ok",
-          "bytes": 65536,
-          "duration_ms": 50.1,
-          "upload_kbps": 1278.2
-        }
-      ],
-      "error": "no valid public IP returned through proxy"
-    },
-    {
-      "id": "bd19cc7273a42585",
+      "id": "76baeeddbc0b4e6d",
       "protocol_status": "failed",
       "exit_ip": null,
       "exit_ip_agreement": 0,
@@ -2954,8 +1135,326 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.2,
-          "upload_kbps": 1227.0
+          "duration_ms": 32.8,
+          "upload_kbps": 1953.3
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "da88934d1e27454c",
+      "protocol_status": "verified",
+      "exit_ip": "168.107.51.32",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "168.107.51.32",
+          "latency_ms": 827.1
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "168.107.51.32",
+          "latency_ms": 896.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "168.107.51.32",
+          "latency_ms": 632.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 1115.1,
+          "download_kbps": 229.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 40.3,
+          "upload_kbps": 1587.4
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "068495ab2cd8851a",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 80.2,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 23.3,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 23.5,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 37.5,
+          "upload_kbps": 1705.6
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "d777dc47900c98cb",
+      "protocol_status": "verified",
+      "exit_ip": "45.131.153.56",
+      "exit_ip_agreement": 2,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "45.131.153.56",
+          "latency_ms": 1643.6
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3003.3,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "45.131.153.56",
+          "latency_ms": 2680.0
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 5697.2,
+          "download_kbps": 44.9
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 301.3,
+          "upload_kbps": 212.4
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "9ba0b4499f38e086",
+      "protocol_status": "verified",
+      "exit_ip": "94.103.168.62",
+      "exit_ip_agreement": 2,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "94.103.168.62",
+          "latency_ms": 719.6
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 716.6,
+          "error": "403 Client Error: Forbidden for url: https://ifconfig.me/ip"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "94.103.168.62",
+          "latency_ms": 611.1
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 1338.6,
+          "download_kbps": 191.2
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 44.3,
+          "upload_kbps": 1444.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "7d770133ce70db0a",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.5,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 2696.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 2136.8,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.4,
+          "upload_kbps": 1805.7
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "0596fa55719519e6",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 18.1,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 16.9,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 18.3,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 58.4,
+          "upload_kbps": 1095.5
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "919eb0c029dafb84",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.5,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 2733.8,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 1093.0,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EO"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPE"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 34.3,
+          "upload_kbps": 1863.6
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "99698e76e7391a84",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 25.2,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 24.1,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 28.1,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.1,
+          "upload_kbps": 1774.3
         }
       ],
       "error": "no valid public IP returned through proxy"
@@ -2970,60 +1469,751 @@
           "url": "https://api.ipify.org",
           "status": "ok",
           "ip": "149.22.95.183",
-          "latency_ms": 220.9
+          "latency_ms": 135.6
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
           "ip": "149.22.95.183",
-          "latency_ms": 199.5
+          "latency_ms": 103.5
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
           "ip": "149.22.95.183",
-          "latency_ms": 145.1
+          "latency_ms": 75.3
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 1342.9,
-          "download_kbps": 190.6
+          "duration_ms": 136.4,
+          "download_kbps": 1876.3
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 50.7,
-          "upload_kbps": 1263.3
+          "duration_ms": 56.5,
+          "upload_kbps": 1132.3
         }
       ],
       "error": null
     },
     {
-      "id": "6c15a3d8e6a2cbae",
+      "id": "06641219b3b32489",
       "protocol_status": "verified",
-      "exit_ip": "38.91.107.188",
+      "exit_ip": "162.243.146.243",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "38.91.107.188",
-          "latency_ms": 242.5
+          "ip": "162.243.146.243",
+          "latency_ms": 357.1
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "38.91.107.188",
-          "latency_ms": 346.4
+          "ip": "162.243.146.243",
+          "latency_ms": 218.4
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "38.91.107.188",
-          "latency_ms": 215.0
+          "ip": "162.243.146.243",
+          "latency_ms": 167.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 285.5,
+          "download_kbps": 896.7
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 31.4,
+          "upload_kbps": 2040.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "b62bea8cbad3b8fc",
+      "protocol_status": "verified",
+      "exit_ip": "169.197.142.68",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "169.197.142.68",
+          "latency_ms": 167.8
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "169.197.142.68",
+          "latency_ms": 145.6
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "169.197.142.68",
+          "latency_ms": 107.2
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 368.0,
+          "download_kbps": 695.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 193.7,
+          "upload_kbps": 330.3
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "4fe2d1c7784b5224",
+      "protocol_status": "verified",
+      "exit_ip": "198.200.57.153",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "198.200.57.153",
+          "latency_ms": 1724.7
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "198.200.57.153",
+          "latency_ms": 2757.3
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "198.200.57.153",
+          "latency_ms": 1803.2
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 2519.5,
+          "download_kbps": 101.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 34.3,
+          "upload_kbps": 1863.2
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "a12b5cdc609498fb",
+      "protocol_status": "verified",
+      "exit_ip": "137.184.89.151",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "137.184.89.151",
+          "latency_ms": 150.5
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "137.184.89.151",
+          "latency_ms": 152.6
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "137.184.89.151",
+          "latency_ms": 86.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 227.8,
+          "download_kbps": 1123.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.0,
+          "upload_kbps": 1828.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "7ec5e9a7f48d1a14",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3003.4,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 43.0,
+          "upload_kbps": 1490.1
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "947706657f4ee9c3",
+      "protocol_status": "verified",
+      "exit_ip": "216.106.185.141",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "216.106.185.141",
+          "latency_ms": 313.8
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "216.106.185.141",
+          "latency_ms": 261.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "216.106.185.141",
+          "latency_ms": 183.7
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 313.0,
+          "download_kbps": 818.0
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 37.4,
+          "upload_kbps": 1712.1
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "147ac4cf61b9a1fd",
+      "protocol_status": "verified",
+      "exit_ip": "138.199.35.199",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "138.199.35.199",
+          "latency_ms": 225.9
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "138.199.35.199",
+          "latency_ms": 205.6
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "138.199.35.199",
+          "latency_ms": 164.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 300.6,
+          "download_kbps": 851.5
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 209.0,
+          "upload_kbps": 306.2
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "eb2215d0fe406617",
+      "protocol_status": "verified",
+      "exit_ip": "138.199.35.201",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "138.199.35.201",
+          "latency_ms": 228.2
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "138.199.35.201",
+          "latency_ms": 210.6
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "138.199.35.201",
+          "latency_ms": 165.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 315.0,
+          "download_kbps": 812.7
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.2,
+          "upload_kbps": 1925.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "2334a68b6086340a",
+      "protocol_status": "verified",
+      "exit_ip": "138.199.35.196",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "138.199.35.196",
+          "latency_ms": 277.2
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "138.199.35.196",
+          "latency_ms": 210.1
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "138.199.35.196",
+          "latency_ms": 161.1
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 305.4,
+          "download_kbps": 838.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.9,
+          "upload_kbps": 1888.1
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "e4d245d8d354349a",
+      "protocol_status": "verified",
+      "exit_ip": "138.199.35.211",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "138.199.35.211",
+          "latency_ms": 433.9
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "138.199.35.211",
+          "latency_ms": 204.8
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "138.199.35.211",
+          "latency_ms": 166.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 327.2,
+          "download_kbps": 782.5
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.2,
+          "upload_kbps": 1768.6
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "305789abe1629813",
+      "protocol_status": "verified",
+      "exit_ip": "23.150.152.38",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "23.150.152.38",
+          "latency_ms": 165.3
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "23.150.152.38",
+          "latency_ms": 148.6
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "23.150.152.38",
+          "latency_ms": 104.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 251.9,
+          "download_kbps": 1016.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.1,
+          "upload_kbps": 1820.9
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "47c2171fea926e72",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 484.8,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 108.5,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Max retries exceeded with url: /ip (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 96.4,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Max retries exceeded with url: /__down?bytes=262144 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VER"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 32.7,
+          "upload_kbps": 1954.8
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "7ec51cfbb0164f24",
+      "protocol_status": "verified",
+      "exit_ip": "95.215.201.143",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "95.215.201.143",
+          "latency_ms": 212.5
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "95.215.201.143",
+          "latency_ms": 167.4
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "95.215.201.143",
+          "latency_ms": 143.3
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 501.7,
+          "download_kbps": 510.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.7,
+          "upload_kbps": 1901.9
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "254a104c3859dd0f",
+      "protocol_status": "verified",
+      "exit_ip": "129.146.200.42",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "129.146.200.42",
+          "latency_ms": 219.1
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "129.146.200.42",
+          "latency_ms": 167.9
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "129.146.200.42",
+          "latency_ms": 172.8
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 337.7,
+          "download_kbps": 758.0
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.8,
+          "upload_kbps": 1737.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "36e80422b6a2cbee",
+      "protocol_status": "verified",
+      "exit_ip": "173.244.56.9",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "173.244.56.9",
+          "latency_ms": 234.3
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "173.244.56.9",
+          "latency_ms": 184.9
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "173.244.56.9",
+          "latency_ms": 172.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 350.2,
+          "download_kbps": 730.9
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.3,
+          "upload_kbps": 1924.4
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "54e0172686dfe4e6",
+      "protocol_status": "verified",
+      "exit_ip": "173.244.56.6",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "173.244.56.6",
+          "latency_ms": 233.9
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "173.244.56.6",
+          "latency_ms": 181.7
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "173.244.56.6",
+          "latency_ms": 172.8
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 357.1,
+          "download_kbps": 716.8
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 34.1,
+          "upload_kbps": 1877.1
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "24ac8f8d6bb65548",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3005.2,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.4,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.3,
+          "upload_kbps": 1763.1
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "da2e4974b729b29d",
+      "protocol_status": "verified",
+      "exit_ip": "216.106.178.169",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "216.106.178.169",
+          "latency_ms": 187.6
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "216.106.178.169",
+          "latency_ms": 234.5
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "216.106.178.169",
+          "latency_ms": 166.4
         },
         {
           "url": "cloudflare-256KiB-download",
@@ -3036,90 +2226,857 @@
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.4,
-          "upload_kbps": 1220.8
+          "duration_ms": 40.6,
+          "upload_kbps": 1577.2
         }
       ],
       "error": null
     },
     {
-      "id": "7f7b021e4de46769",
-      "protocol_status": "verified",
-      "exit_ip": "193.151.160.131",
-      "exit_ip_agreement": 3,
+      "id": "c06c4e01a2e478a2",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
-          "status": "ok",
-          "ip": "193.151.160.131",
-          "latency_ms": 201.1
+          "status": "failed",
+          "latency_ms": 3001.5,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://ifconfig.me/ip",
-          "status": "ok",
-          "ip": "193.151.160.131",
-          "latency_ms": 306.0
+          "status": "failed",
+          "latency_ms": 3003.8,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "https://icanhazip.com",
-          "status": "ok",
-          "ip": "193.151.160.131",
-          "latency_ms": 165.9
+          "status": "failed",
+          "latency_ms": 3004.1,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "cloudflare-256KiB-download",
-          "status": "ok",
-          "bytes": 262144,
-          "duration_ms": 547.0,
-          "download_kbps": 468.0
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1292.7
+          "duration_ms": 33.8,
+          "upload_kbps": 1894.5
         }
       ],
-      "error": null
+      "error": "no valid public IP returned through proxy"
     },
     {
-      "id": "892b13bd195dd166",
+      "id": "14ee935123cc92ca",
       "protocol_status": "verified",
-      "exit_ip": "193.151.160.141",
+      "exit_ip": "38.128.66.32",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "193.151.160.141",
+          "ip": "38.128.66.32",
+          "latency_ms": 188.4
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.128.66.32",
+          "latency_ms": 239.5
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.128.66.32",
+          "latency_ms": 166.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 537.0,
+          "download_kbps": 476.8
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 88.7,
+          "upload_kbps": 721.4
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "2b322b68c292c039",
+      "protocol_status": "verified",
+      "exit_ip": "156.146.38.169",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "156.146.38.169",
+          "latency_ms": 201.0
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "156.146.38.169",
+          "latency_ms": 188.7
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "156.146.38.169",
+          "latency_ms": 159.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 416.4,
+          "download_kbps": 614.8
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 36.1,
+          "upload_kbps": 1774.1
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "fdf00a982c49bfd6",
+      "protocol_status": "verified",
+      "exit_ip": "173.214.164.110",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "173.214.164.110",
+          "latency_ms": 956.8
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "173.214.164.110",
+          "latency_ms": 503.8
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "173.214.164.110",
+          "latency_ms": 583.1
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 1112.2,
+          "download_kbps": 230.2
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 43.8,
+          "upload_kbps": 1461.5
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "44410bbbcb074bac",
+      "protocol_status": "verified",
+      "exit_ip": "156.146.38.170",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "156.146.38.170",
+          "latency_ms": 224.1
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "156.146.38.170",
+          "latency_ms": 174.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "156.146.38.170",
+          "latency_ms": 170.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 373.0,
+          "download_kbps": 686.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 30.0,
+          "upload_kbps": 2133.8
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "bd19cc7273a42585",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.2,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.3,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.7,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 37.4,
+          "upload_kbps": 1711.3
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "12f092b689131f60",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.2,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3004.2,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.3,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 30.2,
+          "upload_kbps": 2119.0
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "60b18e513b0901e7",
+      "protocol_status": "verified",
+      "exit_ip": "156.146.38.168",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "156.146.38.168",
+          "latency_ms": 206.5
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "156.146.38.168",
+          "latency_ms": 196.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "156.146.38.168",
+          "latency_ms": 161.0
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 420.9,
+          "download_kbps": 608.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 35.5,
+          "upload_kbps": 1804.2
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "bf2ad9cec0d8a1e0",
+      "protocol_status": "failed",
+      "exit_ip": null,
+      "exit_ip_agreement": 0,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "failed",
+          "latency_ms": 3004.0,
+          "error": "HTTPSConnectionPool(host='api.ipify.org', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "failed",
+          "latency_ms": 3003.0,
+          "error": "HTTPSConnectionPool(host='ifconfig.me', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "failed",
+          "latency_ms": 3004.2,
+          "error": "HTTPSConnectionPool(host='icanhazip.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 52.5,
+          "upload_kbps": 1218.7
+        }
+      ],
+      "error": "no valid public IP returned through proxy"
+    },
+    {
+      "id": "7a868eb635dacfeb",
+      "protocol_status": "verified",
+      "exit_ip": "38.22.17.129",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "38.22.17.129",
+          "latency_ms": 313.1
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.22.17.129",
+          "latency_ms": 312.1
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.22.17.129",
+          "latency_ms": 264.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=8)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 31.6,
+          "upload_kbps": 2025.9
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "e4d978344c147b4d",
+      "protocol_status": "verified",
+      "exit_ip": "38.121.43.231",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "38.121.43.231",
+          "latency_ms": 306.0
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.121.43.231",
+          "latency_ms": 323.0
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.121.43.231",
+          "latency_ms": 267.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 537.1,
+          "download_kbps": 476.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.4,
+          "upload_kbps": 1913.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "bb1acc6930d219ac",
+      "protocol_status": "verified",
+      "exit_ip": "149.40.57.134",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "149.40.57.134",
+          "latency_ms": 207.8
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "149.40.57.134",
+          "latency_ms": 211.1
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "149.40.57.134",
+          "latency_ms": 196.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 452.8,
+          "download_kbps": 565.4
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 100.8,
+          "upload_kbps": 634.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "ee6283507d3e4e9a",
+      "protocol_status": "verified",
+      "exit_ip": "172.111.36.123",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "172.111.36.123",
+          "latency_ms": 288.4
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "172.111.36.123",
+          "latency_ms": 314.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "172.111.36.123",
+          "latency_ms": 274.1
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 1543.3,
+          "download_kbps": 165.9
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 32.9,
+          "upload_kbps": 1947.8
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "1197501f651ed192",
+      "protocol_status": "verified",
+      "exit_ip": "38.22.17.219",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "38.22.17.219",
+          "latency_ms": 298.5
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.22.17.219",
+          "latency_ms": 322.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.22.17.219",
+          "latency_ms": 268.5
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 531.9,
+          "download_kbps": 481.3
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.8,
+          "upload_kbps": 1893.7
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "ada963f801b6c2ab",
+      "protocol_status": "verified",
+      "exit_ip": "167.88.63.99",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "167.88.63.99",
+          "latency_ms": 298.4
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "167.88.63.99",
+          "latency_ms": 317.2
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "167.88.63.99",
+          "latency_ms": 276.6
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 535.8,
+          "download_kbps": 477.8
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 33.9,
+          "upload_kbps": 1888.6
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "2471547036f1a1e7",
+      "protocol_status": "verified",
+      "exit_ip": "38.121.43.18",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "38.121.43.18",
+          "latency_ms": 295.3
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.121.43.18",
+          "latency_ms": 324.1
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.121.43.18",
+          "latency_ms": 263.0
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 526.3,
+          "download_kbps": 486.4
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 444.4,
+          "upload_kbps": 144.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "0dca4ac87138cf06",
+      "protocol_status": "verified",
+      "exit_ip": "38.121.43.225",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "38.121.43.225",
+          "latency_ms": 302.8
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "38.121.43.225",
+          "latency_ms": 323.9
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "38.121.43.225",
+          "latency_ms": 257.9
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 546.9,
+          "download_kbps": 468.1
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 37.8,
+          "upload_kbps": 1695.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "f82e7681dcf26077",
+      "protocol_status": "verified",
+      "exit_ip": "172.111.38.72",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "172.111.38.72",
           "latency_ms": 199.7
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "193.151.160.141",
-          "latency_ms": 315.1
+          "ip": "172.111.38.72",
+          "latency_ms": 255.1
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "193.151.160.141",
-          "latency_ms": 164.7
+          "ip": "172.111.38.72",
+          "latency_ms": 274.4
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 401.8,
-          "download_kbps": 637.1
+          "duration_ms": 1110.7,
+          "download_kbps": 230.5
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.1,
-          "upload_kbps": 1228.1
+          "duration_ms": 38.4,
+          "upload_kbps": 1664.6
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "0492cfa136bc919b",
+      "protocol_status": "verified",
+      "exit_ip": "149.40.57.138",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "149.40.57.138",
+          "latency_ms": 214.3
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "149.40.57.138",
+          "latency_ms": 210.7
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "149.40.57.138",
+          "latency_ms": 189.2
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 732.1,
+          "download_kbps": 349.7
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 103.1,
+          "upload_kbps": 620.5
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "e71669b78cd081ed",
+      "protocol_status": "verified",
+      "exit_ip": "149.40.57.133",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "149.40.57.133",
+          "latency_ms": 222.6
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "149.40.57.133",
+          "latency_ms": 213.4
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "149.40.57.133",
+          "latency_ms": 187.4
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 459.2,
+          "download_kbps": 557.5
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 1010.4,
+          "upload_kbps": 63.3
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "5cbbc4eaf88cc413",
+      "protocol_status": "verified",
+      "exit_ip": "15.204.247.206",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "15.204.247.206",
+          "latency_ms": 3021.0
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "15.204.247.206",
+          "latency_ms": 2708.9
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "15.204.247.206",
+          "latency_ms": 4106.6
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "failed",
+          "error": "HTTPSConnectionPool(host='speed.cloudflare.com', port=443): Read timed out. (read timeout=3)"
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 37.7,
+          "upload_kbps": 1698.6
         }
       ],
       "error": null
@@ -3134,115 +3091,156 @@
           "url": "https://api.ipify.org",
           "status": "ok",
           "ip": "45.86.51.144",
-          "latency_ms": 184.6
+          "latency_ms": 201.2
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
           "ip": "45.86.51.144",
-          "latency_ms": 236.5
+          "latency_ms": 247.1
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
           "ip": "45.86.51.144",
-          "latency_ms": 175.1
+          "latency_ms": 192.3
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 421.6,
-          "download_kbps": 607.2
+          "duration_ms": 472.1,
+          "download_kbps": 542.3
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 49.5,
-          "upload_kbps": 1293.7
+          "duration_ms": 33.0,
+          "upload_kbps": 1938.7
         }
       ],
       "error": null
     },
     {
-      "id": "924e586ef2250090",
+      "id": "b8a36ec7d0a83737",
       "protocol_status": "verified",
-      "exit_ip": "162.251.62.31",
+      "exit_ip": "38.91.100.39",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "162.251.62.31",
-          "latency_ms": 252.9
+          "ip": "38.91.100.39",
+          "latency_ms": 249.6
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "162.251.62.31",
-          "latency_ms": 352.9
+          "ip": "38.91.100.39",
+          "latency_ms": 242.5
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "162.251.62.31",
-          "latency_ms": 224.4
+          "ip": "38.91.100.39",
+          "latency_ms": 251.1
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 461.5,
-          "download_kbps": 554.7
+          "duration_ms": 548.1,
+          "download_kbps": 467.1
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 52.9,
-          "upload_kbps": 1208.9
+          "duration_ms": 36.9,
+          "upload_kbps": 1735.4
         }
       ],
       "error": null
     },
     {
-      "id": "0c60ffd77bfa6d5a",
+      "id": "2dd9a90624bbe748",
       "protocol_status": "verified",
-      "exit_ip": "24.142.229.178",
+      "exit_ip": "37.19.198.236",
       "exit_ip_agreement": 3,
       "http_checks": [
         {
           "url": "https://api.ipify.org",
           "status": "ok",
-          "ip": "24.142.229.178",
-          "latency_ms": 581.4
+          "ip": "37.19.198.236",
+          "latency_ms": 204.0
         },
         {
           "url": "https://ifconfig.me/ip",
           "status": "ok",
-          "ip": "24.142.229.178",
-          "latency_ms": 692.8
+          "ip": "37.19.198.236",
+          "latency_ms": 244.0
         },
         {
           "url": "https://icanhazip.com",
           "status": "ok",
-          "ip": "24.142.229.178",
-          "latency_ms": 494.2
+          "ip": "37.19.198.236",
+          "latency_ms": 206.6
         },
         {
           "url": "cloudflare-256KiB-download",
           "status": "ok",
           "bytes": 262144,
-          "duration_ms": 1127.8,
-          "download_kbps": 227.0
+          "duration_ms": 685.1,
+          "download_kbps": 373.6
         },
         {
           "url": "cloudflare-64KiB-upload",
           "status": "ok",
           "bytes": 65536,
-          "duration_ms": 51.4,
-          "upload_kbps": 1244.3
+          "duration_ms": 36.1,
+          "upload_kbps": 1772.6
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "eaa682fe7f968088",
+      "protocol_status": "verified",
+      "exit_ip": "185.195.57.175",
+      "exit_ip_agreement": 3,
+      "http_checks": [
+        {
+          "url": "https://api.ipify.org",
+          "status": "ok",
+          "ip": "185.195.57.175",
+          "latency_ms": 317.1
+        },
+        {
+          "url": "https://ifconfig.me/ip",
+          "status": "ok",
+          "ip": "185.195.57.175",
+          "latency_ms": 453.8
+        },
+        {
+          "url": "https://icanhazip.com",
+          "status": "ok",
+          "ip": "185.195.57.175",
+          "latency_ms": 647.2
+        },
+        {
+          "url": "cloudflare-256KiB-download",
+          "status": "ok",
+          "bytes": 262144,
+          "duration_ms": 772.1,
+          "download_kbps": 331.6
+        },
+        {
+          "url": "cloudflare-64KiB-upload",
+          "status": "ok",
+          "bytes": 65536,
+          "duration_ms": 54.9,
+          "upload_kbps": 1165.9
         }
       ],
       "error": null
