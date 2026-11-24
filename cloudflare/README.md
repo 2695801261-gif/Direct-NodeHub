@@ -57,10 +57,18 @@ The TCP bridge is an experiment. A successful syntax check is not a live connect
 
 ### Generate the client config
 
-After the Worker is deployed, run this from the repository root on a computer with Python and the project requirements installed:
+First, run this from the repository root on a computer with Python and the project requirements installed. It selects the best eligible upstream and prints the exact `UPSTREAM_URL` to configure in Cloudflare:
+
+```powershell
+python tools/build-cloudflare-ws-config.py
+```
+
+Create a random URL-safe token (for example, with `python -c "import secrets; print(secrets.token_urlsafe(32))"`). Set the printed `UPSTREAM_URL`, set `UPSTREAM_TLS=true`, and add that token as the Worker secret `RELAY_TOKEN`. Deploy the Worker and note its hostname.
+
+Then generate the private client config:
 
 ```powershell
 python tools/build-cloudflare-ws-config.py --worker-host YOUR-WORKER.workers.dev --output "$HOME\Desktop\cloudflare-relay.yaml"
 ```
 
-Enter the same `RELAY_TOKEN` when prompted. The script selects a currently cloud-verified, stable, risk-eligible, Worker-compatible upstream and builds a private Mihomo YAML. It also prints the exact `UPSTREAM_URL` to set in the Worker. Keep the generated YAML private because it contains the relay token.
+Enter the same `RELAY_TOKEN` when prompted. The script rechecks that the selected upstream is currently cloud-verified, stable, risk-eligible and Worker-compatible. Keep the generated YAML private because it contains the relay token.
