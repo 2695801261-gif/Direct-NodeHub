@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-24T11:15:43Z",
+  "generated_at": "2026-11-24T11:18:38Z",
   "summary": {
-    "reputation_screened_stable_nodes": 43,
-    "fast_stable_nodes": 19,
-    "chain_entry_nodes": 43,
+    "reputation_screened_stable_nodes": 41,
+    "fast_stable_nodes": 32,
+    "chain_entry_nodes": 41,
     "chain_template": "public/chain-template.yaml",
     "standard_gate": "3/3 repeated Mihomo tunnel tests, consistent exit IP, median cloud latency <= 1000 ms, download >= 128 KiB/s, upload >= 32 KiB/s, risk feeds available and no known-bad match",
     "fast_gate": "protocol verified, 3/3 stable rounds, cloud latency <= 1000 ms, download >= 512 KiB/s and upload >= 128 KiB/s; no reputation-list filtering",
@@ -14,24 +14,51 @@
   },
   "cloud_tcp": {
     "total": 938,
-    "reachable": 802,
-    "failed": 136,
+    "reachable": 801,
+    "failed": 137,
     "meaning": "TCP reachability only; not proxy handshake, tunnel, speed, reputation, or mainland reachability."
   },
   "protocol": {
-    "total_tcp_reachable": 802,
+    "total_tcp_reachable": 801,
     "tested": 80,
-    "verified": 53,
+    "verified": 51,
     "partial": 1,
-    "failed": 26,
+    "failed": 28,
+    "selected_transports": {
+      "ws": 20,
+      "tcp": 60
+    },
+    "selected_websocket_count": 20,
+    "selected_websocket_ids": [
+      "25936794bf150b64",
+      "72e2c83ced06b0b0",
+      "927e920ae06ccea5",
+      "6a704566f2215853",
+      "99a12610e23fce6f",
+      "0986ee20d9e33fef",
+      "951d75f60d3e548c",
+      "ad9f6b0310490f9d",
+      "784a3aaa07f3a76a",
+      "d0b70a9583ee462b",
+      "552698943e63bcba",
+      "bc1feb96d25d3b01",
+      "990bb31919921e23",
+      "4071c43dbef77c69",
+      "33c0c99b63369130",
+      "115b33e03bd3d922",
+      "463b0cab0f0f7e1b",
+      "1843ecd2be7166f5",
+      "ef37afeaba43e9cd",
+      "71fac96ad897d576"
+    ],
     "region": "github-hosted-runner (region not guaranteed)",
     "meaning": "Mihomo tunnel and HTTP egress from cloud; not a mainland China test."
   },
   "risk": {
     "total": 938,
     "blocked": 0,
-    "unconfirmed": 53,
-    "unknown": 885,
+    "unconfirmed": 51,
+    "unknown": 887,
     "feeds": {
       "ipsum": {
         "status": "ok",
@@ -47,10 +74,10 @@
     "warning": "Not listed in threat feeds does not prove an IP is clean; this is not a reputation guarantee."
   },
   "stability": {
-    "candidates_tested": 53,
-    "stable": 43,
-    "degraded": 6,
-    "unstable": 4,
+    "candidates_tested": 51,
+    "stable": 41,
+    "degraded": 9,
+    "unstable": 1,
     "rounds": 3,
     "required_successful_rounds": 3,
     "minimum_download_kbps": 128.0,
