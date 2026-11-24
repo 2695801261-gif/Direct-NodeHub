@@ -33,14 +33,14 @@ def result_metrics(result: dict[str, Any]) -> tuple[float, float, float]:
 
 
 def test_candidate(node: dict[str, Any], binary: str, index: int, rounds: int,
-                   min_download: float, min_upload: float) -> dict[str, Any]:
+                   min_download: float, min_upload: float, max_latency: float) -> dict[str, Any]:
     attempts = []
     for attempt in range(rounds):
         result = verify_one(node, binary, preferred_port=30000 + index * rounds + attempt)
         latency, download, upload = result_metrics(result)
         attempts.append({
             "round": attempt + 1,
-            "ok": result.get("protocol_status") == "verified" and download >= min_download and upload >= min_upload,
+            "ok": result.get("protocol_status") == "verified" and latency > 0 and latency <= max_latency and download >= min_download and upload >= min_upload,
             "exit_ip": result.get("exit_ip"),
             "protocol_status": result.get("protocol_status"),
             "latency_ms": round(latency, 1) if latency else None,
@@ -79,14 +79,15 @@ def run(args: argparse.Namespace) -> Path:
     settings = policy.get("stability", {})
     rounds = max(1, min(int(args.rounds), 5))
     min_download = float(settings.get("minimum_download_kbps", 64))
-    min_upload = float(settings.get("minimum_upload_kbps", 16))
+    min_upload = float(settings.get("minimum_upload_kbps", 32))
+    max_latency = float(policy.get("mainland_max_latency_ms", 1200))
     candidates = [n for n in data.get("candidates", [])
                   if n.get("protocol_status") == "verified" and n.get("stable_status") == "stable"
                   and n.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"]
     candidates = candidates[:max(1, min(int(args.limit), 60))]
     results = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
-        futures = [pool.submit(test_candidate, node, binary, i, rounds, min_download, min_upload)
+        futures = [pool.submit(test_candidate, node, binary, i, rounds, min_download, min_upload, max_latency)
                    for i, node in enumerate(candidates)]
         for future in concurrent.futures.as_completed(futures):
             results.append(future.result())
@@ -102,6 +103,7 @@ def run(args: argparse.Namespace) -> Path:
             "rounds": rounds,
             "minimum_download_kib_per_second": min_download,
             "minimum_upload_kib_per_second": min_upload,
+            "maximum_latency_ms": max_latency,
             "vpn_disabled_attested": True,
             "meaning": "Actual proxy tunnel and bidirectional transfer tested from the operator-confirmed mainland network."
         }
