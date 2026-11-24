@@ -195,7 +195,15 @@ def worker_compatible_tcp_bridge(candidate):
     network = str(proxy.get("network") or "tcp").lower()
     if kind not in {"vless", "vmess", "trojan"} or network != "tcp":
         return False
-    if proxy.get("flow") or proxy.get("reality-opts") or proxy.get("skip-cert-verify"):
+    if (
+        proxy.get("flow")
+        or proxy.get("reality-opts")
+        or proxy.get("skip-cert-verify")
+        or proxy.get("client-fingerprint")
+        or proxy.get("alpn")
+    ):
+        # cloudflare:sockets does not expose controls for reproducing a
+        # candidate-specific TLS fingerprint or ALPN list.
         return False
     server = str(proxy.get("server") or "").strip().lower()
     if not server:
