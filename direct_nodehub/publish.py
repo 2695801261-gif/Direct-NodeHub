@@ -34,14 +34,17 @@ def run():
     # Reputation-screened list: only IPs checked against all configured feeds and not found in known-bad lists.
     screened=[n for n in stable if n.get("risk_status")=="unconfirmed" and n.get("risk_policy_decision")=="eligible_for_unconfirmed_pool"]
     # Fast list intentionally does not require a positive reputation result, but known-bad exits remain excluded.
-    fast=[n for n in stable if float(n.get("median_download_kbps") or 0)>=256]
+    fast_settings=policy.get("stability",{})
+fast_download=float(fast_settings.get("fast_pool_minimum_download_kbps",256))
+fast_upload=float(fast_settings.get("fast_pool_minimum_upload_kbps",64))
+fast=[n for n in stable if float(n.get("median_download_kbps") or 0)>=fast_download and float(n.get("median_upload_kbps") or 0)>=fast_upload]
     screened=screened[:limit]; fast=fast[:limit]
     configs=unique_configs(screened); names=[n["name"] for n in configs]
     standard={"mixed-port":7890,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":configs,
       "proxy-groups":[
        {"name":"节点手动选择","type":"select","proxies":names+["DIRECT"]},
        {"name":"节点自动优选","type":"url-test","url":"https://www.gstatic.com/generate_204","interval":300,"tolerance":80,"lazy":True,"proxies":names or ["DIRECT"]},
-       {"name":"节点故障切换","type":"fallback","url":"https://www.gstatic.com/generate_204","interval":180,"lazy":True,"proxies":names},
+       {"name":"节点故障切换","type":"fallback","url":"https://www.gstatic.com/generate_204","interval":180,"lazy":True,"proxies":names or ["DIRECT"]},
        {"name":"PROXY","type":"select","proxies":["节点自动优选","节点故障切换","节点手动选择","DIRECT"]}],
       "rules":["MATCH,PROXY"]}
     (OUTPUT/"clash.yaml").write_text(yaml.safe_dump(standard,allow_unicode=True,sort_keys=False),encoding="utf-8")
@@ -54,7 +57,8 @@ def run():
       "rules":["MATCH,PROXY"]}
     (OUTPUT/"fast.yaml").write_text(yaml.safe_dump(fast_yaml,allow_unicode=True,sort_keys=False),encoding="utf-8")
     # Chain direction: public node is the first hop; the user's own home endpoint is the final hop.
-    chainconfigs=unique_configs(stable[:limit]); chainnames=[n["name"] for n in chainconfigs]
+    chain_eligible=[n for n in stable if n.get("risk_status")!="blocked"]
+    chainconfigs=unique_configs(chain_eligible[:limit]); chainnames=[n["name"] for n in chainconfigs]
     home={"name":"HOME-RESIDENTIAL-REPLACE-ME","type":"socks5","server":"YOUR_HOME_HOST","port":1080,"username":"YOUR_USERNAME","password":"YOUR_PASSWORD","dialer-proxy":"ENTRY-AUTO"}
     chain={"mixed-port":7892,"allow-lan":False,"mode":"rule","log-level":"warning","ipv6":False,"proxies":chainconfigs+[home],
       "proxy-groups":[
@@ -62,7 +66,7 @@ def run():
        {"name":"HOME-CHAIN","type":"select","proxies":["HOME-RESIDENTIAL-REPLACE-ME"]}],
       "rules":["MATCH,HOME-CHAIN"]}
     (OUTPUT/"chain-template.yaml").write_text(yaml.safe_dump(chain,allow_unicode=True,sort_keys=False),encoding="utf-8")
-    summary={"reputation_screened_stable_nodes":len(configs),"fast_stable_nodes":len(fastconfigs),"chain_entry_nodes":len(chainconfigs),"chain_template":"public/chain-template.yaml","standard_gate":"3/3 stable rounds, exit IP agreement, download >=64 KiB/s, risk feeds available and no known-bad match","fast_gate":"3/3 stable rounds, exit IP agreement, download >=256 KiB/s; positive reputation confirmation not required, known-bad IPs still excluded","chain_direction":"public node as entry hop; user-owned home endpoint as final hop via dialer-proxy","mainland_status":"not_tested","warning":"Cloud runner results do not guarantee mainland reachability. Chain template placeholders must be replaced locally; never commit home credentials."}
+    summary={"reputation_screened_stable_nodes":len(configs),"fast_stable_nodes":len(fastconfigs),"chain_entry_nodes":len(chainconfigs),"chain_template":"public/chain-template.yaml","standard_gate":"3/3 stable rounds, exit IP agreement, download >=64 KiB/s, risk feeds available and no known-bad match","fast_gate":f"3/3 stable rounds, download >= {fast_download:g} KiB/s and upload >= {fast_upload:g} KiB/s; positive reputation confirmation not required, known-bad IPs excluded","chain_direction":"public node as entry hop; user-owned home endpoint as final hop via dialer-proxy","mainland_status":"not_tested","warning":"Cloud runner results do not guarantee mainland reachability. Chain template placeholders must be replaced locally; never commit home credentials."}
     stamp=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())
     status={"generated_at":stamp,"summary":summary,"cloud_tcp":data.get("cloud_tcp_summary"),"protocol":data.get("protocol_summary"),"risk":data.get("risk_summary"),"stability":data.get("stability_summary"),"sources":data.get("sources",[])}
     (OUTPUT/"status.json").write_text(json.dumps(status,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
