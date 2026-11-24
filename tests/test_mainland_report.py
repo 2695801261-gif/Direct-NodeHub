@@ -24,6 +24,15 @@ class MainlandReportTests(unittest.TestCase):
             })
 
 
+    def test_mainland_latency_rejects_single_echo_service(self):
+        latency, download, upload = result_metrics({"http_checks": [
+            {"url": "https://api.ipify.org", "status": "ok", "latency_ms": 120},
+            {"url": "https://ifconfig.me/ip", "status": "failed", "latency_ms": 6000},
+            {"url": "cloudflare-256KiB-download", "status": "ok", "download_kbps": 300},
+            {"url": "cloudflare-64KiB-upload", "status": "ok", "upload_kbps": 80}
+        ]})
+        self.assertEqual(latency, 0.0)
+
     def test_extract_bidirectional_metrics(self):
         latency, download, upload = result_metrics({"http_checks": [
             {"url": "https://api.ipify.org", "status": "ok", "latency_ms": 120},
