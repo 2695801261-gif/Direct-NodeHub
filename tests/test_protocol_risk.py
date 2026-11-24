@@ -1,6 +1,6 @@
 import unittest
 
-from direct_nodehub.protocol import to_mihomo_proxy
+from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates
 from direct_nodehub.risk import classify
 from direct_nodehub import publish
 from direct_nodehub.stability import upload_metric, download_metric, latency_metric
@@ -72,6 +72,26 @@ class ProtocolRiskTests(unittest.TestCase):
             {"url": "https://ifconfig.me/ip", "status": "failed", "latency_ms": 3000},
         ]}
         self.assertIsNone(latency_metric(result))
+
+
+    def test_protocol_probe_reserves_slots_for_websocket(self):
+        nodes = [
+            {"id": "tcp-1", "cloud_tcp_latency_ms": 1, "config": {"type": "ss", "network": "tcp"}},
+            {"id": "ws-1", "cloud_tcp_latency_ms": 50, "config": {"type": "vless", "network": "ws"}},
+            {"id": "tcp-2", "cloud_tcp_latency_ms": 2, "config": {"type": "ss", "network": "tcp"}},
+            {"id": "ws-2", "cloud_tcp_latency_ms": 60, "config": {"type": "trojan", "network": "ws"}},
+            {"id": "tcp-3", "cloud_tcp_latency_ms": 3, "config": {"type": "ss", "network": "tcp"}},
+        ]
+        selected = select_protocol_candidates(nodes, max_candidates=3, websocket_quota=2)
+        self.assertEqual([node["id"] for node in selected], ["ws-1", "ws-2", "tcp-1"])
+
+    def test_protocol_probe_respects_total_limit(self):
+        nodes = [
+            {"id": f"ws-{i}", "cloud_tcp_latency_ms": i, "config": {"type": "vless", "network": "ws"}}
+            for i in range(10)
+        ]
+        selected = select_protocol_candidates(nodes, max_candidates=4, websocket_quota=20)
+        self.assertEqual(len(selected), 4)
 
     def test_cloud_test_url_is_not_google_gstatic(self):
         self.assertEqual(publish.URL_TEST, "https://cp.cloudflare.com/generate_204")
