@@ -38,7 +38,7 @@ GitHub Actions 自动检查候选节点的 TCP 端口是否可达，并记录云
 - 多源采集与 URI / Clash-Mihomo YAML 解析，单源候选数量受策略限制，并保留跨来源命中记录。
 - 云端 TCP 可达性预筛。
 - 使用官方 Mihomo 稳定版对节点配置进行校验，启动真实代理隧道，并通过多个 HTTPS 出口查询服务核对出口 IP。
-- 对通过协议验证的节点进行 3 轮重复连接与 256 KiB HTTPS 下载测试；稳定池要求 3/3 成功、出口 IP 一致、下载速率达到策略阈值。
+- 对通过协议验证的节点进行 3 轮重复连接、256 KiB HTTPS 下载和 64 KiB HTTPS 上传测试；稳定池要求 3/3 成功、出口 IP 一致、下载至少 64 KiB/s、上传至少 16 KiB/s。高速池额外要求下载至少 256 KiB/s、上传至少 64 KiB/s。
 - 生成 `public/clash.yaml`（风险情报筛选稳定池）、`public/fast.yaml`（高速稳定池）、`public/chain-template.yaml`（公开节点作为前置、用户自有家宽端点作为最终出口）、`public/status.json` 和 `public/index.html`。
 - 每 6 小时由 GitHub Actions 自动更新，并可手动触发。
 - 下载 IPsum 与 Tor 出口列表进行已知风险命中筛查；IPsum 仅采用至少 3 个情报源同时命中的地址。
