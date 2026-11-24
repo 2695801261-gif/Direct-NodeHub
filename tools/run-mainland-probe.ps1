@@ -33,7 +33,7 @@ $pythonPrefix = $pyInfo.Prefix
 
 function Invoke-ProjectPython {
     param([string[]]$Arguments)
-    & $script:pythonCommand @script:pythonPrefix @Arguments
+     $allArgs = @()\n    if ($script:pythonPrefix) { $allArgs += $script:pythonPrefix }\n    $allArgs += $Arguments\n    & $script:pythonCommand @allArgs
     if ($LASTEXITCODE -ne 0) {
         throw "Python 命令失败，退出码：$LASTEXITCODE"
     }
@@ -59,7 +59,7 @@ if (-not $asset -or -not $asset.digest -or $asset.digest -notmatch "^sha256:(.+)
 $zipPath = Join-Path $WorkDir "mihomo.zip"
 $extractDir = Join-Path $WorkDir "mihomo"
 Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zipPath
-$expectedHash = $Matches[1].ToLowerInvariant()
+$expectedHash = $asset.digest.Substring(7).ToLowerInvariant()
 $actualHash = (Get-FileHash -Path $zipPath -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($actualHash -ne $expectedHash) {
     throw "Mihomo SHA-256 校验失败，已停止。"
