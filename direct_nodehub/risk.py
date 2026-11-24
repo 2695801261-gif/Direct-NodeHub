@@ -5,11 +5,16 @@ from typing import Any
 import requests
 ROOT=Path(__file__).resolve().parents[1]; CANDIDATES=ROOT/"public"/"candidates.json"; OUTPUT=ROOT/"public"/"risk-results.json"
 FEEDS={"ipsum":"https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt","tor_exit_list":"https://check.torproject.org/torbulkexitlist"}
-def download_set(url):
+def download_set(url, min_score=0):
     r=requests.get(url,timeout=20,headers={"User-Agent":"Direct-NodeHub/0.1"}); r.raise_for_status(); found=set()
     for line in r.text.splitlines():
         parts=line.strip().split()
         if not parts or parts[0].startswith("#"): continue
+        if min_score:
+            if len(parts)<2: continue
+            try:
+                if int(parts[1])<min_score: continue
+            except ValueError: continue
         try: found.add(str(ipaddress.ip_address(parts[0])))
         except ValueError: continue
     return found
@@ -27,7 +32,7 @@ def run():
     if not CANDIDATES.exists(): raise FileNotFoundError("run collector first")
     data=json.loads(CANDIDATES.read_text()); feeds={}; lists={}
     for name,url in FEEDS.items():
-        try: lists[name]=download_set(url); feeds[name]={"status":"ok","entries":len(lists[name])}
+        try: lists[name]=download_set(url,min_score=3 if name=="ipsum" else 0); feeds[name]={"status":"ok","entries":len(lists[name]),"minimum_score":3 if name=="ipsum" else None}
         except Exception as e: lists[name]=set(); feeds[name]={"status":"error","error":str(e)[:180]}
     results=[]
     for node in data.get("candidates",[]):
