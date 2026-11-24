@@ -30,11 +30,16 @@ class MainlandPublishTests(unittest.TestCase):
         ]
         self.report = {
             "probe_location": "mainland_china",
-            "test_contract": {"vpn_disabled_attested": True},
+            "candidate_snapshot_generated_at": "snapshot-1",
+            "test_contract": {"vpn_disabled_attested": True, "rounds": 3},
             "results": [
                 {
                     "id": "stable-a",
                     "status": "reachable",
+                    "successful_rounds": 3,
+                    "total_rounds": 3,
+                    "same_exit_ip": True,
+                    "exit_ip": "198.51.100.10",
                     "latency_ms": 180,
                     "download_kbps": 900,
                     "upload_kbps": 250,
@@ -42,6 +47,10 @@ class MainlandPublishTests(unittest.TestCase):
                 {
                     "id": "unstable-b",
                     "status": "reachable",
+                    "successful_rounds": 3,
+                    "total_rounds": 3,
+                    "same_exit_ip": True,
+                    "exit_ip": "198.51.100.11",
                     "latency_ms": 100,
                     "download_kbps": 2000,
                     "upload_kbps": 500,
@@ -49,6 +58,10 @@ class MainlandPublishTests(unittest.TestCase):
                 {
                     "id": "blocked-c",
                     "status": "reachable",
+                    "successful_rounds": 3,
+                    "total_rounds": 3,
+                    "same_exit_ip": True,
+                    "exit_ip": "198.51.100.12",
                     "latency_ms": 90,
                     "download_kbps": 2000,
                     "upload_kbps": 500,
@@ -71,6 +84,21 @@ class MainlandPublishTests(unittest.TestCase):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
         self.assertNotIn("blocked-c", [node["id"] for node in standard])
         self.assertIn("blocked-c", [node["id"] for node in fast])
+
+    def test_rejects_report_with_fewer_than_three_rounds(self):
+        report = dict(self.report)
+        report["test_contract"] = {"vpn_disabled_attested": True, "rounds": 1}
+        with self.assertRaises(ValueError):
+            select_mainland_nodes(self.candidates, report, 512, 128)
+
+    def test_rejects_result_without_all_rounds_and_consistent_exit(self):
+        report = dict(self.report)
+        report["results"] = [dict(item) for item in self.report["results"]]
+        report["results"][0]["successful_rounds"] = 2
+        report["results"][0]["same_exit_ip"] = False
+        standard, fast = select_mainland_nodes(self.candidates, report, 512, 128)
+        self.assertNotIn("stable-a", [node["id"] for node in standard])
+        self.assertNotIn("stable-a", [node["id"] for node in fast])
 
     def test_rejects_report_without_mainland_attestation(self):
         report = dict(self.report)
