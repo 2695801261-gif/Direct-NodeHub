@@ -147,12 +147,32 @@ def verify_one(c,binary,preferred_port=19000):
                 except subprocess.TimeoutExpired: proc.kill()
     except Exception as e: out["error"]=str(e)[:300]
     return out
+def network_of(candidate):
+    config = candidate.get("config")
+    if isinstance(config, dict):
+        return str(config.get("network") or "tcp").lower()
+    try:
+        return str(to_mihomo_proxy(candidate).get("network") or "tcp").lower()
+    except Exception:
+        return "unknown"
+
+
+def select_protocol_candidates(nodes, max_candidates=80, websocket_quota=20):
+    ranked = sorted(nodes, key=lambda n: n.get("cloud_tcp_latency_ms") or 999999)
+    websocket = [node for node in ranked if network_of(node) == "ws"]
+    other = [node for node in ranked if network_of(node) != "ws"]
+    ws_limit = min(max(0, int(websocket_quota)), max(0, int(max_candidates)))
+    selected_ws = websocket[:ws_limit]
+    selected_other = other[:max(0, int(max_candidates) - len(selected_ws))]
+    return selected_ws + selected_other
+
+
 def run():
     if not CANDIDATES.exists(): raise FileNotFoundError("run collector first")
     binary=os.environ.get("MIHOMO_BIN") or shutil.which("mihomo")
     if not binary: raise RuntimeError("mihomo binary not found")
     policy=json.loads(POLICY.read_text()); data=json.loads(CANDIDATES.read_text()); tcp=[n for n in data.get("candidates",[]) if n.get("cloud_tcp")=="reachable"]
-    tcp.sort(key=lambda n:n.get("cloud_tcp_latency_ms") or 999999); selected=tcp[:int(policy.get("protocol_probe",{}).get("max_candidates",80))]
+    probe_policy=policy.get("protocol_probe",{}); selected=select_protocol_candidates(tcp, int(probe_policy.get("max_candidates",80)), int(probe_policy.get("websocket_probe_quota",20)))
     def task(pair):
         index,node=pair
         return verify_one(node,binary,preferred_port=20000+index)
