@@ -32,35 +32,12 @@ jobs:
         run: node --check cloudflare/worker-ws-relay.js
       - name: Check TCP bridge JavaScript syntax
         run: node --check cloudflare/worker-ws-tcp-bridge.js
-      - name: Install pinned official Mihomo stable binary with API digest verification
+      - name: Install pinned official Mihomo stable binary with SHA-256 verification
         shell: bash
-        env:
-          GH_API_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          python - <<'PY' > /tmp/mihomo-meta
-          import json, urllib.request
-          version = "v1.19.34"
-          asset_name = "mihomo-linux-amd64-compatible-" + version + ".gz"
-          request = urllib.request.Request(
-              "https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/" + version,
-              headers={
-                  "Accept": "application/vnd.github+json",
-                  "User-Agent": "Direct-NodeHub",
-                  "Authorization": "Bearer " + __import__("os").environ["GH_API_TOKEN"],
-              }
-          )
-          with urllib.request.urlopen(request, timeout=20) as response:
-              release = json.load(response)
-          asset = next((item for item in release["assets"] if item["name"] == asset_name), None)
-          digest = str(asset.get("digest", "")) if asset else ""
-          if not asset or not digest.startswith("sha256:"):
-              raise SystemExit("Missing official SHA-256 digest; refusing unverified binary")
-          print(asset["browser_download_url"])
-          print(digest.split(":", 1)[1])
-          PY
-          URL="$(sed -n '1p' /tmp/mihomo-meta)"
-          DIGEST="$(sed -n '2p' /tmp/mihomo-meta)"
+          URL="https://github.com/MetaCubeX/mihomo/releases/download/v1.19.34/mihomo-linux-amd64-compatible-v1.19.34.gz"
+          DIGEST="2763f5b414527f7baf6dc57e3f82f3ab561eedf34bfd7c2f2cde1f7e592efe06"
           curl --fail --location --retry 3 --connect-timeout 15 "$URL" -o /tmp/mihomo.gz
           echo "$DIGEST  /tmp/mihomo.gz" | sha256sum --check -
           gzip -dc /tmp/mihomo.gz > /tmp/mihomo
