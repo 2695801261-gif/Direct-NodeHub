@@ -18,6 +18,17 @@ class ProtocolRiskTests(unittest.TestCase):
         }
         self.assertEqual(candidate_id(first), candidate_id(second))
 
+    def test_candidate_id_normalizes_default_uri_flags(self):
+        first = {
+            "name": "node one",
+            "uri": "vless://123e4567-e89b-12d3-a456-426614174000@edge.example:443?security=tls&type=ws&path=%2Fws&sni=edge.example&host=edge.example&encryption=none&allowInsecure=0#one"
+        }
+        second = {
+            "name": "node two",
+            "uri": "vless://123e4567-e89b-12d3-a456-426614174000@edge.example:443?path=/ws&type=ws&security=tls&sni=edge.example#two"
+        }
+        self.assertEqual(candidate_id(first), candidate_id(second))
+
     def test_vless_reality(self):
         candidate = {
             "id": "x",
