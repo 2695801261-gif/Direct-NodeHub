@@ -105,18 +105,24 @@ def make_config(nodes: list[dict[str, Any]], name: str, port: int) -> dict[str, 
     }
 
 
+def validate_candidate_snapshot(report: dict[str, Any], candidates_data: dict[str, Any]) -> None:
+    snapshot = report.get("candidate_snapshot_generated_at")
+    current_snapshot = candidates_data.get("generated_at")
+    if not snapshot or not current_snapshot:
+        raise ValueError("mainland report or candidate file is missing its snapshot timestamp")
+    if snapshot != current_snapshot:
+        raise ValueError(
+            "mainland report was generated from a different candidate snapshot; "
+            "rerun the local probe against the current public/candidates.json"
+        )
+
+
 def run(report_path: Path) -> dict[str, Any]:
     if not CANDIDATES.exists():
         raise FileNotFoundError("public/candidates.json is missing; use the current repository snapshot")
     report = json.loads(report_path.read_text(encoding="utf-8"))
     candidates_data = json.loads(CANDIDATES.read_text(encoding="utf-8"))
-    snapshot = report.get("candidate_snapshot_generated_at")
-    current_snapshot = candidates_data.get("generated_at")
-    if snapshot and current_snapshot and snapshot != current_snapshot:
-        raise ValueError(
-            "mainland report was generated from a different candidate snapshot; "
-            "rerun the local probe against the current public/candidates.json"
-        )
+    validate_candidate_snapshot(report, candidates_data)
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
     stability = policy.get("stability", {})
     fast_download = float(stability.get("fast_pool_minimum_download_kbps", 512))
