@@ -28,7 +28,9 @@
     "rounds": 3,
     "required_successful_rounds": 3,
     "minimum_download_kbps": 64,
+    "minimum_upload_kbps": 16,
     "fast_pool_minimum_download_kbps": 256,
+    "fast_pool_minimum_upload_kbps": 64,
     "max_candidates": 60
   }
 }
