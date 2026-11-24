@@ -8,7 +8,10 @@ New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null
 function Get-PythonCommand {
     $py = Get-Command py -ErrorAction SilentlyContinue
     if ($py) {
-        return @{ Command = "py"; Prefix = @("-3.12") }
+        $null = & py -3 --version 2>$null
+        if ($LASTEXITCODE -eq 0) {
+            return @{ Command = "py"; Prefix = @("-3") }
+        }
     }
     $python = Get-Command python -ErrorAction SilentlyContinue
     if ($python) {
@@ -24,7 +27,7 @@ function Get-PythonCommand {
             }
         }
     }
-    throw "需要 Python 3.12。请先从 https://www.python.org/downloads/windows/ 安装，再重新运行本脚本。"
+    throw "需要 Python 3.10 或更新版本。请先从 https://www.python.org/downloads/windows/ 安装，再重新运行本脚本。"
 }
 
 $pyInfo = Get-PythonCommand
@@ -33,7 +36,7 @@ $pythonPrefix = $pyInfo.Prefix
 
 function Invoke-ProjectPython {
     param([string[]]$Arguments)
-        $allArgs = @()
+    $allArgs = @()
     if ($script:pythonPrefix) { $allArgs += $script:pythonPrefix }
     $allArgs += $Arguments
     & $script:pythonCommand @allArgs
