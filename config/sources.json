@@ -59,13 +59,25 @@
       "name": "Pawdroid-Free-servers",
       "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
       "format": "auto",
-      "enabled": false
+      "enabled": true
     },
     {
       "name": "Thordata-free-proxy-list",
       "url": "https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/all.txt",
       "format": "plain_proxy",
       "enabled": false
+    },
+    {
+      "name": "snakem982-proxypool-Mihomo",
+      "url": "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml",
+      "format": "clash",
+      "enabled": true
+    },
+    {
+      "name": "snakem982-proxypool-V2Ray",
+      "url": "https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt",
+      "format": "uri",
+      "enabled": true
     }
   ]
 }
