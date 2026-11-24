@@ -206,7 +206,11 @@ def worker_compatible_tcp_bridge(candidate):
         # candidate-specific TLS fingerprint or ALPN list.
         return False
     server = str(proxy.get("server") or "").strip().lower()
-    if not server:
+    try:
+        port = int(proxy.get("port") or 0)
+    except (TypeError, ValueError):
+        return False
+    if not server or port < 1 or port > 65535 or port == 25:
         return False
     try:
         ipaddress.ip_address(server)
