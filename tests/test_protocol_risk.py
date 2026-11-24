@@ -146,6 +146,7 @@ class ProtocolRiskTests(unittest.TestCase):
                 "network": "tcp",
                 "tls": True,
                 "server": "origin.example",
+                "port": 443,
                 "servername": "origin.example",
                 "uuid": "123e4567-e89b-12d3-a456-426614174000",
             },
@@ -197,7 +198,7 @@ class ProtocolRiskTests(unittest.TestCase):
             "id": "fingerprint",
             "config": {
                 "type": "vless", "network": "tcp", "tls": True,
-                "server": "origin.example", "servername": "origin.example",
+                "server": "origin.example", "port": 443, "servername": "origin.example",
                 "client-fingerprint": "chrome",
             },
         }
