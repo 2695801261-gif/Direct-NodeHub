@@ -38,7 +38,7 @@ GitHub Actions 自动检查候选节点的 TCP 端口是否可达，并记录云
 - 多源采集与 URI / Clash-Mihomo YAML 解析，单源候选数量受策略限制，并保留跨来源命中记录。
 - 云端 TCP 可达性预筛。
 - 使用官方 Mihomo 稳定版对节点配置进行校验，启动真实代理隧道，并通过多个 HTTPS 出口查询服务核对出口 IP。
-- 对通过协议验证的节点进行 3 轮重复连接、256 KiB HTTPS 下载和 64 KiB HTTPS 上传测试；稳定池要求 3/3 成功、出口 IP 一致、下载至少 64 KiB/s、上传至少 16 KiB/s。高速池额外要求下载至少 256 KiB/s、上传至少 64 KiB/s。
+- 对通过协议验证的节点进行 3 轮重复连接、出口 IP 一致性、延迟和双向速度测试；云端稳定池要求 3/3 成功、出口 IP 一致、至少两个出口查询成功、中位云端延迟不高于 1000 ms、下载至少 128 KiB/s、上传至少 32 KiB/s。高速池额外要求下载至少 512 KiB/s、上传至少 128 KiB/s。云端延迟不能当作大陆延迟。
 - 生成 `public/clash.yaml`（风险情报筛选稳定池）、`public/fast.yaml`（高速稳定池）、`public/chain-template.yaml`（公开节点作为前置、用户自有家宽端点作为最终出口）、`public/status.json` 和 `public/index.html`。
 - 每 6 小时由 GitHub Actions 自动更新，并可手动触发。
 - 下载 IPsum 与 Tor 出口列表进行已知风险命中筛查；IPsum 仅采用至少 3 个情报源同时命中的地址。
@@ -81,8 +81,13 @@ $env:MIHOMO_BIN="C:\工具\mihomo.exe"
 python -m direct_nodehub.mainland_probe --confirm-mainland --limit 20 --rounds 3
 ```
 
-运行时必须确实处于中国大陆网络，并关闭其他 VPN/代理；只有明确确认后脚本才会生成 reports/mainland/ 报告。报告包含节点 ID、三轮连通情况、出口 IP、下载和上传速度。可将报告交给 `python -m direct_nodehub.mainland_report 报告文件.json` 导入。不要上传或提交任何家宽账号密码。
+运行时必须确实处于中国大陆网络，并关闭其他 VPN/代理；只有明确确认后脚本才会生成 reports/mainland/ 报告。报告包含节点 ID、三轮连通情况、出口 IP、下载和上传速度。现在也提供 Windows 一键脚本：在已解压的仓库目录打开 PowerShell，运行 `Set-ExecutionPolicy -Scope Process Bypass`，再运行 `.	oolsun-mainland-probe.ps1`。脚本会安装项目依赖、下载并校验官方 Mihomo Windows 版，然后要求你输入 `MAINLAND` 确认当前已关闭 VPN/代理，再测试最多 30 个云端初筛节点。通过大陆三轮实测的节点会单独生成 `clash-mainland.yaml` 和 `fast-mainland.yaml`，并复制到桌面 `Direct-NodeHub-Mainland` 文件夹；这两份才是大陆实测订阅。若为 0 个，代表没有节点通过，不会拿云端结果冒充大陆可用。不要上传或提交任何家宽账号密码。
 
 ## 发布手机状态页（一次性设置）
 
 仓库已包含 GitHub Pages 自动部署工作流。首次启用时，在 GitHub 仓库页面打开 Settings → Pages，将 Build and deployment 的 Source 设为 GitHub Actions；然后进入 Actions，手动运行 Publish status website。成功后，GitHub 会在部署任务中显示站点地址。此后 public/ 文件更新时会自动重新部署。
+
+
+## Cloudflare 使用边界
+
+Cloudflare Pages 可以托管静态状态页和订阅文件，但它不会替节点转发代理流量。当前项目不部署 Workers 代理中转：Cloudflare 的 TCP 能力有明确的入站条件和端口/网络限制，且自助服务协议对 VPN 或类似代理服务有禁止条款；为了避免账号和项目被停用，不把它当作免费代理中转方案。
