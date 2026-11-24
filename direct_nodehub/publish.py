@@ -82,10 +82,21 @@ def run() -> dict[str, Any]:
     fast_download = float(stability.get("fast_pool_minimum_download_kbps", 512))
     fast_upload = float(stability.get("fast_pool_minimum_upload_kbps", 128))
 
-    stable = eligible_stable_nodes(nodes, max_latency)
+    # The stable pool is reputation-screened; the fast pool intentionally is not.
+    cloud_stable = [
+        node for node in nodes
+        if node.get("protocol_status") == "verified"
+        and node.get("stable_status") == "stable"
+        and latency_of(node) <= max_latency
+    ]
+    stable = [
+        node for node in cloud_stable
+        if node.get("risk_status") != "blocked"
+        and node.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"
+    ]
     screened = [node for node in stable if node.get("risk_status") == "unconfirmed"]
     fast = [
-        node for node in stable
+        node for node in cloud_stable
         if download_of(node) >= fast_download and upload_of(node) >= fast_upload
     ]
     fast.sort(key=lambda node: (-download_of(node), latency_of(node), -upload_of(node)))
@@ -168,7 +179,7 @@ def run() -> dict[str, Any]:
         "chain_entry_nodes": len(chain_configs),
         "chain_template": "public/chain-template.yaml",
         "standard_gate": f"3/3 repeated Mihomo tunnel tests, consistent exit IP, median cloud latency <= {max_latency:g} ms, download >= 128 KiB/s, upload >= 32 KiB/s, risk feeds available and no known-bad match",
-        "fast_gate": f"same stability and risk gate, download >= {fast_download:g} KiB/s and upload >= {fast_upload:g} KiB/s",
+        "fast_gate": f"protocol verified, 3/3 stable rounds, cloud latency <= {max_latency:g} ms, download >= {fast_download:g} KiB/s and upload >= {fast_upload:g} KiB/s; no reputation-list filtering",
         "url_test": URL_TEST,
         "test_scope": "GitHub-hosted runner only; not a mainland-China measurement",
         "mainland_status": "not_tested",
@@ -205,7 +216,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 <section><h2>订阅文件</h2>
 <ul>
 <li><a href="clash.yaml">云端复测稳定池（Clash / Mihomo）</a></li>
-<li><a href="fast.yaml">云端高速筛选池（Clash / Mihomo）</a></li>
+<li><a href="fast.yaml">云端高速池（不做信誉名单筛选；非大陆实测）</a></li>
 <li><a href="chain-template.yaml">个人家宽链式模板</a></li>
 <li><a href="status.json">完整状态 JSON</a></li>
 </ul></section>
@@ -218,7 +229,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const s=d.summary||{};
  document.getElementById('status').textContent=
- '稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
+ '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
  }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
 </script>
 </body></html>"""
