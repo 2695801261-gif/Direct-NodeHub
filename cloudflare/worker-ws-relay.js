@@ -8,9 +8,12 @@
 function closeSafely(socket, code = 1000, reason = "") {
   try {
     if (socket && socket.readyState < WebSocket.CLOSING) {
-      const valid = Number.isInteger(code) && code >= 1000 && code < 5000 &&
-        ![1004, 1005, 1006, 1015].includes(code);
-      socket.close(valid ? code : 1011, String(reason).slice(0, 100));
+      // Keep close() compatible with strict WebSocket implementations:
+      // only 1000 and application/private-use codes 3000-4999 are sent.
+      const valid = code === 1000 || (Number.isInteger(code) && code >= 3000 && code < 5000 &&
+        ![3004, 3005, 3006, 3015].includes(code));
+      if (valid) socket.close(code, String(reason).slice(0, 100));
+      else socket.close();
     }
   } catch (_) {}
 }
@@ -38,7 +41,8 @@ export default {
   async fetch(request, env) {
     if (request.method !== "GET") return new Response("Method not allowed", { status: 405 });
     const token = String(env.RELAY_TOKEN || "");
-    if (token.length < 24 || request.headers.get("Upgrade")?.toLowerCase() !== "websocket") {
+    if (!/^[A-Za-z0-9_-]{24,128}$/.test(token) ||
+        request.headers.get("Upgrade")?.toLowerCase() !== "websocket") {
       return new Response("WebSocket relay unavailable", { status: 404 });
     }
     const url = new URL(request.url);
