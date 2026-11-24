@@ -157,10 +157,31 @@ def network_of(candidate):
         return "unknown"
 
 
+def worker_compatible_ws(candidate):
+    """Return true only when a fixed-origin HTTPS Worker relay can preserve WS host/SNI."""
+    try:
+        proxy = to_mihomo_proxy(candidate)
+    except Exception:
+        return False
+    if str(proxy.get("network") or "tcp").lower() != "ws" or not proxy.get("tls"):
+        return False
+    server = str(proxy.get("server") or "").strip().lower()
+    sni = str(proxy.get("servername") or proxy.get("sni") or server).strip().lower()
+    ws_opts = proxy.get("ws-opts") if isinstance(proxy.get("ws-opts"), dict) else {}
+    headers = ws_opts.get("headers") if isinstance(ws_opts.get("headers"), dict) else {}
+    host = str(headers.get("Host") or headers.get("host") or server).strip().lower()
+    return bool(server and server == sni == host and not proxy.get("skip-cert-verify"))
+
+
 def select_protocol_candidates(nodes, max_candidates=80, websocket_quota=20):
     ranked = sorted(nodes, key=lambda n: n.get("cloud_tcp_latency_ms") or 999999)
     websocket = [node for node in ranked if network_of(node) == "ws"]
     other = [node for node in ranked if network_of(node) != "ws"]
+    # Prioritize WS nodes that can actually be used by the fixed-origin Worker relay.
+    websocket.sort(key=lambda node: (
+        not worker_compatible_ws(node),
+        float(node.get("cloud_tcp_latency_ms") or 999999),
+    ))
     ws_limit = min(max(0, int(websocket_quota)), max(0, int(max_candidates)))
     selected_ws = websocket[:ws_limit]
     selected_other = other[:max(0, int(max_candidates) - len(selected_ws))]
