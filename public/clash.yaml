@@ -4,6 +4,20 @@ mode: rule
 log-level: warning
 ipv6: false
 proxies:
+- name: 🇺🇸US-95.215.201.18-0114
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-169.197.142.68-0180
+  type: ss
+  server: 169.197.142.68
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: 🇺🇸US-38.121.43.225-0135
   type: ss
   server: 38.121.43.225
@@ -18,16 +32,30 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-216.106.178.169-0178
+- name: 🇺🇸US-38.121.43.231-0124
   type: ss
-  server: 216.106.178.169
+  server: 38.121.43.231
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-38.91.100.39-0193
+- name: 🇺🇸US-167.88.63.99-0194
   type: ss
-  server: 38.91.100.39
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-173.244.56.9-0125
+  type: ss
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇺🇸US-216.106.178.169-0178
+  type: ss
+  server: 216.106.178.169
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -39,6 +67,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇺🇸US-38.128.66.32-0186
+  type: ss
+  server: 38.128.66.32
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-38.22.17.219-0198
+  type: ss
+  server: 38.22.17.219
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: 🇺🇸US-156.146.38.169-0117
   type: ss
   server: 156.146.38.169
@@ -46,16 +88,16 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
+- name: 🇺🇸US-23.150.152.38-0172
+  type: ss
+  server: 23.150.152.38
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: 🇺🇸US-37.19.198.243-0184
   type: ss
   server: 37.19.198.243
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: 🇺🇸US-37.19.198.236-0187
-  type: ss
-  server: 37.19.198.236
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
@@ -67,13 +109,53 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇨🇦CA-137.184.174.93-0214
+- name: '🇺🇸 美国 | USA #1'
   type: ss
-  server: 137.184.174.93
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
+  server: 129.146.200.42
+  port: 50356
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 1KRWYoNOBU1OXV+dLChiRageSP9uIRY2wsJPieRC7kY=
   udp: true
+- type: http
+  server: 138.199.35.199
+  port: 9002
+  tls: true
+  skip-cert-verify: true
+  name: US - zhuhai.uk
+- type: http
+  server: 138.199.35.211
+  port: 9002
+  username: 'null'
+  password: None
+  tls: true
+  skip-cert-verify: true
+  name: US - zhuhai.uk 02
+- type: http
+  server: 162.243.146.243
+  port: 443
+  username: testuser1
+  password: e4b72b531a2d10900519
+  tls: true
+  sni: a2f392f3.acsnet.co
+  name: US - zhuhai.uk 03
+- type: http
+  server: 138.199.35.196
+  port: 9002
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 138.199.35.196
+  skip-cert-verify: true
+  name: US - zhuhai.uk 06
+- type: http
+  server: 138.199.35.201
+  port: 9002
+  username: 'null'
+  password: 'null'
+  tls: true
+  sni: 138.199.35.201
+  skip-cert-verify: true
+  name: US - zhuhai.uk 07
 - name: 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 12
   type: vless
   server: o685y.save-node.com
@@ -87,18 +169,13 @@ proxies:
   tls: true
   servername: o685y.save-node.com
   client-fingerprint: firefox
-- name: 🇩🇪 Germany - Unknown | 169.40.42.35:443 47
-  type: vless
-  server: 169.40.42.35
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
+- name: 🇰🇷 South Korea - Chuncheon | ikr200.zxom.eu.org:20045 4
+  type: trojan
+  server: ikr200.zxom.eu.org
+  port: 20045
+  password: 463f7453753f4d47
   tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  servername: ikr200.zxom.eu.org
 - name: 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 14
   type: vless
   server: o685y.save-node.com
@@ -109,203 +186,42 @@ proxies:
     path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
   tls: true
   servername: o685y.save-node.com
-- name: 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 22
+- name: 🇺🇸 United States - Santa Clara | 216.106.185.158:443 4
   type: vless
-  server: o685y.save-node.com
+  server: 216.106.185.158
   port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-    headers:
-      Host: o685y.save-node.com
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   tls: true
-  servername: o685y.save-node.com
-  client-fingerprint: chrome
-- name: 🇩🇪 Germany - Unknown | 169.40.42.168:443 41
-  type: vless
-  server: 169.40.42.168
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.90:443 46
-  type: vless
-  server: 169.40.42.90
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 25
-  type: vless
-  server: o685y.save-node.com
-  port: 443
-  uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
-  network: ws
-  ws-opts:
-    path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
-  tls: true
-  servername: o685y.save-node.com
-- name: 🇩🇪 Germany - Unknown | 169.40.42.89:443 55
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.89:443 59
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.89:443 68
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  client-fingerprint: chrome
-- name: 🇩🇪 Germany - Unknown | 169.40.42.229:443 30
-  type: vless
-  server: 169.40.42.229
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.35:443 63
-  type: vless
-  server: 169.40.42.35
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-  client-fingerprint: chrome
-- name: 🇩🇪 Germany - Unknown | 169.40.42.89:443 51
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.89:443 66
-  type: vless
-  server: 169.40.42.89
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.168:443 46
-  type: vless
-  server: 169.40.42.168
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.35:443 55
-  type: vless
-  server: 169.40.42.35
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇩🇪 Germany - Unknown | 169.40.42.90:443 28
-  type: vless
-  server: 169.40.42.90
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  servername: kuruish.org
 proxy-groups:
 - name: 节点手动选择
   type: select
   proxies:
+  - 🇺🇸US-95.215.201.18-0114
+  - 🇺🇸US-169.197.142.68-0180
   - 🇺🇸US-38.121.43.225-0135
   - 🇺🇸US-172.111.36.123-0123
+  - 🇺🇸US-38.121.43.231-0124
+  - 🇺🇸US-167.88.63.99-0194
+  - 🇺🇸US-173.244.56.9-0125
   - 🇺🇸US-216.106.178.169-0178
-  - 🇺🇸US-38.91.100.39-0193
   - 🇺🇸US-38.128.66.32-0186
+  - 🇺🇸US-193.151.163.18-0119
+  - 🇺🇸US-38.22.17.219-0198
   - 🇺🇸US-156.146.38.169-0117
+  - 🇺🇸US-23.150.152.38-0172
   - 🇺🇸US-37.19.198.243-0184
-  - 🇺🇸US-37.19.198.236-0187
   - 🇺🇸US-156.146.38.170-0122
-  - 🇨🇦CA-137.184.174.93-0214
+  - '🇺🇸 美国 | USA #1'
+  - US - zhuhai.uk
+  - US - zhuhai.uk 02
+  - US - zhuhai.uk 03
+  - US - zhuhai.uk 06
+  - US - zhuhai.uk 07
   - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 12
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 47
+  - 🇰🇷 South Korea - Chuncheon | ikr200.zxom.eu.org:20045 4
   - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 14
-  - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 22
-  - 🇩🇪 Germany - Unknown | 169.40.42.168:443 41
-  - 🇩🇪 Germany - Unknown | 169.40.42.90:443 46
-  - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 25
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 55
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 59
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 68
-  - 🇩🇪 Germany - Unknown | 169.40.42.229:443 30
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 63
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 51
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 66
-  - 🇩🇪 Germany - Unknown | 169.40.42.163:443 33
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 55
-  - 🇩🇪 Germany - Unknown | 169.40.42.90:443 28
+  - 🇺🇸 United States - Santa Clara | 216.106.185.158:443 4
   - DIRECT
 - name: 节点自动优选
   type: url-test
@@ -314,33 +230,31 @@ proxy-groups:
   tolerance: 80
   lazy: true
   proxies: &id001
+  - 🇺🇸US-95.215.201.18-0114
+  - 🇺🇸US-169.197.142.68-0180
   - 🇺🇸US-38.121.43.225-0135
   - 🇺🇸US-172.111.36.123-0123
+  - 🇺🇸US-38.121.43.231-0124
+  - 🇺🇸US-167.88.63.99-0194
+  - 🇺🇸US-173.244.56.9-0125
   - 🇺🇸US-216.106.178.169-0178
-  - 🇺🇸US-38.91.100.39-0193
   - 🇺🇸US-38.128.66.32-0186
+  - 🇺🇸US-193.151.163.18-0119
+  - 🇺🇸US-38.22.17.219-0198
   - 🇺🇸US-156.146.38.169-0117
+  - 🇺🇸US-23.150.152.38-0172
   - 🇺🇸US-37.19.198.243-0184
-  - 🇺🇸US-37.19.198.236-0187
   - 🇺🇸US-156.146.38.170-0122
-  - 🇨🇦CA-137.184.174.93-0214
+  - '🇺🇸 美国 | USA #1'
+  - US - zhuhai.uk
+  - US - zhuhai.uk 02
+  - US - zhuhai.uk 03
+  - US - zhuhai.uk 06
+  - US - zhuhai.uk 07
   - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 12
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 47
+  - 🇰🇷 South Korea - Chuncheon | ikr200.zxom.eu.org:20045 4
   - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 14
-  - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 22
-  - 🇩🇪 Germany - Unknown | 169.40.42.168:443 41
-  - 🇩🇪 Germany - Unknown | 169.40.42.90:443 46
-  - 🇩🇪 Germany - Frankfurt am Main | o685y.save-node.com:443 25
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 55
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 59
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 68
-  - 🇩🇪 Germany - Unknown | 169.40.42.229:443 30
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 63
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 51
-  - 🇩🇪 Germany - Unknown | 169.40.42.89:443 66
-  - 🇩🇪 Germany - Unknown | 169.40.42.163:443 33
-  - 🇩🇪 Germany - Unknown | 169.40.42.35:443 55
-  - 🇩🇪 Germany - Unknown | 169.40.42.90:443 28
+  - 🇺🇸 United States - Santa Clara | 216.106.185.158:443 4
 - name: 节点故障切换
   type: fallback
   url: https://cp.cloudflare.com/generate_204
