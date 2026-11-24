@@ -105,6 +105,7 @@ def run(args: argparse.Namespace) -> Path:
         "probe_location": "mainland_china",
         "tested_at": tested_at,
         "probe_id": args.probe_id,
+        "candidate_snapshot_generated_at": data.get("generated_at"),
         "results": results,
         "test_contract": {
             "rounds": rounds,
@@ -116,7 +117,8 @@ def run(args: argparse.Namespace) -> Path:
         }
     }
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    path = OUTPUT_DIR / f"{args.probe_id}-{tested_at[:10]}.json"
+    file_stamp = tested_at.replace("-", "").replace(":", "").replace("T", "-").replace("Z", "")
+    path = OUTPUT_DIR / f"{args.probe_id}-{file_stamp}.json"
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
         "report": str(path.relative_to(ROOT)),
