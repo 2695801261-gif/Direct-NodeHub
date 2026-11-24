@@ -36,7 +36,8 @@ def run():
         except Exception as e: lists[name]=set(); feeds[name]={"status":"error","error":str(e)[:180]}
     results=[]
     for node in data.get("candidates",[]):
-        r=classify(node.get("exit_ip"),lists.get("ipsum",set()),lists.get("tor_exit_list",set())); node.update(r)
+        verified_ip=node.get("exit_ip") if node.get("protocol_status")=="verified" and int(node.get("exit_ip_agreement") or 0)>=2 else None
+        r=classify(verified_ip,lists.get("ipsum",set()),lists.get("tor_exit_list",set())); node.update(r)
         decision="reject" if r["risk_status"]=="blocked" else "quarantine"
         if r["risk_status"]=="unconfirmed" and all(v["status"]=="ok" for v in feeds.values()): decision="eligible_for_unconfirmed_pool"
         node["risk_policy_decision"]=decision; results.append({"id":node["id"],**r,"decision":decision})
