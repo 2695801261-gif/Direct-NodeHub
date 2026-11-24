@@ -19,6 +19,7 @@ def select_mainland_nodes(
     report: dict[str, Any],
     fast_download: float,
     fast_upload: float,
+    max_latency: float = 1200,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     if report.get("probe_location") != "mainland_china":
         raise ValueError("report is not a mainland-China probe")
@@ -41,6 +42,9 @@ def select_mainland_nodes(
         if candidate.get("stable_status") != "stable":
             continue
         if candidate.get("risk_policy_decision") != "eligible_for_unconfirmed_pool":
+            continue
+        latency = result.get("latency_ms")
+        if not isinstance(latency, (int, float)) or latency <= 0 or latency > max_latency:
             continue
         node = dict(candidate)
         node["mainland_status"] = "reachable"
@@ -96,12 +100,14 @@ def run(report_path: Path) -> dict[str, Any]:
     stability = policy.get("stability", {})
     fast_download = float(stability.get("fast_pool_minimum_download_kbps", 512))
     fast_upload = float(stability.get("fast_pool_minimum_upload_kbps", 128))
+    max_latency = float(policy.get("mainland_max_latency_ms", 1200))
 
     standard, fast = select_mainland_nodes(
         candidates_data.get("candidates", []),
         report,
         fast_download,
         fast_upload,
+        max_latency,
     )
     output_dir = report_path.parent / "output"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -126,6 +132,7 @@ def run(report_path: Path) -> dict[str, Any]:
         "fast_subscription": str(fast_path),
         "fast_minimum_download_kbps": fast_download,
         "fast_minimum_upload_kbps": fast_upload,
+        "maximum_mainland_latency_ms": max_latency,
         "meaning": "Only nodes that passed the actual local mainland-China tunnel and repeated transfer tests are included.",
     }
     (output_dir / "summary.json").write_text(
