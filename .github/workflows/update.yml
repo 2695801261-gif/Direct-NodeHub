@@ -70,7 +70,7 @@ jobs:
       - name: Run parser and module regression tests
         run: |
           python -m unittest discover -s tests -v
-          python -m py_compile tools/build-cloudflare-ws-config.py
+          python -m py_compile tools/build-cloudflare-ws-config.py tools/build-cloudflare-tcp-config.py
       - name: Check Cloudflare Worker JavaScript syntax
         run: node --check cloudflare/worker-ws-relay.js
       - name: Check TCP bridge JavaScript syntax
