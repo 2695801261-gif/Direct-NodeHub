@@ -1,6 +1,7 @@
 import unittest
 from direct_nodehub.protocol import to_mihomo_proxy
 from direct_nodehub.risk import classify
+from direct_nodehub import publish
 from direct_nodehub.stability import upload_metric, download_metric
 class ProtocolRiskTests(unittest.TestCase):
     def test_vless_reality(self):
