@@ -28,6 +28,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+      # GitHub's artifact listing can briefly lag behind a successful upload.
+      # Wait for the artifact metadata to become visible before deployment.
+      - name: Wait for Pages artifact indexing
+        run: sleep 20
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
