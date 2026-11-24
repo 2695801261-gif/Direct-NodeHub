@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T11:03:22Z",
+  "generated_at": "2026-11-24T11:09:13Z",
   "summary": {
-    "reputation_screened_stable_nodes": 23,
-    "fast_stable_nodes": 23,
-    "chain_entry_nodes": 23,
+    "reputation_screened_stable_nodes": 43,
+    "fast_stable_nodes": 40,
+    "chain_entry_nodes": 43,
     "chain_template": "public/chain-template.yaml",
     "standard_gate": "3/3 repeated Mihomo tunnel tests, consistent exit IP, median cloud latency <= 1000 ms, download >= 128 KiB/s, upload >= 32 KiB/s, risk feeds available and no known-bad match",
-    "fast_gate": "same stability and risk gate, download >= 512 KiB/s and upload >= 128 KiB/s",
+    "fast_gate": "protocol verified, 3/3 stable rounds, cloud latency <= 1000 ms, download >= 512 KiB/s and upload >= 128 KiB/s; no reputation-list filtering",
     "url_test": "https://cp.cloudflare.com/generate_204",
     "test_scope": "GitHub-hosted runner only; not a mainland-China measurement",
     "mainland_status": "not_tested",
@@ -14,24 +14,24 @@
   },
   "cloud_tcp": {
     "total": 938,
-    "reachable": 803,
-    "failed": 135,
+    "reachable": 808,
+    "failed": 130,
     "meaning": "TCP reachability only; not proxy handshake, tunnel, speed, reputation, or mainland reachability."
   },
   "protocol": {
-    "total_tcp_reachable": 803,
+    "total_tcp_reachable": 808,
     "tested": 80,
-    "verified": 34,
-    "partial": 3,
-    "failed": 43,
+    "verified": 51,
+    "partial": 4,
+    "failed": 25,
     "region": "github-hosted-runner (region not guaranteed)",
     "meaning": "Mihomo tunnel and HTTP egress from cloud; not a mainland China test."
   },
   "risk": {
     "total": 938,
     "blocked": 0,
-    "unconfirmed": 34,
-    "unknown": 904,
+    "unconfirmed": 51,
+    "unknown": 887,
     "feeds": {
       "ipsum": {
         "status": "ok",
@@ -47,10 +47,10 @@
     "warning": "Not listed in threat feeds does not prove an IP is clean; this is not a reputation guarantee."
   },
   "stability": {
-    "candidates_tested": 34,
-    "stable": 23,
+    "candidates_tested": 51,
+    "stable": 43,
     "degraded": 6,
-    "unstable": 5,
+    "unstable": 2,
     "rounds": 3,
     "required_successful_rounds": 3,
     "minimum_download_kbps": 128.0,
@@ -113,7 +113,7 @@
     {
       "source": "Pawdroid-Free-servers",
       "status": "ok",
-      "parsed": 9,
+      "parsed": 8,
       "unique_added": 4
     },
     {

@@ -16,7 +16,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 <section><h2>订阅文件</h2>
 <ul>
 <li><a href="clash.yaml">云端复测稳定池（Clash / Mihomo）</a></li>
-<li><a href="fast.yaml">云端高速筛选池（Clash / Mihomo）</a></li>
+<li><a href="fast.yaml">云端高速池（不做信誉名单筛选；非大陆实测）</a></li>
 <li><a href="chain-template.yaml">个人家宽链式模板</a></li>
 <li><a href="status.json">完整状态 JSON</a></li>
 </ul></section>
@@ -29,7 +29,7 @@ li{margin:10px 0}.warn{color:#ffd18a}
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const s=d.summary||{};
  document.getElementById('status').textContent=
- '稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
+ '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
  }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
 </script>
 </body></html>
