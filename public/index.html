@@ -32,13 +32,9 @@ li{margin:10px 0}.warn{color:#ffd18a}
 </ul>
 <p class="muted">实测前必须关闭其他 VPN、代理客户端和系统代理；不要把云端延迟当作大陆延迟。</p>
 </section>
-<section><h2>中国大陆本地实测</h2>
-<p>如果你在中国大陆使用，请先运行本地实测工具。它会逐个建立真实代理隧道、连续测试三轮，并分别生成大陆稳定池和高速池。</p>
-<ul>
-<li><a href="https://github.com/2695801261-gif/Direct-NodeHub/blob/main/tools/README-mainland.md">Windows 实测操作说明</a></li>
-<li><a href="https://github.com/2695801261-gif/Direct-NodeHub/archive/refs/heads/main.zip">下载完整实测工具包</a></li>
-</ul>
-<p class="muted">实测前必须关闭其他 VPN、代理客户端和系统代理；不要把云端延迟当作大陆延迟。</p>
+<section><h2>Cloudflare 中转实验</h2>
+<p>只有通过协议、稳定性和上游兼容性筛选的节点才会列为中转候选。中转不会改变出口 IP，也不保证降低延迟；请先阅读部署限制并在实际网络测试。</p>
+<ul><li><a href="https://github.com/2695801261-gif/Direct-NodeHub/blob/main/cloudflare/README.md">Cloudflare WS 中转与 TCP 桥接说明</a></li></ul>
 </section>
 <section><h2>本轮数据</h2><p id="status">正在读取状态…</p></section>
 <script>
