@@ -83,10 +83,11 @@ def run(args: argparse.Namespace) -> Path:
     min_download = float(settings.get("minimum_download_kbps", 64))
     min_upload = float(settings.get("minimum_upload_kbps", 32))
     max_latency = float(policy.get("mainland_max_latency_ms", 1200))
-    # Probe every cloud-stable protocol-verified candidate locally. Reputation
-    # filtering is applied later only to the stable subscription, not the fast pool.
+    # Cloud stability is not a prerequisite for mainland stability. Probe every
+    # cloud protocol-verified candidate; local three-round results decide whether
+    # it enters either mainland subscription.
     candidates = [n for n in data.get("candidates", [])
-                  if n.get("protocol_status") == "verified" and n.get("stable_status") == "stable"]
+                  if n.get("protocol_status") == "verified"]
     # Cloud ranking is only a test-order hint, never a mainland latency claim.
     candidates.sort(key=lambda n: (
         float(n.get("median_latency_ms") or 1e9),
