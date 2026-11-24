@@ -1,0 +1,130 @@
+{
+  "generated_at": "2026-11-24T10:16:37Z",
+  "summary": {
+    "reputation_screened_stable_nodes": 29,
+    "fast_stable_nodes": 28,
+    "chain_entry_nodes": 29,
+    "chain_template": "public/chain-template.yaml",
+    "standard_gate": "3/3 stable rounds, exit IP agreement, download >=64 KiB/s, upload >=16 KiB/s, risk feeds available and no known-bad match",
+    "fast_gate": "3/3 stable rounds, download >= 256 KiB/s and upload >= 64 KiB/s; positive reputation confirmation not required, known-bad IPs excluded",
+    "chain_direction": "public node as entry hop; user-owned home endpoint as final hop via dialer-proxy",
+    "mainland_status": "not_tested",
+    "warning": "Cloud runner results do not guarantee mainland reachability. Chain template placeholders must be replaced locally; never commit home credentials."
+  },
+  "cloud_tcp": {
+    "total": 977,
+    "reachable": 844,
+    "failed": 133,
+    "meaning": "TCP reachability only; not proxy handshake, tunnel, speed, reputation, or mainland reachability."
+  },
+  "protocol": {
+    "total_tcp_reachable": 844,
+    "tested": 80,
+    "verified": 45,
+    "partial": 1,
+    "failed": 34,
+    "region": "github-hosted-runner (region not guaranteed)",
+    "meaning": "Mihomo tunnel and HTTP egress from cloud; not a mainland China test."
+  },
+  "risk": {
+    "total": 977,
+    "blocked": 0,
+    "unconfirmed": 45,
+    "unknown": 932,
+    "feeds": {
+      "ipsum": {
+        "status": "ok",
+        "entries": 16564,
+        "minimum_score": 3
+      },
+      "tor_exit_list": {
+        "status": "ok",
+        "entries": 1253,
+        "minimum_score": null
+      }
+    },
+    "warning": "Not listed in threat feeds does not prove an IP is clean; this is not a reputation guarantee."
+  },
+  "stability": {
+    "candidates_tested": 45,
+    "stable": 29,
+    "degraded": 12,
+    "unstable": 4,
+    "rounds": 3,
+    "required_successful_rounds": 3,
+    "minimum_download_kbps": 64.0,
+    "minimum_upload_kbps": 16.0,
+    "test_region": "github-hosted-runner (region not guaranteed)",
+    "meaning": "Repeated tunnel establishment, consistent exit IP, 256 KiB HTTPS download and 64 KiB HTTPS upload; not a mainland measurement."
+  },
+  "sources": [
+    {
+      "source": "V2RayAggregator",
+      "status": "ok",
+      "parsed": 300,
+      "unique_added": 300
+    },
+    {
+      "source": "NoMoreWalls",
+      "status": "ok",
+      "parsed": 300,
+      "unique_added": 236
+    },
+    {
+      "source": "v2rayfree",
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2"
+    },
+    {
+      "source": "learnLi-free-nodes-Mihomo",
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/learnLi/free-nodes/main/list.meta.yml"
+    },
+    {
+      "source": "735754647-Free-Nodes-Clash",
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://raw.githubusercontent.com/735754647/Free-Nodes/main/clash.yaml"
+    },
+    {
+      "source": "zhuhaiuk-free-nodes-Clash",
+      "status": "ok",
+      "parsed": 38,
+      "unique_added": 38
+    },
+    {
+      "source": "a2470982985-getNode-Clash",
+      "status": "ok",
+      "parsed": 0,
+      "unique_added": 0
+    },
+    {
+      "source": "rtwo2-FastNodes-top",
+      "status": "ok",
+      "parsed": 300,
+      "unique_added": 294
+    },
+    {
+      "source": "morpheusadam-v2ray-config-all",
+      "status": "error",
+      "error": "source exceeds 4 MiB limit"
+    },
+    {
+      "source": "Pawdroid-Free-servers",
+      "status": "ok",
+      "parsed": 9,
+      "unique_added": 4
+    },
+    {
+      "source": "snakem982-proxypool-Mihomo",
+      "status": "ok",
+      "parsed": 55,
+      "unique_added": 55
+    },
+    {
+      "source": "snakem982-proxypool-V2Ray",
+      "status": "ok",
+      "parsed": 55,
+      "unique_added": 50
+    }
+  ]
+}
