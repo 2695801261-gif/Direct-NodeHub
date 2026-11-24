@@ -1,6 +1,6 @@
 import unittest
 
-from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates, worker_compatible_ws
+from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates, worker_compatible_ws, worker_compatible_tcp_bridge
 from direct_nodehub.risk import classify
 from direct_nodehub import publish
 from direct_nodehub.stability import upload_metric, download_metric, latency_metric
@@ -84,6 +84,45 @@ class ProtocolRiskTests(unittest.TestCase):
         ]
         selected = select_protocol_candidates(nodes, max_candidates=3, websocket_quota=2)
         self.assertEqual([node["id"] for node in selected], ["ws-1", "ws-2", "tcp-1"])
+
+    def test_worker_compatible_tls_vless_tcp_bridge(self):
+        candidate = {
+            "id": "tcp",
+            "config": {
+                "type": "vless",
+                "network": "tcp",
+                "tls": True,
+                "server": "origin.example",
+                "servername": "origin.example",
+                "uuid": "123e4567-e89b-12d3-a456-426614174000",
+            },
+        }
+        self.assertTrue(worker_compatible_tcp_bridge(candidate))
+
+    def test_worker_tcp_bridge_rejects_reality_and_ip_sni_mismatch(self):
+        reality = {
+            "id": "reality",
+            "config": {
+                "type": "vless",
+                "network": "tcp",
+                "tls": True,
+                "server": "origin.example",
+                "servername": "origin.example",
+                "reality-opts": {"public-key": "key"},
+            },
+        }
+        ip_host = {
+            "id": "ip",
+            "config": {
+                "type": "vless",
+                "network": "tcp",
+                "tls": True,
+                "server": "203.0.113.10",
+                "servername": "origin.example",
+            },
+        }
+        self.assertFalse(worker_compatible_tcp_bridge(reality))
+        self.assertFalse(worker_compatible_tcp_bridge(ip_host))
 
     def test_worker_compatible_tls_websocket(self):
         candidate = {
