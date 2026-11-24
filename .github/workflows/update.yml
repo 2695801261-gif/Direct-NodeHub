@@ -63,6 +63,8 @@ jobs:
           echo "MIHOMO_BIN=/tmp/mihomo" >> "$GITHUB_ENV"
       - name: Run parser and module regression tests
         run: python -m unittest discover -s tests -v
+      - name: Check Cloudflare Worker JavaScript syntax
+        run: node --check cloudflare/worker-ws-relay.js
       - name: Collect public candidates
         run: python -m direct_nodehub
       - name: Run cloud TCP reachability probes
