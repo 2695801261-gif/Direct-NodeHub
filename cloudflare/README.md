@@ -9,7 +9,7 @@ This is an optional experiment, not a replacement for the direct node pool.
 - Does not convert Shadowsocks, Trojan/TCP, Hysteria2, TUIC, raw TCP, or UDP into WebSocket.
 - Does not make an upstream node faster, more reputable, or more available.
 - The Worker can inspect the relayed protocol bytes. Do not use it for sensitive accounts or traffic.
-- The origin hostname, TLS SNI, and WebSocket Host must be compatible. This Worker uses the upstream URL hostname for TLS and Host; nodes requiring a different WebSocket Host or SNI are not compatible with this version.
+- The origin hostname, TLS SNI, and WebSocket Host must be compatible. This Worker uses the upstream URL hostname for TLS and Host; nodes requiring a different WebSocket Host or SNI are not compatible with this version. It also cannot preserve a custom TLS fingerprint or ALPN requirement, so the candidate filter excludes those nodes.
 - Cloudflare Workers Free has request and CPU quotas. Long-lived WebSocket sessions may disconnect during runtime updates; clients must reconnect.
 
 ## Deploy
