@@ -156,25 +156,43 @@ def candidate_id(node: dict[str, Any]) -> str:
             except Exception:
                 stable = uri.split("#", 1)[0]
         else:
-            parsed = urlsplit(uri)
-            # Query parameter order and fragment labels do not change a proxy.
-            # Canonicalize them so mirrors do not inflate the pool with duplicates.
-            pairs = sorted(parse_qsl(parsed.query, keep_blank_values=True))
-            netloc = parsed.netloc
-            if "@" in netloc:
-                userinfo, hostport = netloc.rsplit("@", 1)
-                netloc = userinfo + "@" + hostport.lower()
-            else:
-                netloc = netloc.lower()
-            stable = urlunsplit((
-                parsed.scheme.lower(),
-                netloc,
-                parsed.path,
-                urlencode(pairs, doseq=True),
-                "",
-            ))
+            try:
+                # Hash the parsed Mihomo semantics, not the raw URI spelling.
+                # This removes duplicates caused by query order, percent encoding,
+                # default flags and source-specific display fragments.
+                from direct_nodehub.protocol import to_mihomo_proxy
+                normalized = to_mihomo_proxy(node)
+                normalized.pop("name", None)
+                ws_opts = normalized.get("ws-opts")
+                if isinstance(ws_opts, dict):
+                    headers = ws_opts.get("headers")
+                    if isinstance(headers, dict):
+                        server = str(normalized.get("server") or "").lower()
+                        for key in list(headers):
+                            if str(key).lower() == "host" and str(headers[key]).lower() == server:
+                                headers.pop(key, None)
+                        if not headers:
+                            ws_opts.pop("headers", None)
+                stable = json.dumps(normalized, sort_keys=True, separators=(",", ":"))
+            except Exception:
+                parsed = urlsplit(uri)
+                pairs = sorted(parse_qsl(parsed.query, keep_blank_values=True))
+                netloc = parsed.netloc
+                if "@" in netloc:
+                    userinfo, hostport = netloc.rsplit("@", 1)
+                    netloc = userinfo + "@" + hostport.lower()
+                else:
+                    netloc = netloc.lower()
+                stable = urlunsplit((
+                    parsed.scheme.lower(),
+                    netloc,
+                    parsed.path,
+                    urlencode(pairs, doseq=True),
+                    "",
+                ))
     else:
         config = dict(node.get("config") or {})
+        config.pop("name", None)
         stable = json.dumps(config, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(stable.encode("utf-8")).hexdigest()[:16]
 
