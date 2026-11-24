@@ -1,6 +1,6 @@
 import unittest
 
-from direct_nodehub.mainland_publish import select_mainland_nodes
+from direct_nodehub.mainland_publish import select_mainland_nodes, validate_candidate_snapshot
 
 
 class MainlandPublishTests(unittest.TestCase):
@@ -89,6 +89,20 @@ class MainlandPublishTests(unittest.TestCase):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
         self.assertNotIn("blocked-c", [node["id"] for node in standard])
         self.assertIn("blocked-c", [node["id"] for node in fast])
+
+    def test_requires_matching_candidate_snapshot(self):
+        validate_candidate_snapshot(
+            self.report,
+            {"generated_at": "snapshot-1"},
+        )
+        with self.assertRaises(ValueError):
+            validate_candidate_snapshot(self.report, {"generated_at": "snapshot-2"})
+
+    def test_rejects_missing_candidate_snapshot(self):
+        report = dict(self.report)
+        report.pop("candidate_snapshot_generated_at")
+        with self.assertRaises(ValueError):
+            validate_candidate_snapshot(report, {"generated_at": "snapshot-1"})
 
     def test_rejects_report_with_fewer_than_three_rounds(self):
         report = dict(self.report)
