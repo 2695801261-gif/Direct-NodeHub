@@ -40,3 +40,14 @@ jobs:
         run: |
           node --check cloudflare/worker-ws-relay.js
           node --check cloudflare/worker-ws-tcp-bridge.js
+
+  windows-script-check:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate mainland probe PowerShell syntax
+        shell: pwsh
+        run: |
+          $null = [scriptblock]::Create((Get-Content tools/run-mainland-probe.ps1 -Raw))
+          Write-Host "PowerShell syntax OK"
