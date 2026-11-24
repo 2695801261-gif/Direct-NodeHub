@@ -26,6 +26,8 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
+      - name: Run parser regression tests
+        run: python -m unittest discover -s tests -v
       - name: Refresh node pool
         run: python -m direct_nodehub
       - name: Commit generated public data
