@@ -55,15 +55,15 @@ This can wrap a compatible **TLS TCP VLESS / VMess / Trojan** upstream in a clie
 
 The TCP bridge is an experiment. A successful syntax check is not a live connectivity test, and a Cloudflare-hosted test is not a mainland-China measurement.
 
-### Generate the client config
+### Generate the client config for the WebSocket-to-WebSocket relay
 
-First, run this from the repository root on a computer with Python and the project requirements installed. It selects the best eligible upstream and prints the exact `UPSTREAM_URL` to configure in Cloudflare:
+This generator is for `worker-ws-relay.js` above, not the TCP bridge. First, run this from the repository root on a computer with Python and the project requirements installed. It selects the best eligible upstream and prints the exact `UPSTREAM_URL` to configure in that Worker:
 
 ```powershell
 python tools/build-cloudflare-ws-config.py
 ```
 
-Create a random URL-safe token (for example, with `python -c "import secrets; print(secrets.token_urlsafe(32))"`). Set the printed `UPSTREAM_URL`, set `UPSTREAM_TLS=true`, and add that token as the Worker secret `RELAY_TOKEN`. Deploy the Worker and note its hostname.
+Create a random URL-safe token (for example, with `python -c "import secrets; print(secrets.token_urlsafe(32))"`). Set the printed `UPSTREAM_URL` and add that token as the Worker secret `RELAY_TOKEN`. The URL uses `https://`, so the upstream WebSocket connection uses TLS. Deploy `worker-ws-relay.js` and note its hostname.
 
 Then generate the private client config:
 
