@@ -1,5 +1,6 @@
 import unittest
 from direct_nodehub.mainland_report import validate_report
+from direct_nodehub.mainland_probe import result_metrics
 
 
 class MainlandReportTests(unittest.TestCase):
@@ -23,5 +24,15 @@ class MainlandReportTests(unittest.TestCase):
             })
 
 
+    def test_extract_bidirectional_metrics(self):
+        latency, download, upload = result_metrics({"http_checks": [
+            {"url": "https://api.ipify.org", "status": "ok", "latency_ms": 120},
+            {"url": "https://ifconfig.me/ip", "status": "ok", "latency_ms": 140},
+            {"url": "cloudflare-256KiB-download", "status": "ok", "download_kbps": 300},
+            {"url": "cloudflare-64KiB-upload", "status": "ok", "upload_kbps": 80}
+        ]})
+        self.assertEqual(latency, 130)
+        self.assertEqual(download, 300)
+        self.assertEqual(upload, 80)
 if __name__ == "__main__":
     unittest.main()
