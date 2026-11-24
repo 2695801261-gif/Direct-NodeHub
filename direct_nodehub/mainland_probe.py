@@ -135,7 +135,7 @@ def run(args: argparse.Namespace) -> Path:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run real mainland-China Mihomo tunnel and bidirectional-transfer tests.")
     parser.add_argument("--confirm-mainland", action="store_true", help="attest that this machine is on a mainland China network with other VPN/proxies disabled")
-    parser.add_argument("--limit", type=int, default=20, help="maximum stable candidates to test (1-60)")
+    parser.add_argument("--limit", type=int, default=20, help="maximum cloud protocol-verified candidates to test (1-60)")
     parser.add_argument("--rounds", type=int, default=3, help="repeat each candidate 1-5 times (default 3)")
     parser.add_argument("--probe-id", default="local-mainland-probe", help="short label for this probe device")
     run(parser.parse_args())
