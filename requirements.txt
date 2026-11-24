@@ -1,0 +1,3 @@
+# Keep the initial collector dependency-light; protocol probing tools are provisioned in CI.
+PyYAML==6.0.2
+requests==2.32.3
