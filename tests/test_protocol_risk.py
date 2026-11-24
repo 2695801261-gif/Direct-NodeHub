@@ -152,6 +152,21 @@ class ProtocolRiskTests(unittest.TestCase):
         }
         self.assertTrue(worker_compatible_tcp_bridge(candidate))
 
+    def test_worker_tcp_bridge_rejects_blocked_smtp_port(self):
+        candidate = {
+            "id": "smtp",
+            "config": {
+                "type": "trojan",
+                "network": "tcp",
+                "tls": True,
+                "server": "origin.example",
+                "servername": "origin.example",
+                "port": 25,
+                "password": "secret",
+            },
+        }
+        self.assertFalse(worker_compatible_tcp_bridge(candidate))
+
     def test_worker_tcp_bridge_rejects_reality_and_ip_sni_mismatch(self):
         reality = {
             "id": "reality",
