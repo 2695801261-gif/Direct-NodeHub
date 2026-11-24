@@ -81,9 +81,10 @@ def run(args: argparse.Namespace) -> Path:
     min_download = float(settings.get("minimum_download_kbps", 64))
     min_upload = float(settings.get("minimum_upload_kbps", 32))
     max_latency = float(policy.get("mainland_max_latency_ms", 1200))
+    # Probe every cloud-stable protocol-verified candidate locally. Reputation
+    # filtering is applied later only to the stable subscription, not the fast pool.
     candidates = [n for n in data.get("candidates", [])
-                  if n.get("protocol_status") == "verified" and n.get("stable_status") == "stable"
-                  and n.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"]
+                  if n.get("protocol_status") == "verified" and n.get("stable_status") == "stable"]
     # Cloud ranking is only a test-order hint, never a mainland latency claim.
     candidates.sort(key=lambda n: (
         float(n.get("median_latency_ms") or 1e9),
