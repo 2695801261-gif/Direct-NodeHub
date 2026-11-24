@@ -32,7 +32,7 @@ def select_mainland_nodes(
         for item in report.get("results", [])
         if item.get("status") == "reachable"
     }
-    selected = []
+    locally_verified = []
     for candidate in candidates:
         result = result_map.get(candidate.get("id"))
         if not result:
@@ -40,8 +40,6 @@ def select_mainland_nodes(
         if candidate.get("protocol_status") != "verified":
             continue
         if candidate.get("stable_status") != "stable":
-            continue
-        if candidate.get("risk_policy_decision") != "eligible_for_unconfirmed_pool":
             continue
         latency = result.get("latency_ms")
         if not isinstance(latency, (int, float)) or latency <= 0 or latency > max_latency:
@@ -51,15 +49,22 @@ def select_mainland_nodes(
         node["mainland_latency_ms"] = result.get("latency_ms")
         node["mainland_download_kbps"] = float(result.get("download_kbps") or 0)
         node["mainland_upload_kbps"] = float(result.get("upload_kbps") or 0)
-        selected.append(node)
+        locally_verified.append(node)
 
-    selected.sort(key=lambda node: (
+    locally_verified.sort(key=lambda node: (
         float(node.get("mainland_latency_ms") or 1e9),
         -float(node.get("mainland_download_kbps") or 0),
         -float(node.get("mainland_upload_kbps") or 0),
     ))
+    # Stable pool: local pass plus risk-feed eligibility.
+    selected = [
+        node for node in locally_verified
+        if node.get("risk_status") != "blocked"
+        and node.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"
+    ]
+    # Fast pool: local pass plus speed threshold only; deliberately no reputation filter.
     fast = [
-        node for node in selected
+        node for node in locally_verified
         if node["mainland_download_kbps"] >= fast_download
         and node["mainland_upload_kbps"] >= fast_upload
     ]
@@ -132,6 +137,8 @@ def run(report_path: Path) -> dict[str, Any]:
         "fast_subscription": str(fast_path),
         "fast_minimum_download_kbps": fast_download,
         "fast_minimum_upload_kbps": fast_upload,
+        "fast_pool_reputation_filter": False,
+        "mainland_locally_verified_candidates": len(locally_verified),
         "maximum_mainland_latency_ms": max_latency,
         "meaning": "Only nodes that passed the actual local mainland-China tunnel and repeated transfer tests are included.",
     }
