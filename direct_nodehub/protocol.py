@@ -184,7 +184,12 @@ def run():
         if r: n.update({"protocol_status":r["protocol_status"],"exit_ip":r["exit_ip"],"exit_ip_agreement":r["exit_ip_agreement"],"protocol_error":r["error"]})
         else: n.setdefault("protocol_status","not_tested")
         n["mainland_status"]="not_tested"
-    summary={"total_tcp_reachable":len(tcp),"tested":len(tested),"verified":sum(r["protocol_status"]=="verified" for r in tested),"partial":sum(r["protocol_status"]=="partial" for r in tested),"failed":sum(r["protocol_status"]=="failed" for r in tested),"region":"github-hosted-runner (region not guaranteed)","meaning":"Mihomo tunnel and HTTP egress from cloud; not a mainland China test."}
+    selected_transports={}
+    for node in selected:
+        transport=network_of(node)
+        selected_transports[transport]=selected_transports.get(transport,0)+1
+    selected_websocket_ids=[node["id"] for node in selected if network_of(node)=="ws"]
+    summary={"total_tcp_reachable":len(tcp),"tested":len(tested),"verified":sum(r["protocol_status"]=="verified" for r in tested),"partial":sum(r["protocol_status"]=="partial" for r in tested),"failed":sum(r["protocol_status"]=="failed" for r in tested),"selected_transports":selected_transports,"selected_websocket_count":len(selected_websocket_ids),"selected_websocket_ids":selected_websocket_ids,"region":"github-hosted-runner (region not guaranteed)","meaning":"Mihomo tunnel and HTTP egress from cloud; not a mainland China test."}
     stamp=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()); data["protocol_tested_at"]=stamp; data["protocol_summary"]=summary; CANDIDATES.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     OUTPUT.parent.mkdir(parents=True,exist_ok=True); OUTPUT.write_text(json.dumps({"schema_version":1,"generated_at":stamp,"summary":summary,"results":tested},ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(summary,ensure_ascii=False,indent=2)); return summary
