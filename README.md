@@ -82,3 +82,7 @@ python -m direct_nodehub.mainland_probe --confirm-mainland --limit 20 --rounds 3
 ```
 
 运行时必须确实处于中国大陆网络，并关闭其他 VPN/代理；只有明确确认后脚本才会生成 reports/mainland/ 报告。报告包含节点 ID、三轮连通情况、出口 IP、下载和上传速度。可将报告交给 `python -m direct_nodehub.mainland_report 报告文件.json` 导入。不要上传或提交任何家宽账号密码。
+
+## 发布手机状态页（一次性设置）
+
+仓库已包含 GitHub Pages 自动部署工作流。首次启用时，在 GitHub 仓库页面打开 Settings → Pages，将 Build and deployment 的 Source 设为 GitHub Actions；然后进入 Actions，手动运行 Publish status website。成功后，GitHub 会在部署任务中显示站点地址。此后 public/ 文件更新时会自动重新部署。
