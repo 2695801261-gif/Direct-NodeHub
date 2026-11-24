@@ -6,6 +6,8 @@ import time
 from pathlib import Path
 from typing import Any
 
+from direct_nodehub.protocol import network_of, worker_compatible_ws
+
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +78,23 @@ def run() -> dict[str, Any]:
     data = json.loads(CANDIDATES.read_text(encoding="utf-8"))
     policy = json.loads(POLICY.read_text(encoding="utf-8"))
     nodes = data.get("candidates", [])
+    ws_nodes = [node for node in nodes if network_of(node) == "ws"]
+    ws_verified_stable = [
+        node for node in ws_nodes
+        if node.get("protocol_status") == "verified" and node.get("stable_status") == "stable"
+    ]
+    ws_worker_compatible = [node for node in ws_nodes if worker_compatible_ws(node)]
+    ws_worker_compatible_stable = [
+        node for node in ws_verified_stable if worker_compatible_ws(node)
+    ]
+    cloudflare_relay_status = {
+        "websocket_candidates": len(ws_nodes),
+        "protocol_verified_and_stable": len(ws_verified_stable),
+        "worker_compatible_candidates": len(ws_worker_compatible),
+        "worker_compatible_verified_and_stable": len(ws_worker_compatible_stable),
+        "eligible_candidate_ids": [node["id"] for node in ws_worker_compatible_stable[:10]],
+        "meaning": "Eligibility only; Worker must still be deployed and tested from the actual client network. Requires TLS WebSocket with matching upstream server, SNI and Host.",
+    }
     limit = int(policy.get("publication", {}).get("max_nodes", 100))
     stability = policy.get("stability", {})
     max_latency = float(stability.get("max_latency_ms", policy.get("max_cloud_latency_ms", 1000)))
@@ -194,6 +213,7 @@ def run() -> dict[str, Any]:
         "risk": data.get("risk_summary"),
         "stability": data.get("stability_summary"),
         "sources": data.get("sources", []),
+        "cloudflare_ws_relay": cloudflare_relay_status,
     }
     (OUTPUT / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
