@@ -113,6 +113,20 @@ class ProtocolRiskTests(unittest.TestCase):
         }
         self.assertFalse(worker_compatible_ws(candidate))
 
+    def test_worker_rejects_unforwarded_websocket_headers(self):
+        candidate = {
+            "id": "ws",
+            "config": {
+                "type": "vless",
+                "network": "ws",
+                "tls": True,
+                "server": "edge.example",
+                "servername": "edge.example",
+                "ws-opts": {"path": "/ws", "headers": {"Host": "edge.example", "Origin": "https://other.example"}},
+            },
+        }
+        self.assertFalse(worker_compatible_ws(candidate))
+
     def test_protocol_probe_respects_total_limit(self):
         nodes = [
             {"id": f"ws-{i}", "cloud_tcp_latency_ms": i, "config": {"type": "vless", "network": "ws"}}
