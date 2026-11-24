@@ -177,6 +177,26 @@ class ProtocolRiskTests(unittest.TestCase):
         self.assertFalse(worker_compatible_tcp_bridge(reality))
         self.assertFalse(worker_compatible_tcp_bridge(ip_host))
 
+    def test_worker_tcp_bridge_rejects_custom_tls_fingerprint_and_alpn(self):
+        fingerprint = {
+            "id": "fingerprint",
+            "config": {
+                "type": "vless", "network": "tcp", "tls": True,
+                "server": "origin.example", "servername": "origin.example",
+                "client-fingerprint": "chrome",
+            },
+        }
+        alpn = {
+            "id": "alpn",
+            "config": {
+                "type": "vmess", "network": "tcp", "tls": True,
+                "server": "origin.example", "servername": "origin.example",
+                "alpn": ["h2", "http/1.1"],
+            },
+        }
+        self.assertFalse(worker_compatible_tcp_bridge(fingerprint))
+        self.assertFalse(worker_compatible_tcp_bridge(alpn))
+
     def test_worker_compatible_tls_websocket(self):
         candidate = {
             "id": "ws",
