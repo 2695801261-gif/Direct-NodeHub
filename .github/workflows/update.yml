@@ -30,6 +30,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Refresh node pool
         run: python -m direct_nodehub
+      - name: Run cloud TCP reachability probes
+        run: python -m direct_nodehub.probe
       - name: Commit generated public data
         run: |
           if [ -n "$(git status --porcelain public)" ]; then
