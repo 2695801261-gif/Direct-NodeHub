@@ -32,16 +32,15 @@ li{margin:10px 0}.warn{color:#ffd18a}
 </ul>
 <p class="muted">实测前必须关闭其他 VPN、代理客户端和系统代理；不要把云端延迟当作大陆延迟。</p>
 </section>
-<section><h2>Cloudflare 中转实验</h2>
-<p>只有通过协议、稳定性和上游兼容性筛选的节点才会列为中转候选。中转不会改变出口 IP，也不保证降低延迟；请先阅读部署限制并在实际网络测试。</p>
-<ul><li><a href="https://github.com/2695801261-gif/Direct-NodeHub/blob/main/cloudflare/README.md">Cloudflare WS 中转与 TCP 桥接说明</a></li></ul>
+<section><h2>Cloudflare 中转</h2>
+<p class="warn">当前不部署。Cloudflare 自助服务协议限制使用其服务提供 VPN 或类似代理服务；仓库中的 Worker 代码仅保留作技术研究，除非获得 Cloudflare 明确书面许可，不要部署。</p>
 </section>
 <section><h2>本轮数据</h2><p id="status">正在读取状态…</p></section>
 <script>
 fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const s=d.summary||{};
  document.getElementById('status').textContent=
- '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成；Cloudflare WS 中转合格候选 '+(d.cloudflare_ws_relay?.worker_compatible_verified_and_stable??0)+' 个；Cloudflare TCP 桥接合格候选 '+(d.cloudflare_tcp_bridge?.protocol_verified_and_stable??0)+' 个。更新时间：'+(d.generated_at||'未知');
+ '信誉筛查稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；不做信誉筛查的高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成；Cloudflare 中转：未部署（自助服务条款限制）。更新时间：'+(d.generated_at||'未知');
  }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
 </script>
 </body></html>
