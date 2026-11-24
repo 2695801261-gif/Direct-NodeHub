@@ -6,6 +6,7 @@ import requests, yaml
 ROOT=Path(__file__).resolve().parents[1]; CANDIDATES=ROOT/"public"/"candidates.json"; OUTPUT=ROOT/"public"/"protocol-results.json"; POLICY=ROOT/"config"/"policy.json"
 ECHO_URLS=["https://api.ipify.org","https://ifconfig.me/ip","https://icanhazip.com"]
 DOWNLOAD_URL="https://speed.cloudflare.com/__down?bytes=262144"
+UPLOAD_URL="https://speed.cloudflare.com/__up"
 def _b64(v):
     v += "="*((4-len(v)%4)%4); return base64.urlsafe_b64decode(v.encode())
 def _params(p): return {k:v[-1] for k,v in urllib.parse.parse_qs(p.query,keep_blank_values=True).items()}
@@ -101,6 +102,15 @@ def _egress(port):
         elapsed=max(time.perf_counter()-started,0.001)
         checks.append({"url":"cloudflare-256KiB-download","status":"ok" if total>=262144 else "partial","bytes":total,"duration_ms":round(elapsed*1000,1),"download_kbps":round(total/1024/elapsed,1)})
     except Exception as e: checks.append({"url":"cloudflare-256KiB-download","status":"failed","error":str(e)[:160]})
+    started=time.perf_counter()
+    try:
+        payload=bytes(65536)
+        response=s.post(UPLOAD_URL,data=payload,headers={"Content-Type":"application/octet-stream"},timeout=(3,8))
+        response.raise_for_status()
+        elapsed=max(time.perf_counter()-started,0.001)
+        checks.append({"url":"cloudflare-64KiB-upload","status":"ok","bytes":len(payload),"duration_ms":round(elapsed*1000,1),"upload_kbps":round(len(payload)/1024/elapsed,1)})
+    except Exception as e:
+        checks.append({"url":"cloudflare-64KiB-upload","status":"failed","error":str(e)[:160]})
     return ips,checks
 def verify_one(c,binary,preferred_port=19000):
     out={"id":c["id"],"protocol_status":"failed","exit_ip":None,"exit_ip_agreement":0,"http_checks":[],"error":None}
