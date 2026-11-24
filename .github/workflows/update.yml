@@ -73,6 +73,13 @@ jobs:
         run: python -m direct_nodehub.stability
       - name: Generate subscriptions and chain template
         run: python -m direct_nodehub.publish
+      - name: Validate generated Mihomo configurations
+        run: |
+          set -euo pipefail
+          for config in public/clash.yaml public/fast.yaml public/chain-template.yaml; do
+            echo "Validating $config"
+            /tmp/mihomo -t -f "$config"
+          done
       - name: Commit generated public data
         run: |
           if [ -n "$(git status --porcelain public)" ]; then
