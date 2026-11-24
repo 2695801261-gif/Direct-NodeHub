@@ -156,7 +156,7 @@ def run():
     def task(pair):
         index,node=pair
         return verify_one(node,binary,preferred_port=20000+index)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         tested=list(pool.map(task,enumerate(selected)))
     byid={r["id"]:r for r in tested}
     for n in data.get("candidates",[]):
