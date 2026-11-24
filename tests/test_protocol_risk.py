@@ -191,6 +191,21 @@ class ProtocolRiskTests(unittest.TestCase):
         }
         self.assertTrue(worker_compatible_ws(candidate))
 
+    def test_worker_rejects_custom_tls_fingerprint_and_alpn(self):
+        candidate = {
+            "id": "ws",
+            "config": {
+                "type": "vless",
+                "network": "ws",
+                "tls": True,
+                "server": "edge.example",
+                "servername": "edge.example",
+                "client-fingerprint": "chrome",
+                "ws-opts": {"path": "/ws", "headers": {"Host": "edge.example"}},
+            },
+        }
+        self.assertFalse(worker_compatible_ws(candidate))
+
     def test_worker_rejects_mismatched_upstream_host_or_sni(self):
         candidate = {
             "id": "ws",
