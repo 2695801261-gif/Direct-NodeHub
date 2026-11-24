@@ -8,7 +8,7 @@
   "minimum_exit_ip_agreement": 2,
   "max_cloud_latency_ms": 2500,
   "protocol_probe": {
-    "max_candidates": 80,
+    "max_candidates": 120,
     "mihomo_version": "v1.19.34"
   },
   "risk_policy": {
@@ -23,5 +23,12 @@
     "include_cloud_latency_as_china_latency": false,
     "label_cloud_probe_location": true,
     "max_nodes": 100
+  },
+  "stability": {
+    "rounds": 3,
+    "required_successful_rounds": 3,
+    "minimum_download_kbps": 64,
+    "fast_pool_minimum_download_kbps": 256,
+    "max_candidates": 60
   }
 }
