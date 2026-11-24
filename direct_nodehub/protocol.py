@@ -1,5 +1,5 @@
 from __future__ import annotations
-import base64, json, os, shutil, socket, subprocess, tempfile, time, urllib.parse
+import base64, concurrent.futures, json, os, shutil, socket, subprocess, tempfile, time, urllib.parse
 from pathlib import Path
 from typing import Any
 import requests, yaml
@@ -90,12 +90,12 @@ def _egress(port):
             import ipaddress; ipaddress.ip_address(ip); ips.append(ip); checks.append({"url":url,"status":"ok","ip":ip})
         except Exception as e: checks.append({"url":url,"status":"failed","error":str(e)[:160]})
     return ips,checks
-def verify_one(c,binary):
+def verify_one(c,binary,preferred_port=19000):
     out={"id":c["id"],"protocol_status":"failed","exit_ip":None,"exit_ip_agreement":0,"http_checks":[],"error":None}
     try:
         proxy=to_mihomo_proxy(c)
         with tempfile.TemporaryDirectory(prefix="dnh-") as td:
-            cfgpath=Path(td)/"config.yaml"; port=19000
+            cfgpath=Path(td)/"config.yaml"; port=preferred_port
             while True:
                 with socket.socket() as sock:
                     try: sock.bind(("127.0.0.1",port)); break
@@ -130,7 +130,13 @@ def run():
     binary=os.environ.get("MIHOMO_BIN") or shutil.which("mihomo")
     if not binary: raise RuntimeError("mihomo binary not found")
     policy=json.loads(POLICY.read_text()); data=json.loads(CANDIDATES.read_text()); tcp=[n for n in data.get("candidates",[]) if n.get("cloud_tcp")=="reachable"]
-    tcp.sort(key=lambda n:n.get("cloud_tcp_latency_ms") or 999999); tested=[verify_one(n,binary) for n in tcp[:int(policy.get("protocol_probe",{}).get("max_candidates",80))]]; byid={r["id"]:r for r in tested}
+    tcp.sort(key=lambda n:n.get("cloud_tcp_latency_ms") or 999999); selected=tcp[:int(policy.get("protocol_probe",{}).get("max_candidates",80))]
+    def task(pair):
+        index,node=pair
+        return verify_one(node,binary,preferred_port=20000+index)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        tested=list(pool.map(task,enumerate(selected)))
+    byid={r["id"]:r for r in tested}
     for n in data.get("candidates",[]):
         r=byid.get(n["id"])
         if r: n.update({"protocol_status":r["protocol_status"],"exit_ip":r["exit_ip"],"exit_ip_agreement":r["exit_ip_agreement"],"protocol_error":r["error"]})
