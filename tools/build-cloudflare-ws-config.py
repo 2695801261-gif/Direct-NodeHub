@@ -23,16 +23,9 @@ def main() -> int:
         description="Build a private Mihomo config for a verified Cloudflare WS relay."
     )
     parser.add_argument("--candidate-id", help="specific eligible candidate ID; default chooses the best cloud-ranked candidate")
-    parser.add_argument("--worker-host", required=True, help="deployed Worker hostname, without scheme or path")
+    parser.add_argument("--worker-host", help="deployed Worker hostname, without scheme or path; omit to print the upstream URL before deployment")
     parser.add_argument("--output", default="cloudflare-relay.yaml", help="private local output file")
     args = parser.parse_args()
-
-    worker_host = args.worker_host.strip().lower()
-    if not re.fullmatch(r"[a-z0-9.-]+", worker_host) or worker_host.startswith(".") or worker_host.endswith("."):
-        raise SystemExit("Worker host must be a plain DNS hostname, not a URL.")
-    token = getpass.getpass("Enter the Worker RELAY_TOKEN (input hidden): ").strip()
-    if not re.fullmatch(r"[A-Za-z0-9_-]{24,128}", token):
-        raise SystemExit("RELAY_TOKEN must contain 24–128 URL-safe characters.")
 
     data = json.loads(CANDIDATES.read_text(encoding="utf-8"))
     eligible = [
@@ -62,6 +55,24 @@ def main() -> int:
     if not upstream_path.startswith("/"):
         upstream_path = "/" + upstream_path
     upstream_url = f"https://{upstream_host}:{upstream_port}{upstream_path}"
+
+    if not args.worker_host:
+        print(json.dumps({
+            "selected_candidate_id": selected["id"],
+            "selected_candidate_name": selected.get("name"),
+            "upstream_exit_ip": selected.get("exit_ip"),
+            "cloud_latency_ms": selected.get("median_latency_ms"),
+            "upstream_url_for_cloudflare_worker": upstream_url,
+            "next": "Create the Worker, set UPSTREAM_URL to the value above, set UPSTREAM_TLS=true, and add a private RELAY_TOKEN. Then rerun this script with --worker-host.",
+        }, ensure_ascii=False, indent=2))
+        return 0
+
+    worker_host = args.worker_host.strip().lower()
+    if not re.fullmatch(r"[a-z0-9.-]+", worker_host) or worker_host.startswith(".") or worker_host.endswith("."):
+        raise SystemExit("Worker host must be a plain DNS hostname, not a URL.")
+    token = getpass.getpass("Enter the Worker RELAY_TOKEN (input hidden): ").strip()
+    if not re.fullmatch(r"[A-Za-z0-9_-]{24,128}", token):
+        raise SystemExit("RELAY_TOKEN must contain 24–128 URL-safe characters.")
 
     client = dict(upstream)
     client["name"] = "Cloudflare-WS-" + str(selected.get("id"))
