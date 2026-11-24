@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "name": "V2RayAggregator",
+      "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
+      "format": "auto",
+      "enabled": true
+    },
+    {
+      "name": "NoMoreWalls",
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+      "format": "auto",
+      "enabled": true
+    },
+    {
+      "name": "v2rayfree",
+      "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+      "format": "auto",
+      "enabled": true
+    }
+  ]
+}
