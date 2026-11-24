@@ -48,8 +48,8 @@ def select_mainland_nodes(
             continue
         if candidate.get("protocol_status") != "verified":
             continue
-        if candidate.get("stable_status") != "stable":
-            continue
+        # Do not require cloud stable_status here: the local three-round
+        # report is the authority for mainland stability.
         latency = result.get("latency_ms")
         if not isinstance(latency, (int, float)) or latency <= 0 or latency > max_latency:
             continue
