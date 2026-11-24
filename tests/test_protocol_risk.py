@@ -166,6 +166,17 @@ class ProtocolRiskTests(unittest.TestCase):
         }
         self.assertFalse(worker_compatible_ws(candidate))
 
+    def test_protocol_probe_prioritizes_worker_tcp_bridge_candidates(self):
+        nodes = [
+            {"id": "ordinary", "cloud_tcp_latency_ms": 1, "config": {"type": "ss", "network": "tcp"}},
+            {"id": "bridge", "cloud_tcp_latency_ms": 100, "config": {
+                "type": "vless", "network": "tcp", "tls": True,
+                "server": "origin.example", "servername": "origin.example",
+            }},
+        ]
+        selected = select_protocol_candidates(nodes, max_candidates=2, websocket_quota=0)
+        self.assertEqual([node["id"] for node in selected], ["bridge", "ordinary"])
+
     def test_protocol_probe_respects_total_limit(self):
         nodes = [
             {"id": f"ws-{i}", "cloud_tcp_latency_ms": i, "config": {"type": "vless", "network": "ws"}}
