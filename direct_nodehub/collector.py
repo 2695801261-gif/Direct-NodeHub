@@ -7,7 +7,7 @@ import re
 import time
 from pathlib import Path
 from typing import Any
-from urllib.parse import parse_qs, unquote, urlsplit
+from urllib.parse import parse_qs, parse_qsl, unquote, urlencode, urlsplit, urlunsplit
 
 import requests
 import yaml
@@ -156,7 +156,23 @@ def candidate_id(node: dict[str, Any]) -> str:
             except Exception:
                 stable = uri.split("#", 1)[0]
         else:
-            stable = uri.split("#", 1)[0]
+            parsed = urlsplit(uri)
+            # Query parameter order and fragment labels do not change a proxy.
+            # Canonicalize them so mirrors do not inflate the pool with duplicates.
+            pairs = sorted(parse_qsl(parsed.query, keep_blank_values=True))
+            netloc = parsed.netloc
+            if "@" in netloc:
+                userinfo, hostport = netloc.rsplit("@", 1)
+                netloc = userinfo + "@" + hostport.lower()
+            else:
+                netloc = netloc.lower()
+            stable = urlunsplit((
+                parsed.scheme.lower(),
+                netloc,
+                parsed.path,
+                urlencode(pairs, doseq=True),
+                "",
+            ))
     else:
         config = dict(node.get("config") or {})
         stable = json.dumps(config, sort_keys=True, separators=(",", ":"))
