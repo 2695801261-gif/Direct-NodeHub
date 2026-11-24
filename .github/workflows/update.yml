@@ -32,6 +32,14 @@ jobs:
           cache: "pip"
       - name: Install Python dependencies
         run: python -m pip install -r requirements.txt
+      - name: Run parser and module regression tests
+        run: |
+          python -m unittest discover -s tests -v
+          python -m py_compile tools/build-cloudflare-ws-config.py tools/build-cloudflare-tcp-config.py
+      - name: Check Cloudflare Worker JavaScript syntax
+        run: node --check cloudflare/worker-ws-relay.js
+      - name: Check TCP bridge JavaScript syntax
+        run: node --check cloudflare/worker-ws-tcp-bridge.js
       - name: Install pinned official Mihomo stable binary with API digest verification
         shell: bash
         env:
@@ -67,14 +75,6 @@ jobs:
           chmod +x /tmp/mihomo
           /tmp/mihomo -v
           echo "MIHOMO_BIN=/tmp/mihomo" >> "$GITHUB_ENV"
-      - name: Run parser and module regression tests
-        run: |
-          python -m unittest discover -s tests -v
-          python -m py_compile tools/build-cloudflare-ws-config.py tools/build-cloudflare-tcp-config.py
-      - name: Check Cloudflare Worker JavaScript syntax
-        run: node --check cloudflare/worker-ws-relay.js
-      - name: Check TCP bridge JavaScript syntax
-        run: node --check cloudflare/worker-ws-tcp-bridge.js
       - name: Collect public candidates
         run: python -m direct_nodehub
       - name: Run cloud TCP reachability probes
