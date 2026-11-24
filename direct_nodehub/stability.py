@@ -52,7 +52,7 @@ def run():
         result=rmap.get(node["id"])
         if result: node.update({k:v for k,v in result.items() if k!="rounds"})
         elif node.get("protocol_status")=="verified": node["stable_status"]="not_tested"
-    summary={"candidates_tested":len(results),"stable":sum(r["stable_status"]=="stable" for r in results),"degraded":sum(r["stable_status"]=="degraded" for r in results),"unstable":sum(r["stable_status"]=="unstable" for r in results),"rounds":rounds,"required_successful_rounds":required,"minimum_download_kbps":minimum,"minimum_upload_kbps":minimum_upload,"test_region":"github-hosted-runner (region not guaranteed)","meaning":"Repeated tunnel establishment, agreeing exit IP and 256 KiB HTTPS download test; not a mainland measurement."}
+    summary={"candidates_tested":len(results),"stable":sum(r["stable_status"]=="stable" for r in results),"degraded":sum(r["stable_status"]=="degraded" for r in results),"unstable":sum(r["stable_status"]=="unstable" for r in results),"rounds":rounds,"required_successful_rounds":required,"minimum_download_kbps":minimum,"minimum_upload_kbps":minimum_upload,"test_region":"github-hosted-runner (region not guaranteed)","meaning":"Repeated tunnel establishment, consistent exit IP, 256 KiB HTTPS download and 64 KiB HTTPS upload; not a mainland measurement."}
     stamp=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())
     data["stability_tested_at"]=stamp
     data["stability_summary"]=summary
