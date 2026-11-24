@@ -72,3 +72,19 @@ python tools/build-cloudflare-ws-config.py --worker-host YOUR-WORKER.workers.dev
 ```
 
 Enter the same `RELAY_TOKEN` when prompted. The script rechecks that the selected upstream is currently cloud-verified, stable, risk-eligible and Worker-compatible. Keep the generated YAML private because it contains the relay token.
+
+### Generate the client config for the TCP bridge
+
+The TCP bridge uses a separate generator and separate Worker deployment. First run:
+
+```powershell
+python tools/build-cloudflare-tcp-config.py
+```
+
+It prints the selected upstream's `UPSTREAM_HOST`, `UPSTREAM_PORT` and `UPSTREAM_TLS`. Add those variables and a random URL-safe `RELAY_TOKEN` to a Worker created from `worker-ws-tcp-bridge.js`, then deploy it. After you know the Worker hostname, run:
+
+```powershell
+python tools/build-cloudflare-tcp-config.py --worker-host YOUR-WORKER.workers.dev --output "$HOME\Desktop\cloudflare-tcp-bridge.yaml"
+```
+
+Enter the same `RELAY_TOKEN` when prompted. Keep the generated YAML private. This route is experimental and still needs a real test from the intended mainland network.
