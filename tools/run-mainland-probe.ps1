@@ -6,16 +6,24 @@ $Version = "v1.19.34"
 $WorkDir = Join-Path $env:TEMP "Direct-NodeHub-Mainland"
 New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null
 
+function Test-PythonVersion {
+    param([string]$Command, [string[]]$Prefix)
+    $versionText = & $Command @Prefix -c "import sys; print('%d.%d' % sys.version_info[:2])" 2>$null
+    if ($LASTEXITCODE -ne 0 -or -not $versionText) { return $false }
+    $parts = $versionText.Trim().Split(".")
+    if ($parts.Count -ne 2) { return $false }
+    $major = [int]$parts[0]
+    $minor = [int]$parts[1]
+    return ($major -gt 3 -or ($major -eq 3 -and $minor -ge 10))
+}
+
 function Get-PythonCommand {
     $py = Get-Command py -ErrorAction SilentlyContinue
-    if ($py) {
-        $null = & py -3 --version 2>$null
-        if ($LASTEXITCODE -eq 0) {
-            return @{ Command = "py"; Prefix = @("-3") }
-        }
+    if ($py -and (Test-PythonVersion -Command "py" -Prefix @("-3"))) {
+        return @{ Command = "py"; Prefix = @("-3") }
     }
     $python = Get-Command python -ErrorAction SilentlyContinue
-    if ($python) {
+    if ($python -and (Test-PythonVersion -Command "python" -Prefix @())) {
         return @{ Command = "python"; Prefix = @() }
     }
     if (Get-Command winget -ErrorAction SilentlyContinue) {
