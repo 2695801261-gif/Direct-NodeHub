@@ -7,6 +7,10 @@
   "minimum_successful_probes": 2,
   "minimum_exit_ip_agreement": 2,
   "max_cloud_latency_ms": 2500,
+  "protocol_probe": {
+    "max_candidates": 80,
+    "mihomo_version": "v1.19.34"
+  },
   "risk_policy": {
     "deny_known_abuse": true,
     "deny_tor_exit": true,
