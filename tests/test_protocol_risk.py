@@ -275,7 +275,7 @@ class ProtocolRiskTests(unittest.TestCase):
             {"id": "ordinary", "cloud_tcp_latency_ms": 1, "config": {"type": "ss", "network": "tcp"}},
             {"id": "bridge", "cloud_tcp_latency_ms": 100, "config": {
                 "type": "vless", "network": "tcp", "tls": True,
-                "server": "origin.example", "servername": "origin.example",
+                "server": "origin.example", "port": 443, "servername": "origin.example",
             }},
         ]
         selected = select_protocol_candidates(nodes, max_candidates=2, websocket_quota=0)
