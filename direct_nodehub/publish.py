@@ -98,12 +98,18 @@ def run() -> dict[str, Any]:
     ]
     ws_worker_compatible = [node for node in ws_nodes if worker_compatible_ws(node)]
     ws_worker_compatible_stable = [
-        node for node in ws_verified_stable if worker_compatible_ws(node)
+        node for node in ws_verified_stable
+        if worker_compatible_ws(node)
+        and node.get("risk_status") != "blocked"
+        and node.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"
     ]
     tcp_bridge_candidates = [node for node in nodes if worker_compatible_tcp_bridge(node)]
     tcp_bridge_verified_stable = [
         node for node in tcp_bridge_candidates
-        if node.get("protocol_status") == "verified" and node.get("stable_status") == "stable"
+        if node.get("protocol_status") == "verified"
+        and node.get("stable_status") == "stable"
+        and node.get("risk_status") != "blocked"
+        and node.get("risk_policy_decision") == "eligible_for_unconfirmed_pool"
     ]
     cloudflare_relay_status = {
         "websocket_candidates": len(ws_nodes),
