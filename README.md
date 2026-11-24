@@ -34,7 +34,21 @@ GitHub Actions 自动检查候选节点的 TCP 端口是否可达，并记录云
 
 ## 当前状态
 
-已实现公开订阅候选采集、URI/YAML 解析、去重、云端 TCP 可达性预筛，以及大陆实测报告格式校验。协议握手、代理出口验证、风险情报筛查和正式订阅生成仍待实现。
+已实现：
+- 多源采集与 URI / Clash-Mihomo YAML 解析，单源候选数量受策略限制，并保留跨来源命中记录。
+- 云端 TCP 可达性预筛。
+- 使用官方 Mihomo 稳定版对节点配置进行校验，启动真实代理隧道，并通过多个 HTTPS 出口查询服务核对出口 IP。
+- 下载 IPsum 与 Tor 出口列表进行已知风险命中筛查；IPsum 仅采用至少 3 个情报源同时命中的地址。
+- 大陆实测报告格式校验；云端任务不会伪造大陆探测结果。
+
+当前采集源包括 V2RayAggregator、NoMoreWalls、v2rayfree、learnLi/free-nodes、735754647/Free-Nodes、zhuhaiuk/free-nodes、a2470982985/getNode、rtwo2/FastNodes、morpheusadam/v2ray-config、Pawdroid/Free-servers、snakem982/proxypool 等。来源会失效或更改格式，运行结果会记录成功/失败状态；不会假定每个源每次都能返回节点。
+
+风险状态的含义：
+- `blocked`：命中已知风险情报或出口 IP 非公网地址，拒绝进入候选池。
+- `unconfirmed`：未命中当前威胁情报，但这不等于干净 IP；只允许进入独立的未确认观察池。
+- `unknown`：没有有效出口 IP 或威胁情报源不可用，隔离处理。
+
+**尚未完成：** 正式订阅文件生成与网页展示；大陆网络实际探测仍需要真实大陆网络作为探测点。协议验证目前最多抽测策略设定数量的云端 TCP 可达节点，云端成功不等于大陆可用。
 
 ## 计划输出
 
