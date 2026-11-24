@@ -1,4 +1,5 @@
 $ErrorActionPreference = "Stop"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $Version = "v1.19.34"
@@ -79,6 +80,9 @@ Copy-Item -Path $mihomo.FullName -Destination $normalizedMihomo -Force
 $env:MIHOMO_BIN = $normalizedMihomo
 & $env:MIHOMO_BIN -v
 
+Write-Host "刷新最新候选节点数据（如需 GitHub 代理，请在下一步确认前完成下载）…" -ForegroundColor Cyan
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/2695801261-gif/Direct-NodeHub/main/public/candidates.json" -OutFile (Join-Path $RepoRoot "public\candidates.json")
+
 Write-Host ""
 Write-Host "请确认：电脑当前连接的是中国大陆本地网络，并已关闭所有 VPN、代理软件和系统代理。" -ForegroundColor Yellow
 Write-Host "测试期间不要切换网络。该脚本只会测试仓库中已通过云端初筛的节点。"
@@ -86,9 +90,6 @@ $confirm = Read-Host "确认以上条件后输入 MAINLAND 开始测试"
 if ($confirm -cne "MAINLAND") {
     throw "未确认大陆直连环境，已停止。"
 }
-
-Write-Host "刷新最新候选节点数据…" -ForegroundColor Cyan
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/2695801261-gif/Direct-NodeHub/main/public/candidates.json" -OutFile (Join-Path $RepoRoot "public\candidates.json")
 
 Write-Host "3/4 执行大陆本地协议、延迟和双向速度测试（最多 30 个节点，每个节点 3 轮）…" -ForegroundColor Cyan
 Push-Location $RepoRoot
