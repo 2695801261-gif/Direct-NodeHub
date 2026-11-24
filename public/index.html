@@ -1,1 +1,35 @@
-<!doctype html><html lang='zh-CN'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Direct-NodeHub 状态</title><style>body{font:16px system-ui;background:#101722;color:#e7edf5;max-width:760px;margin:36px auto;padding:0 18px}a{color:#8cc8ff}section{background:#1b2735;padding:16px;border-radius:12px;margin:14px 0}small{color:#aab7c7}</style><h1>Direct-NodeHub</h1><p>公开节点云端筛选状态</p><section><h2>订阅文件</h2><p><a href="clash.yaml">信誉情报筛选稳定池</a></p><p><a href="fast.yaml">高速稳定池</a></p><p><a href="chain-template.yaml">家宽链式代理模板</a></p><p><a href="status.json">JSON 状态</a></p></section><section><h2>测试边界</h2><p>云端协议与下载测试不代表中国大陆连通性。大陆状态尚未测试。</p><small>免费公开节点可能随时失效；不要用于敏感账号或支付。</small></section></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direct-NodeHub 节点状态</title>
+<style>
+:root{color-scheme:dark}body{font:16px system-ui;background:#101722;color:#e7edf5;max-width:760px;margin:30px auto;padding:0 18px}
+section{background:#1b2735;padding:16px;border-radius:12px;margin:14px 0}a{color:#8cc8ff}small,.muted{color:#aab7c7}
+li{margin:10px 0}.warn{color:#ffd18a}
+</style>
+</head>
+<body>
+<h1>Direct-NodeHub</h1>
+<p>自动采集 · 协议验证 · 重复稳定性测试</p>
+<section><h2>订阅文件</h2>
+<ul>
+<li><a href="clash.yaml">云端复测稳定池（Clash / Mihomo）</a></li>
+<li><a href="fast.yaml">云端高速筛选池（Clash / Mihomo）</a></li>
+<li><a href="chain-template.yaml">个人家宽链式模板</a></li>
+<li><a href="status.json">完整状态 JSON</a></li>
+</ul></section>
+<section><h2>验证范围</h2>
+<p class="warn">注意：以上是 GitHub 云端运行器的测试结果，不代表中国大陆网络实测。大陆延迟、运营商阻断和本地可用性尚未验证。</p>
+<p class="muted">节点可能随时失效。不要用于敏感账号、支付或其他高风险用途。</p>
+</section>
+<section><h2>本轮数据</h2><p id="status">正在读取状态…</p></section>
+<script>
+fetch('status.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ const s=d.summary||{};
+ document.getElementById('status').textContent=
+ '稳定池 '+(s.reputation_screened_stable_nodes??0)+' 个；高速池 '+(s.fast_stable_nodes??0)+' 个；大陆实测：未完成。更新时间：'+(d.generated_at||'未知');
+ }).catch(()=>{document.getElementById('status').textContent='状态暂时不可读取。'});
+</script>
+</body></html>

@@ -1,36 +1,37 @@
 {
-  "generated_at": "2026-11-24T10:16:37Z",
+  "generated_at": "2026-11-24T11:03:22Z",
   "summary": {
-    "reputation_screened_stable_nodes": 29,
-    "fast_stable_nodes": 28,
-    "chain_entry_nodes": 29,
+    "reputation_screened_stable_nodes": 23,
+    "fast_stable_nodes": 23,
+    "chain_entry_nodes": 23,
     "chain_template": "public/chain-template.yaml",
-    "standard_gate": "3/3 stable rounds, exit IP agreement, download >=64 KiB/s, upload >=16 KiB/s, risk feeds available and no known-bad match",
-    "fast_gate": "3/3 stable rounds, download >= 256 KiB/s and upload >= 64 KiB/s; positive reputation confirmation not required, known-bad IPs excluded",
-    "chain_direction": "public node as entry hop; user-owned home endpoint as final hop via dialer-proxy",
+    "standard_gate": "3/3 repeated Mihomo tunnel tests, consistent exit IP, median cloud latency <= 1000 ms, download >= 128 KiB/s, upload >= 32 KiB/s, risk feeds available and no known-bad match",
+    "fast_gate": "same stability and risk gate, download >= 512 KiB/s and upload >= 128 KiB/s",
+    "url_test": "https://cp.cloudflare.com/generate_204",
+    "test_scope": "GitHub-hosted runner only; not a mainland-China measurement",
     "mainland_status": "not_tested",
-    "warning": "Cloud runner results do not guarantee mainland reachability. Chain template placeholders must be replaced locally; never commit home credentials."
+    "warning": "Cloud-side validation cannot guarantee reachability or latency from mainland China. Free public nodes may stop working at any time."
   },
   "cloud_tcp": {
-    "total": 977,
-    "reachable": 844,
-    "failed": 133,
+    "total": 938,
+    "reachable": 803,
+    "failed": 135,
     "meaning": "TCP reachability only; not proxy handshake, tunnel, speed, reputation, or mainland reachability."
   },
   "protocol": {
-    "total_tcp_reachable": 844,
+    "total_tcp_reachable": 803,
     "tested": 80,
-    "verified": 45,
-    "partial": 1,
-    "failed": 34,
+    "verified": 34,
+    "partial": 3,
+    "failed": 43,
     "region": "github-hosted-runner (region not guaranteed)",
     "meaning": "Mihomo tunnel and HTTP egress from cloud; not a mainland China test."
   },
   "risk": {
-    "total": 977,
+    "total": 938,
     "blocked": 0,
-    "unconfirmed": 45,
-    "unknown": 932,
+    "unconfirmed": 34,
+    "unknown": 904,
     "feeds": {
       "ipsum": {
         "status": "ok",
@@ -46,16 +47,17 @@
     "warning": "Not listed in threat feeds does not prove an IP is clean; this is not a reputation guarantee."
   },
   "stability": {
-    "candidates_tested": 45,
-    "stable": 29,
-    "degraded": 12,
-    "unstable": 4,
+    "candidates_tested": 34,
+    "stable": 23,
+    "degraded": 6,
+    "unstable": 5,
     "rounds": 3,
     "required_successful_rounds": 3,
-    "minimum_download_kbps": 64.0,
-    "minimum_upload_kbps": 16.0,
+    "minimum_download_kbps": 128.0,
+    "minimum_upload_kbps": 32.0,
+    "maximum_cloud_latency_ms": 1000.0,
     "test_region": "github-hosted-runner (region not guaranteed)",
-    "meaning": "Repeated tunnel establishment, consistent exit IP, 256 KiB HTTPS download and 64 KiB HTTPS upload; not a mainland measurement."
+    "meaning": "Repeated Mihomo tunnel, consistent exit IP, latency, HTTPS download and upload from GitHub-hosted runner only; not a mainland China measurement."
   },
   "sources": [
     {
@@ -88,8 +90,8 @@
     {
       "source": "zhuhaiuk-free-nodes-Clash",
       "status": "ok",
-      "parsed": 38,
-      "unique_added": 38
+      "parsed": 32,
+      "unique_added": 32
     },
     {
       "source": "a2470982985-getNode-Clash",
@@ -117,14 +119,14 @@
     {
       "source": "snakem982-proxypool-Mihomo",
       "status": "ok",
-      "parsed": 55,
-      "unique_added": 55
+      "parsed": 36,
+      "unique_added": 36
     },
     {
       "source": "snakem982-proxypool-V2Ray",
       "status": "ok",
-      "parsed": 55,
-      "unique_added": 50
+      "parsed": 36,
+      "unique_added": 36
     }
   ]
 }
