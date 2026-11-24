@@ -1,6 +1,6 @@
 import unittest
 
-from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates
+from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates, worker_compatible_ws
 from direct_nodehub.risk import classify
 from direct_nodehub import publish
 from direct_nodehub.stability import upload_metric, download_metric, latency_metric
@@ -84,6 +84,34 @@ class ProtocolRiskTests(unittest.TestCase):
         ]
         selected = select_protocol_candidates(nodes, max_candidates=3, websocket_quota=2)
         self.assertEqual([node["id"] for node in selected], ["ws-1", "ws-2", "tcp-1"])
+
+    def test_worker_compatible_tls_websocket(self):
+        candidate = {
+            "id": "ws",
+            "config": {
+                "type": "vless",
+                "network": "ws",
+                "tls": True,
+                "server": "edge.example",
+                "servername": "edge.example",
+                "ws-opts": {"path": "/ws", "headers": {"Host": "edge.example"}},
+            },
+        }
+        self.assertTrue(worker_compatible_ws(candidate))
+
+    def test_worker_rejects_mismatched_upstream_host_or_sni(self):
+        candidate = {
+            "id": "ws",
+            "config": {
+                "type": "vless",
+                "network": "ws",
+                "tls": True,
+                "server": "origin.example",
+                "servername": "front.example",
+                "ws-opts": {"path": "/ws", "headers": {"Host": "front.example"}},
+            },
+        }
+        self.assertFalse(worker_compatible_ws(candidate))
 
     def test_protocol_probe_respects_total_limit(self):
         nodes = [
