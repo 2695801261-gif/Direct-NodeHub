@@ -16,7 +16,7 @@
 3. 在解压后的仓库根目录（能看到 direct_nodehub、public、tools 这些文件夹的那一层）打开 PowerShell。
 4. 执行：
    powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\run-mainland-probe.ps1
-5. 确认电脑已处于大陆直连环境后，输入 MAINLAND。
+5. 脚本会先下载候选数据和 Mihomo。下载完成后，退出 VPN、代理客户端并关闭 Windows 系统代理；确认电脑仍连接大陆本地网络后，输入 MAINLAND。
 6. 等待脚本完成。它会在桌面创建 Direct-NodeHub-Mainland 文件夹。
 
 ## 输出文件
