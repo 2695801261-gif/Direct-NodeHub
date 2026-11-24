@@ -86,7 +86,7 @@ def _egress(port):
     px={"http":f"http://127.0.0.1:{port}","https":f"http://127.0.0.1:{port}"}; s=requests.Session(); s.trust_env=False; ips=[]; checks=[]
     for url in ECHO_URLS:
         try:
-            r=s.get(url,proxies=px,timeout=(5,9)); r.raise_for_status(); ip=r.text.strip().splitlines()[0]
+            r=s.get(url,proxies=px,timeout=(2,4)); r.raise_for_status(); ip=r.text.strip().splitlines()[0]
             import ipaddress; ipaddress.ip_address(ip); ips.append(ip); checks.append({"url":url,"status":"ok","ip":ip})
         except Exception as e: checks.append({"url":url,"status":"failed","error":str(e)[:160]})
     return ips,checks
