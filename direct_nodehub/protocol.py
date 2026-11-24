@@ -32,6 +32,21 @@ def _from_uri(uri,name):
         elif user and password: method=user
         else: raise ValueError("unsupported Shadowsocks URI form")
         return {"name":name,"type":"ss","server":host,"port":port,"cipher":method,"password":password,"udp":True}
+    if scheme in {"hysteria2","hy2"}:
+        n={"name":name,"type":"hysteria2","server":host,"port":port,"password":urllib.parse.unquote(p.username or "")}
+        if q.get("sni"): n["sni"]=q["sni"]
+        if q.get("obfs"): n["obfs"]=q["obfs"]
+        if q.get("obfs-password"): n["obfs-password"]=q["obfs-password"]
+        if q.get("insecure")=="1": n["skip-cert-verify"]=True
+        return n
+    if scheme=="tuic":
+        n={"name":name,"type":"tuic","server":host,"port":port,"uuid":urllib.parse.unquote(p.username or ""),"password":urllib.parse.unquote(p.password or "")}
+        if q.get("congestion_control"): n["congestion-controller"]=q["congestion_control"]
+        if q.get("udp_relay_mode"): n["udp-relay-mode"]=q["udp_relay_mode"]
+        if q.get("alpn"): n["alpn"]=q["alpn"].split(",")
+        if q.get("sni"): n["sni"]=q["sni"]
+        if q.get("allow_insecure")=="1": n["skip-cert-verify"]=True
+        return n
     if scheme in {"socks","socks5","http","https"}:
         n={"name":name,"type":"socks5" if scheme in {"socks","socks5"} else "http","server":host,"port":port}
         if p.username is not None: n["username"]=urllib.parse.unquote(p.username); n["password"]=urllib.parse.unquote(p.password or "")
