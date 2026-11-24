@@ -9,7 +9,8 @@
   "max_cloud_latency_ms": 1000,
   "protocol_probe": {
     "max_candidates": 80,
-    "mihomo_version": "v1.19.34"
+    "mihomo_version": "v1.19.34",
+    "websocket_probe_quota": 20
   },
   "risk_policy": {
     "deny_known_abuse": true,
