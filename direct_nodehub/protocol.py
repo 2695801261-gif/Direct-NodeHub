@@ -169,8 +169,17 @@ def worker_compatible_ws(candidate):
     sni = str(proxy.get("servername") or proxy.get("sni") or server).strip().lower()
     ws_opts = proxy.get("ws-opts") if isinstance(proxy.get("ws-opts"), dict) else {}
     headers = ws_opts.get("headers") if isinstance(ws_opts.get("headers"), dict) else {}
+    # This relay can reproduce the URL-derived Host/SNI only. It deliberately
+    # rejects custom headers and early-data settings it does not forward.
+    extra_headers = {str(key).lower() for key in headers if str(key).lower() != "host"}
     host = str(headers.get("Host") or headers.get("host") or server).strip().lower()
-    return bool(server and server == sni == host and not proxy.get("skip-cert-verify"))
+    early_data = ws_opts.get("max-early-data") or ws_opts.get("early-data-header-name")
+    return bool(
+        server and server == sni == host
+        and not proxy.get("skip-cert-verify")
+        and not extra_headers
+        and not early_data
+    )
 
 
 def select_protocol_candidates(nodes, max_candidates=80, websocket_quota=20):
