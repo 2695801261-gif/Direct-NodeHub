@@ -2,9 +2,9 @@ name: Refresh public node pool
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 */6 * * *"
 
+# The automatic schedule will be enabled after the end-to-end collector,
+# risk checks, and Mihomo output validator are implemented and tested.
 permissions:
   contents: write
 
