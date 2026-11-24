@@ -3,14 +3,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/update.yml"
-      - "direct_nodehub/**"
-      - "config/**"
-      - "requirements.txt"
-      - "tests/**"
 permissions:
   contents: write
 concurrency:
