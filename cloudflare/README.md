@@ -54,3 +54,13 @@ This can wrap a compatible **TLS TCP VLESS / VMess / Trojan** upstream in a clie
 6. Test from the actual mainland network. Keep it only if it beats the direct upstream in real connection success, latency and stability.
 
 The TCP bridge is an experiment. A successful syntax check is not a live connectivity test, and a Cloudflare-hosted test is not a mainland-China measurement.
+
+### Generate the client config
+
+After the Worker is deployed, run this from the repository root on a computer with Python and the project requirements installed:
+
+```powershell
+python tools/build-cloudflare-ws-config.py --worker-host YOUR-WORKER.workers.dev --output "$HOME\Desktop\cloudflare-relay.yaml"
+```
+
+Enter the same `RELAY_TOKEN` when prompted. The script selects a currently cloud-verified, stable, risk-eligible, Worker-compatible upstream and builds a private Mihomo YAML. It also prints the exact `UPSTREAM_URL` to set in the Worker. Keep the generated YAML private because it contains the relay token.
