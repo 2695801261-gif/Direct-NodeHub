@@ -95,7 +95,9 @@ jobs:
           git add public
           git commit -m "chore: refresh verified node data"
           git fetch origin main
-          git rebase origin/main
+          # Generated public files from this run are authoritative; when a prior
+          # refresh changed the same files, keep this run's newly generated data.
+          git rebase -X theirs origin/main
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
               echo "Public data committed successfully."
@@ -103,7 +105,7 @@ jobs:
             fi
             echo "Push attempt $attempt failed; fetching and rebasing latest main."
             git fetch origin main
-            git rebase origin/main
+            git rebase -X theirs origin/main
             sleep $((attempt * 3))
           done
           echo "Could not push generated data after 3 attempts."
