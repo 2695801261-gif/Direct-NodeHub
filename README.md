@@ -70,3 +70,15 @@ GitHub Actions 自动检查候选节点的 TCP 端口是否可达，并记录云
 - 将模板中的 `YOUR_HOME_HOST`、端口、用户名和密码在本地替换为自己的家宽服务信息；不要把真实凭据提交到公开仓库。
 - 最终访问网站看到的是家宽出口 IP。若家宽端点本身不可从前置节点访问、家中路由/NAT/防火墙不通，链式配置无法自动修复这些问题。
 - Mihomo 的 `dialer-proxy` 官方说明见 https://wiki.metacubex.one/en/config/proxies/dialer-proxy/ 。
+
+## 可选：中国大陆本地实测
+
+云端运行器不能代替大陆网络。若要确认节点能否从你的大陆宽带/移动网络实际使用，可在 Windows 电脑上下载仓库和官方 Mihomo Windows 版，安装 Python 3.12 并运行：
+
+```powershell
+python -m pip install -r requirements.txt
+$env:MIHOMO_BIN="C:\工具\mihomo.exe"
+python -m direct_nodehub.mainland_probe --confirm-mainland --limit 20 --rounds 3
+```
+
+运行时必须确实处于中国大陆网络，并关闭其他 VPN/代理；只有明确确认后脚本才会生成 reports/mainland/ 报告。报告包含节点 ID、三轮连通情况、出口 IP、下载和上传速度。可将报告交给 `python -m direct_nodehub.mainland_report 报告文件.json` 导入。不要上传或提交任何家宽账号密码。
