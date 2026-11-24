@@ -278,6 +278,7 @@ class ProtocolRiskTests(unittest.TestCase):
                 "server": "origin.example", "port": 443, "servername": "origin.example",
             }},
         ]
+        self.assertTrue(worker_compatible_tcp_bridge(nodes[1]))
         selected = select_protocol_candidates(nodes, max_candidates=2, websocket_quota=0)
         self.assertEqual([node["id"] for node in selected], ["bridge", "ordinary"])
 
