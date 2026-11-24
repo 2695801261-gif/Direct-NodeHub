@@ -170,6 +170,7 @@ def collect() -> dict[str, Any]:
     items: list[dict[str, Any]] = []
     source_results = []
 
+    per_source_limit = int(json.loads(POLICY_FILE.read_text(encoding="utf-8")).get("max_candidates_per_source", 300))
     for source in config.get("sources", []):
         if not source.get("enabled", False):
             continue
@@ -190,17 +191,23 @@ def collect() -> dict[str, Any]:
                     raise ValueError("source exceeds 4 MiB limit")
                 chunks.append(chunk)
             body = b"".join(chunks).decode("utf-8-sig", errors="replace")
-            parsed = extract_candidates(body)
+            parsed = extract_candidates(body)[:per_source_limit]
             added = 0
             for node in parsed:
                 key = candidate_id(node)
                 if key in seen:
+                    existing = next((entry for entry in items if entry["id"] == key), None)
+                    if existing is not None:
+                        existing.setdefault("sources", [existing.get("source", name)])
+                        if name not in existing["sources"]:
+                            existing["sources"].append(name)
                     continue
                 seen.add(key)
                 items.append({
                     "id": key,
                     **node,
                     "source": name,
+                    "sources": [name],
                     "status": "unverified",
                     "probe_region": None,
                     "risk_status": "not_checked"
