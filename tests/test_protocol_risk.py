@@ -1,5 +1,7 @@
 import unittest
 
+from direct_nodehub.collector import candidate_id
+
 from direct_nodehub.protocol import to_mihomo_proxy, select_protocol_candidates, worker_compatible_ws, worker_compatible_tcp_bridge
 from direct_nodehub.risk import classify
 from direct_nodehub import publish
@@ -7,6 +9,15 @@ from direct_nodehub.stability import upload_metric, download_metric, latency_met
 
 
 class ProtocolRiskTests(unittest.TestCase):
+    def test_candidate_id_ignores_uri_query_parameter_order_and_fragment(self):
+        first = {
+            "uri": "vless://123e4567-e89b-12d3-a456-426614174000@edge.example:443?security=tls&type=ws&path=%2Fws&sni=edge.example#one"
+        }
+        second = {
+            "uri": "vless://123e4567-e89b-12d3-a456-426614174000@edge.example:443?sni=edge.example&path=%2Fws&type=ws&security=tls#two"
+        }
+        self.assertEqual(candidate_id(first), candidate_id(second))
+
     def test_vless_reality(self):
         candidate = {
             "id": "x",
