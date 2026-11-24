@@ -15,6 +15,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_FILE = ROOT / "config" / "sources.json"
 OUTPUT_FILE = ROOT / "public" / "candidates.json"
+POLICY_FILE = ROOT / "config" / "policy.json"
 SUPPORTED = {"ss", "vmess", "vless", "trojan", "socks", "socks5", "http", "https"}
 MAX_SOURCE_BYTES = 4 * 1024 * 1024
 USER_AGENT = "Direct-NodeHub/0.1 (+https://github.com/2695801261-gif/Direct-NodeHub)"
