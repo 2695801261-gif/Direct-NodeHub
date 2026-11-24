@@ -206,7 +206,7 @@ class ProtocolRiskTests(unittest.TestCase):
             "id": "alpn",
             "config": {
                 "type": "vmess", "network": "tcp", "tls": True,
-                "server": "origin.example", "servername": "origin.example",
+                "server": "origin.example", "servername": "origin.example", "port": 443,
                 "alpn": ["h2", "http/1.1"],
             },
         }
