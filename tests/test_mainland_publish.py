@@ -59,13 +59,18 @@ class MainlandPublishTests(unittest.TestCase):
     def test_only_stable_risk_eligible_mainland_nodes_publish(self):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
         self.assertEqual([node["id"] for node in standard], ["stable-a"])
-        self.assertEqual([node["id"] for node in fast], ["stable-a"])
+        self.assertEqual([node["id"] for node in fast], ["blocked-c", "stable-a"])
         self.assertEqual(standard[0]["mainland_status"], "reachable")
 
     def test_fast_pool_uses_local_speed_thresholds(self):
         standard, fast = select_mainland_nodes(self.candidates, self.report, 1000, 128)
         self.assertEqual([node["id"] for node in standard], ["stable-a"])
-        self.assertEqual(fast, [])
+        self.assertEqual([node["id"] for node in fast], ["blocked-c"])
+
+    def test_fast_pool_does_not_apply_reputation_filter(self):
+        standard, fast = select_mainland_nodes(self.candidates, self.report, 512, 128)
+        self.assertNotIn("blocked-c", [node["id"] for node in standard])
+        self.assertIn("blocked-c", [node["id"] for node in fast])
 
     def test_rejects_report_without_mainland_attestation(self):
         report = dict(self.report)
