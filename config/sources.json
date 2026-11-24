@@ -18,6 +18,54 @@
       "url": "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
       "format": "auto",
       "enabled": true
+    },
+    {
+      "name": "learnLi-free-nodes-Mihomo",
+      "url": "https://raw.githubusercontent.com/learnLi/free-nodes/main/list.meta.yml",
+      "format": "clash",
+      "enabled": true
+    },
+    {
+      "name": "735754647-Free-Nodes-Clash",
+      "url": "https://raw.githubusercontent.com/735754647/Free-Nodes/main/clash.yaml",
+      "format": "clash",
+      "enabled": true
+    },
+    {
+      "name": "zhuhaiuk-free-nodes-Clash",
+      "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml",
+      "format": "clash",
+      "enabled": true
+    },
+    {
+      "name": "a2470982985-getNode-Clash",
+      "url": "https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml",
+      "format": "clash",
+      "enabled": true
+    },
+    {
+      "name": "rtwo2-FastNodes-top",
+      "url": "https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/top.txt",
+      "format": "uri",
+      "enabled": true
+    },
+    {
+      "name": "morpheusadam-v2ray-config-all",
+      "url": "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/all.txt",
+      "format": "uri",
+      "enabled": true
+    },
+    {
+      "name": "Pawdroid-Free-servers",
+      "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+      "format": "auto",
+      "enabled": false
+    },
+    {
+      "name": "Thordata-free-proxy-list",
+      "url": "https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/all.txt",
+      "format": "plain_proxy",
+      "enabled": false
     }
   ]
 }
