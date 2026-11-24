@@ -1,6 +1,14 @@
 name: Refresh public node pool
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update.yml"
+      - "direct_nodehub/**"
+      - "config/**"
+      - "requirements.txt"
+      - "tests/**"
 permissions:
   contents: write
 concurrency:
