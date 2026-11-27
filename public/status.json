@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-26T21:34:26Z",
+  "generated_at": "2026-11-27T08:36:03Z",
   "summary": {
-    "reputation_screened_stable_nodes": 22,
-    "fast_stable_nodes": 20,
-    "chain_entry_nodes": 22,
+    "reputation_screened_stable_nodes": 25,
+    "fast_stable_nodes": 0,
+    "chain_entry_nodes": 25,
     "chain_template": "public/chain-template.yaml",
     "standard_gate": "3/3 repeated Mihomo tunnel tests, consistent exit IP, median cloud latency <= 1000 ms, download >= 128 KiB/s, upload >= 32 KiB/s, risk feeds available and no known-bad match",
     "fast_gate": "protocol verified, 3/3 stable rounds, cloud latency <= 1000 ms, download >= 512 KiB/s and upload >= 128 KiB/s; no reputation-list filtering",
@@ -13,58 +13,58 @@
     "warning": "Cloud-side validation cannot guarantee reachability or latency from mainland China. Free public nodes may stop working at any time."
   },
   "cloud_tcp": {
-    "total": 642,
-    "reachable": 492,
-    "failed": 150,
+    "total": 659,
+    "reachable": 517,
+    "failed": 142,
     "meaning": "TCP reachability only; not proxy handshake, tunnel, speed, reputation, or mainland reachability."
   },
   "protocol": {
-    "total_tcp_reachable": 492,
+    "total_tcp_reachable": 517,
     "tested": 80,
-    "verified": 35,
-    "partial": 2,
-    "failed": 43,
+    "verified": 31,
+    "partial": 3,
+    "failed": 46,
     "selected_transports": {
       "ws": 20,
-      "tcp": 58,
-      "xhttp": 1,
-      "unknown": 1
+      "tcp": 45,
+      "xhttp": 5,
+      "unknown": 10
     },
     "selected_websocket_count": 20,
     "selected_websocket_ids": [
-      "2c05600d6c33e07f",
-      "f94a24b65436ab1f",
-      "06d4c17b4056c021",
       "614706e554878869",
+      "06d4c17b4056c021",
       "04a62e0711bd56cf",
       "d55031ee7233ed7e",
       "8b58535cb8ec4ded",
+      "c2547a05d0ab36ec",
+      "b2ed7659963667f8",
       "0b0295430d70585c",
       "58994354212022e5",
-      "80d465769c12088c",
       "a07eb53a564bb754",
       "9a0bc17600838b1f",
-      "dc93e272d7d251a7",
-      "621c9ae37744f919",
-      "42cc2271f059eab3",
+      "6292e6949c3492d9",
+      "123e203b9a028f11",
+      "00ad10b559822498",
+      "4444da6e87450be5",
       "d526ade09ef55f98",
-      "358d87a885a794c8",
-      "d9f30c7debd46194",
       "51956d74fc28e261",
-      "af4b404aeaa0d7f8"
+      "4e8ff45a5e870156",
+      "d08f13c40d97f830",
+      "958b1eedf95d414a"
     ],
     "region": "github-hosted-runner (region not guaranteed)",
     "meaning": "Mihomo tunnel and HTTP egress from cloud; not a mainland China test."
   },
   "risk": {
-    "total": 642,
+    "total": 659,
     "blocked": 0,
-    "unconfirmed": 35,
-    "unknown": 607,
+    "unconfirmed": 31,
+    "unknown": 628,
     "feeds": {
       "ipsum": {
         "status": "ok",
-        "entries": 17554,
+        "entries": 17606,
         "minimum_score": 3
       },
       "tor_exit_list": {
@@ -76,10 +76,10 @@
     "warning": "Not listed in threat feeds does not prove an IP is clean; this is not a reputation guarantee."
   },
   "stability": {
-    "candidates_tested": 35,
-    "stable": 22,
-    "degraded": 7,
-    "unstable": 6,
+    "candidates_tested": 31,
+    "stable": 25,
+    "degraded": 2,
+    "unstable": 4,
     "rounds": 3,
     "required_successful_rounds": 3,
     "minimum_download_kbps": 128.0,
@@ -93,13 +93,13 @@
       "source": "V2RayAggregator",
       "status": "ok",
       "parsed": 300,
-      "unique_added": 300
+      "unique_added": 299
     },
     {
       "source": "NoMoreWalls",
       "status": "ok",
       "parsed": 300,
-      "unique_added": 231
+      "unique_added": 220
     },
     {
       "source": "v2rayfree",
@@ -119,8 +119,8 @@
     {
       "source": "zhuhaiuk-free-nodes-Clash",
       "status": "ok",
-      "parsed": 28,
-      "unique_added": 28
+      "parsed": 30,
+      "unique_added": 30
     },
     {
       "source": "a2470982985-getNode-Clash",
@@ -141,24 +141,24 @@
     {
       "source": "Pawdroid-Free-servers",
       "status": "ok",
-      "parsed": 14,
-      "unique_added": 9
+      "parsed": 13,
+      "unique_added": 8
     },
     {
       "source": "snakem982-proxypool-Mihomo",
       "status": "ok",
-      "parsed": 57,
-      "unique_added": 47
+      "parsed": 61,
+      "unique_added": 54
     },
     {
       "source": "snakem982-proxypool-V2Ray",
       "status": "ok",
-      "parsed": 57,
-      "unique_added": 27
+      "parsed": 61,
+      "unique_added": 48
     }
   ],
   "cloudflare_ws_relay": {
-    "websocket_candidates": 138,
+    "websocket_candidates": 132,
     "protocol_verified_and_stable": 0,
     "worker_compatible_candidates": 13,
     "worker_compatible_verified_and_stable": 0,
@@ -166,7 +166,7 @@
     "meaning": "WebSocket-to-WebSocket relay eligibility only; Worker must still be deployed and tested from the actual client network."
   },
   "cloudflare_tcp_bridge": {
-    "eligible_tls_tcp_candidates": 5,
+    "eligible_tls_tcp_candidates": 6,
     "protocol_verified_and_stable": 0,
     "eligible_candidate_ids": [],
     "meaning": "TLS TCP VLESS/VMess/Trojan only; excludes Reality, XTLS Vision, UDP and upstream WebSocket. Worker must still be deployed and tested from the actual client network."
