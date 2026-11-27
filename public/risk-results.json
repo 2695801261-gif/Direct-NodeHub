@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T08:34:47Z",
+  "generated_at": "2026-11-27T21:19:12Z",
   "summary": {
-    "total": 659,
-    "blocked": 0,
-    "unconfirmed": 31,
-    "unknown": 628,
+    "total": 613,
+    "blocked": 1,
+    "unconfirmed": 35,
+    "unknown": 577,
     "feeds": {
       "ipsum": {
         "status": "ok",
@@ -14,7 +14,7 @@
       },
       "tor_exit_list": {
         "status": "ok",
-        "entries": 1263,
+        "entries": 1262,
         "minimum_score": null
       }
     },
@@ -23,30 +23,30 @@
   "results": [
     {
       "id": "f5ed962118bc620d",
-      "risk_status": "unconfirmed",
-      "risk_score": null,
-      "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
-      ],
-      "decision": "eligible_for_unconfirmed_pool"
-    },
-    {
-      "id": "9156c67076d92acc",
-      "risk_status": "unconfirmed",
-      "risk_score": null,
-      "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
-      ],
-      "decision": "eligible_for_unconfirmed_pool"
-    },
-    {
-      "id": "60b18e513b0901e7",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
         "no_verified_exit_ip"
       ],
       "decision": "quarantine"
+    },
+    {
+      "id": "9156c67076d92acc",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "60b18e513b0901e7",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "9033b61b1f1f19c7",
@@ -59,24 +59,15 @@
     },
     {
       "id": "892b13bd195dd166",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "7ec51cfbb0164f24",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "7f7b021e4de46769",
       "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
@@ -85,13 +76,22 @@
       "decision": "eligible_for_unconfirmed_pool"
     },
     {
-      "id": "44410bbbcb074bac",
+      "id": "7f7b021e4de46769",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
         "no_verified_exit_ip"
       ],
       "decision": "quarantine"
+    },
+    {
+      "id": "44410bbbcb074bac",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "de8a3340a2be345c",
@@ -113,12 +113,12 @@
     },
     {
       "id": "2dd9a90624bbe748",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "e2f79f2d3536ede8",
@@ -320,12 +320,12 @@
     },
     {
       "id": "5d503c78b450997d",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "ac0af0ae5a272134",
@@ -392,12 +392,12 @@
     },
     {
       "id": "6c15a3d8e6a2cbae",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "c001d81cd7c4fa6b",
@@ -428,12 +428,12 @@
     },
     {
       "id": "924e586ef2250090",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "cc889b3a2f08e966",
@@ -446,12 +446,12 @@
     },
     {
       "id": "b62bea8cbad3b8fc",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "bb1acc6930d219ac",
@@ -518,21 +518,21 @@
     },
     {
       "id": "da2e4974b729b29d",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "14ee935123cc92ca",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "4313ce27e4d8fc77",
@@ -545,12 +545,12 @@
     },
     {
       "id": "54e0172686dfe4e6",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "7ec5e9a7f48d1a14",
@@ -581,12 +581,12 @@
     },
     {
       "id": "305789abe1629813",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "ee6283507d3e4e9a",
@@ -608,12 +608,12 @@
     },
     {
       "id": "b8a36ec7d0a83737",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "2471547036f1a1e7",
@@ -644,12 +644,12 @@
     },
     {
       "id": "36e80422b6a2cbee",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "d16b5c7e24286221",
@@ -680,12 +680,12 @@
     },
     {
       "id": "a12b5cdc609498fb",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "a1a632feec39a54b",
@@ -815,12 +815,12 @@
     },
     {
       "id": "2b322b68c292c039",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "0ef4bc14bf2c06cf",
@@ -1049,12 +1049,12 @@
     },
     {
       "id": "999127f747f2d110",
-      "risk_status": "unknown",
-      "risk_score": null,
+      "risk_status": "blocked",
+      "risk_score": 100,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "ipsum_threat_intel_match"
       ],
-      "decision": "quarantine"
+      "decision": "reject"
     },
     {
       "id": "e6aaa932a813887e",
@@ -1094,12 +1094,12 @@
     },
     {
       "id": "3d1744d82ff3560a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "cc7a5983913ff734",
@@ -1130,12 +1130,12 @@
     },
     {
       "id": "467aea45d5deb07a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "fd17bf6b58e75138",
@@ -1175,12 +1175,12 @@
     },
     {
       "id": "543f5bbe14cc352c",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "944f562217563bc7",
@@ -1193,12 +1193,12 @@
     },
     {
       "id": "46a292c796f8ee2a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "1f5734902060f9d0",
@@ -1283,12 +1283,12 @@
     },
     {
       "id": "5cbbc4eaf88cc413",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
     },
     {
       "id": "7ba352921edcf210",
@@ -1382,12 +1382,12 @@
     },
     {
       "id": "6292e6949c3492d9",
-      "risk_status": "unknown",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "36454fe03f9d1808",
@@ -2974,7 +2974,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "11cf9b971ec37ad0",
+      "id": "dd9e64f80459bb5d",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3271,15 +3271,6 @@
       "decision": "quarantine"
     },
     {
-      "id": "35090a1377cc66af",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
       "id": "0e573a6742a32126",
       "risk_status": "unknown",
       "risk_score": null,
@@ -3308,12 +3299,21 @@
     },
     {
       "id": "958b1eedf95d414a",
-      "risk_status": "unconfirmed",
+      "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
-        "not_listed_in_downloaded_threat_feeds"
+        "no_verified_exit_ip"
       ],
-      "decision": "eligible_for_unconfirmed_pool"
+      "decision": "quarantine"
+    },
+    {
+      "id": "42bfee0b044d95f4",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
     },
     {
       "id": "4444da6e87450be5",
@@ -3325,7 +3325,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "0a266000bed404bf",
+      "id": "bd8c3069ee666b9b",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3343,6 +3343,24 @@
       "decision": "quarantine"
     },
     {
+      "id": "51956d74fc28e261",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "61d0c05963bda4b2",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "a3c5680d4e226ec3",
       "risk_status": "unknown",
       "risk_score": null,
@@ -3352,7 +3370,16 @@
       "decision": "quarantine"
     },
     {
-      "id": "e5f85dddd27c7364",
+      "id": "b33499c06440e975",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "1d0fbb4741b667c9",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3362,6 +3389,15 @@
     },
     {
       "id": "8da885e60d5796ba",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "23486f3dc05803a5",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3398,15 +3434,6 @@
     },
     {
       "id": "84184b550b9d199a",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "a1158a83235f956f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3478,7 +3505,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "02144e30004735e5",
+      "id": "fc6f1a872bf8f806",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3487,7 +3514,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "d725c3da2f0b0b5a",
+      "id": "02144e30004735e5",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3541,6 +3568,24 @@
       "decision": "quarantine"
     },
     {
+      "id": "4a02ad3cc26b3b2c",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "71c589f92b24a17c",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "42cc2271f059eab3",
       "risk_status": "unknown",
       "risk_score": null,
@@ -3559,25 +3604,16 @@
       "decision": "quarantine"
     },
     {
+      "id": "5d4f325469fa4786",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "3cdf1655486d15bf",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "236da8a903295b0b",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d526ade09ef55f98",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3622,6 +3658,15 @@
       "decision": "quarantine"
     },
     {
+      "id": "bb112ecfbab56119",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "614706e554878869",
       "risk_status": "unknown",
       "risk_score": null,
@@ -3640,7 +3685,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "c9100118a57af5c8",
+      "id": "1e2dda0b9faae6ba",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3667,25 +3712,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "aa84b02781d518f7",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ef7366388e6edb74",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "6bb218c1ffef62da",
+      "id": "813545d16ed489db",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3695,6 +3722,15 @@
     },
     {
       "id": "5040813672dd270f",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "9d99eb77c937de7c",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3722,6 +3758,15 @@
     },
     {
       "id": "d685b3fcf52e5aae",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "e3cfb5460e335096",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3793,6 +3838,15 @@
       "decision": "quarantine"
     },
     {
+      "id": "b193db0e01a04493",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "53e30297bcde5b87",
       "risk_status": "unknown",
       "risk_score": null,
@@ -3821,24 +3875,6 @@
     },
     {
       "id": "d9f30c7debd46194",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "51956d74fc28e261",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "3f77c0d1c73482a0",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3883,7 +3919,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "5f9dda23f57faf5a",
+      "id": "479cc37e2d7b139a",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3892,7 +3928,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "6841048df9b70eae",
+      "id": "73f691e45e2139b8",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3911,6 +3947,24 @@
     },
     {
       "id": "30a3d144c455b467",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "723d9458fb2a7d45",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "62e1c829a75f71d2",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -3991,7 +4045,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f433df7e0722ace5",
+      "id": "2e1a7f56775e592e",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4000,16 +4054,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "973ce6587a9d39cc",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "6311b555e272a610",
+      "id": "813ac2ff2b573ed1",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4126,7 +4171,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "96659892c3301007",
+      "id": "30f39cfacebfe650",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4135,7 +4180,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "723d9458fb2a7d45",
+      "id": "558415a518a28e92",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4144,7 +4189,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "b408e3191bb08c83",
+      "id": "194b60381c33d14c",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4153,7 +4198,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "8cf3ec1304b7a884",
+      "id": "9178ac4f48a99228",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4162,7 +4207,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "4c4ff38875cfd21e",
+      "id": "922e8fb439ad03cb",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4171,7 +4216,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "a8e62fc68194c289",
+      "id": "129f7bf30a63500f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4180,7 +4225,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "65b56eb53c078b08",
+      "id": "6c9a8a7036957ca2",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4189,7 +4234,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "5d33f6c893c0a516",
+      "id": "0c7d1505ef2b4f89",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4198,7 +4243,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "b6b3a6406c727ef6",
+      "id": "9cf599885bd1d64b",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4207,7 +4252,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "826817190fc17f00",
+      "id": "aecf148aeb6794f2",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4216,7 +4261,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "41695c9a64d3df98",
+      "id": "70f5676a6d8fdaec",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4225,7 +4270,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9b43c8ba693af3ad",
+      "id": "dcfc45f73d8eff59",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4234,7 +4279,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "0ce1763ea8d6c64b",
+      "id": "84983f7628e032e2",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4243,7 +4288,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "dbf2af21d5175556",
+      "id": "f0dfbfef05df19e4",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4252,7 +4297,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "d804a015585df947",
+      "id": "45d7984886af2c3f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4261,7 +4306,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "bd2026928f46c2e3",
+      "id": "81f6242d3de0a4bd",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4270,7 +4315,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f4cc97e5535146d8",
+      "id": "051e56541245233d",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4279,7 +4324,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "73f691e45e2139b8",
+      "id": "8435367c89a726dd",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4288,7 +4333,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "b4e30dfc66150149",
+      "id": "dc5208db63d7be62",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4297,7 +4342,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "d64154d376822e48",
+      "id": "bc49690a8d366bfc",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4306,7 +4351,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "8ad92a68f5a7e218",
+      "id": "99fb985d9f8d37f8",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4315,7 +4360,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "e8a9997d456d6089",
+      "id": "16f30feaed2c1200",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4324,7 +4369,214 @@
       "decision": "quarantine"
     },
     {
-      "id": "919eb0c029dafb84",
+      "id": "916aac1f7fa2d86b",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "2b59454d544434b6",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "f1246dac4a736221",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "b4c01d01fbfd33c1",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "11948fad3507d749",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "c321381b01f2a5ff",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "2b3bacd9350b587a",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "ae39dd69ee78ae3a",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "19783b4ec2040967",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "e36aac2eda0de050",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "058bfa15f3aa1213",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "61098daf87aa21de",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "587c85db6a55e7db",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "92549bd46752c926",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "d2a02ad973e5fa64",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "0fe889053e6684b4",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "d833e38d79df8caa",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "e331dbc24e1e318c",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "523ee5e5ac8af1a8",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "1c451ed2c70f6cb5",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "6307304604a94b35",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "bf26595e90829c6d",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "3fa00acbe900c85c",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "36fe5c0c96d2a6ac",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4342,6 +4594,15 @@
       "decision": "quarantine"
     },
     {
+      "id": "0d7f0133e84128df",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "66222457654bdbfc",
       "risk_status": "unknown",
       "risk_score": null,
@@ -4351,178 +4612,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9b433c8ede338339",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "c408bd45253fca26",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "6aacbcae54acea4b",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "84479baafc071e2f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "026221fd9e731cf5",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5e7dd45538497f49",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "92c6063f787dc994",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "a856f75ae0221960",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d3d09be384a265b3",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "159923e709551db3",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "68054fae4bcb56ab",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "161332ef4ca23056",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "938f54d34660ba7f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "446277ae1b56c768",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "30f39cfacebfe650",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ada3758223921660",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8352d1b42a8e543f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "92daa605e3646251",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "7540a4990978d030",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "24c91d28cc2a3858",
+      "id": "af8235a3e96047e8",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4540,6 +4630,78 @@
       "decision": "quarantine"
     },
     {
+      "id": "9b433c8ede338339",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "f59424a52a6edc27",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "c408bd45253fca26",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "733295efe9c52de6",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "6aacbcae54acea4b",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "e8a9997d456d6089",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "740198e1b3903eb9",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "feff6027676bceaa",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
       "id": "67b1ea70918f70bc",
       "risk_status": "unknown",
       "risk_score": null,
@@ -4549,7 +4711,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "c6ea532b9ae3c255",
+      "id": "43dffbbcc707a106",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4558,7 +4720,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "712a60440323264d",
+      "id": "84479baafc071e2f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4567,7 +4729,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f1fea4ebb5f651aa",
+      "id": "a87d2fa3ad2dcb75",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4576,34 +4738,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9ffe1c38d9679dbb",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "aef7838a33de3367",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "43e61fed72444f12",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8e60040e4de95739",
+      "id": "7406cbd4047a013b",
       "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
@@ -4612,7 +4747,7 @@
       "decision": "eligible_for_unconfirmed_pool"
     },
     {
-      "id": "0e43f1a15a168cc5",
+      "id": "4e76dfdff3024ad2",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4621,94 +4756,13 @@
       "decision": "quarantine"
     },
     {
-      "id": "e56a746b1fa40629",
-      "risk_status": "unknown",
+      "id": "0f997b462fb92d6b",
+      "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
-        "no_verified_exit_ip"
+        "not_listed_in_downloaded_threat_feeds"
       ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "3f118176f316b54c",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "654bf83153d244c2",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "40f436884961909a",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ff614f29ed6b117f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "bd89542d036b7b8f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5d4f325469fa4786",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "28e3189c5ef6a4a3",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ab9b6234459742b6",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5741f7dab65b9fd3",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
+      "decision": "eligible_for_unconfirmed_pool"
     },
     {
       "id": "aa5928198d43e811",
@@ -4720,7 +4774,25 @@
       "decision": "quarantine"
     },
     {
-      "id": "92acad5334cc67b9",
+      "id": "0e445006c6f171bb",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "270f9691559fd424",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "50a3b8e64fe2269c",
       "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
@@ -4729,7 +4801,7 @@
       "decision": "eligible_for_unconfirmed_pool"
     },
     {
-      "id": "1b0ed00b73c73b95",
+      "id": "c59b88feef583d10",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4738,7 +4810,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "535d3fd4f22ee40a",
+      "id": "212773fe3c2a2c85",
       "risk_status": "unconfirmed",
       "risk_score": null,
       "risk_reasons": [
@@ -4747,7 +4819,25 @@
       "decision": "eligible_for_unconfirmed_pool"
     },
     {
-      "id": "99df491b52384e97",
+      "id": "53b9b3b17a39ca6d",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "4e988a47775621af",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "b3d0627e30496553",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4756,7 +4846,34 @@
       "decision": "quarantine"
     },
     {
-      "id": "eb2215d0fe406617",
+      "id": "cb330689ec4bd544",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "3c1be472652a9fb8",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "bf0fe8f14fc9e62d",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "d33762045b39d34b",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4765,7 +4882,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "0c002dc242842fa8",
+      "id": "810f65115831e0bf",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4774,7 +4891,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9f388bbad93b1b2a",
+      "id": "1ee8b056e4b3641e",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4783,7 +4900,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "ca682b987e761dc4",
+      "id": "e1373c9925956ff4",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4792,7 +4909,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "692ef8c03551ed19",
+      "id": "c508126092e8af0c",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4801,88 +4918,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f8c51686539ee688",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ee056caf22271afc",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "edd76b38dc26de11",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "cb72e6bbf09d4049",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "a5ec75b049529c55",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "fc0b19ee2d65c501",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "9abd744197ce9b8f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8eb7d50dcb7ff21e",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "30abaa59d80f5033",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "0646916c1621103d",
+      "id": "a12c521b4f547eda",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4900,34 +4936,34 @@
       "decision": "quarantine"
     },
     {
-      "id": "45078e34932e6848",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "7c5efd1a6a755577",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "1022bd85ddfa8c58",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
       "id": "4a62da4eac182f37",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "c4b96c7815d8563e",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "bd1c512d868ffe07",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "76317e10a90fb68c",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -4954,655 +4990,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "cf6d6874b66a8e99",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "b356af32f86568df",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "cf2d3fa28425fe15",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "db1adf2f0ce9645c",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "68e2ad8263e30378",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ac05cd25e7453e01",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "46af9c81d2180497",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d6c849bab46f17ee",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
       "id": "79a75f77cbd38021",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "b781f5dc5ea701d5",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "0761f60e1b1f44eb",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "516b95741da298c8",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "9365eb66b9f80257",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "e5dd02d7fdc58883",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "75480938b56e5b5e",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "fb9b4567a409b2ec",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d2f0c54acb6e6f95",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5918bc373fd8cc87",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8c92f09a8e527e0e",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "e56a4db24e9f5f60",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "16c388576a36d230",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "0ea136d0b3485288",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "940dcb747c488b47",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "cb7702280f677fbb",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "4853a1039c434c8d",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "b9e3529100223444",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "2750f7eb315bca20",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ccdd983a8c9ba435",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "bc2436c14d520012",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "c5b2a4f3838f4120",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8e4eabfc8e46314b",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "f36906436fdc4d87",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "39ce8a184dc05330",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "6a8da08d8066bf39",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d11dd9d4724811f0",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "52cc83f7ca84e72a",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "9d9d8397d01a6da1",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "59fa8fe584878863",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ca8ea595b9230921",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8a9610c31019d59f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "31ade9aab18652ae",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "c63bb4b51e588cb4",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "eb3d96ff06d6c5e2",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d8bd2609f55339a0",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "f4689e950603cc0a",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "fd1b96d3e561e83f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "1f1ced289c49134b",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "69212c250660deed",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d0301c3312da6bf2",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "bd23ab75828d236f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "c1e155ef9a168c51",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ce14d1db048d69b7",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "a50b2042831887c6",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "ffdacaaffc1c6105",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "2afcc3956f8777c2",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "433e8890a13cebb3",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5ee42751ef30d58e",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "5c2bfd40d4e1bcd5",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "405302ef1ea0632a",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "4e8ff45a5e870156",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "e654d563720ee5ae",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "569c9b13f0a66b8d",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "400b51df33fd907d",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "d27a06fa3242ad43",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "37a6493a3bb82804",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "a81f7b5e9178a953",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "59aa262dc22cd095",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "b1131af3045ca6da",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "679b0801dbfcd33b",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "dda19255743a86e8",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "eeba633285658489",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "8f9efa6de2ca263f",
-      "risk_status": "unknown",
-      "risk_score": null,
-      "risk_reasons": [
-        "no_verified_exit_ip"
-      ],
-      "decision": "quarantine"
-    },
-    {
-      "id": "728fdfaac3117769",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5620,7 +5008,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "174c5c06ac049eb1",
+      "id": "df04a2ef87ea618b",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5629,7 +5017,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "19945fbc0187d22e",
+      "id": "ac05cd25e7453e01",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5638,7 +5026,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "a8e4e0899928822c",
+      "id": "2f28535b0a26e134",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5647,7 +5035,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "fd667607c87803d7",
+      "id": "952cacc7e6d9acaf",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5656,7 +5044,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "df7679f02f03aa36",
+      "id": "0ab307405d8aee16",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5665,7 +5053,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "e5bf45d23aa5faee",
+      "id": "d69670389107f53e",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5674,7 +5062,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f2c93d58a7e1bb4e",
+      "id": "8c2a0284923475c4",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5683,7 +5071,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "c77c85a388348ec1",
+      "id": "3d139f107964b396",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5692,7 +5080,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "e31e4b2e7a4d6ca2",
+      "id": "4853a1039c434c8d",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5701,7 +5089,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "2df8ed9031a1965f",
+      "id": "af0a816cd1f65821",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5710,7 +5098,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "26514d009723cc3c",
+      "id": "afc7081ca4737a09",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5719,7 +5107,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "e7e83a9f38db729d",
+      "id": "97f819bb36a61843",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5728,7 +5116,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "3d34c5c1c53e7440",
+      "id": "3a16a11f20448395",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5737,7 +5125,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "a4db2cf5860bcb05",
+      "id": "5f5c60f64ed3ef6b",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5746,7 +5134,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "3fa00acbe900c85c",
+      "id": "a860e2d57232d8b7",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5755,7 +5143,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "8d2483f68e57f6b1",
+      "id": "5596371e4b3f6cf8",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5764,7 +5152,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "36fe5c0c96d2a6ac",
+      "id": "3412cde32bd10fd5",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5773,7 +5161,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "24ec0024c8d51efd",
+      "id": "6b448da3fc063638",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5782,7 +5170,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "1bf647cf3ff4227e",
+      "id": "db01a93f80898fff",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5791,7 +5179,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "20536c4bd34eac52",
+      "id": "2ce0f666fb5b2883",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5800,7 +5188,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "91ce18a57480a0f8",
+      "id": "76ad2cacc7eff70a",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5809,7 +5197,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "3fd4b07b00e335a3",
+      "id": "a927946725b9b0bf",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5818,7 +5206,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "417e2f9b3190f75f",
+      "id": "b5fb1cefcd96fdc6",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5827,7 +5215,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "312ea07be835f0d1",
+      "id": "94998370bfb536a9",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5836,7 +5224,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "ee3f6b488336c542",
+      "id": "199999520c3eb31c",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5845,7 +5233,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "05e09d3235c10580",
+      "id": "66347da8f6819619",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5854,7 +5242,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "edb08f3a07cb0174",
+      "id": "c5a69545f386ed12",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5863,7 +5251,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "353e803d13f2f033",
+      "id": "0d27699f0ee1e69f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5872,7 +5260,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "80cc465c2ec19c79",
+      "id": "8a9610c31019d59f",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5881,7 +5269,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "163700305bcbd4ad",
+      "id": "bc5b193d4f560961",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5890,7 +5278,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9c8f5e36442ca7f4",
+      "id": "c63bb4b51e588cb4",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5899,7 +5287,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "f54501844c07e5ca",
+      "id": "7c51056b60177aac",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5908,7 +5296,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "7a143bfd91a9f03e",
+      "id": "02cc4e5f7785a1ae",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5917,7 +5305,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "9a368ce440e33e86",
+      "id": "aa7cfe258d27a877",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5926,7 +5314,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "3a835b54a7f6fac7",
+      "id": "94dbbaa4bd034631",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5935,7 +5323,7 @@
       "decision": "quarantine"
     },
     {
-      "id": "6ecdc5c213cf77ee",
+      "id": "ecc44bd381895e81",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [
@@ -5944,7 +5332,205 @@
       "decision": "quarantine"
     },
     {
-      "id": "243b67c9941340ab",
+      "id": "cad5f912a7afaede",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "7c8be88217471752",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "ddd3dcea2f182538",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "3428adc09892e923",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "5dd7e3bbc39067e2",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "4139a471a31a96f7",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "5f01cb13863a7e19",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "4b1c30d7e5560e22",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "5f973e6a30e9fb89",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "00c75b7477969572",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "b407edfa698a767b",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "a57303688af4baf1",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "849bd1f5d2d1403e",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "9ef35a584fbba191",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "30b7f9ee80a033cc",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "a8d409a91ca267e3",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "dd37b1795709f1fd",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "edbcccdf12f1773a",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "cc9ef5f1a210865f",
+      "risk_status": "unconfirmed",
+      "risk_score": null,
+      "risk_reasons": [
+        "not_listed_in_downloaded_threat_feeds"
+      ],
+      "decision": "eligible_for_unconfirmed_pool"
+    },
+    {
+      "id": "067fc101f6581def",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "8749eeb21e1be0a2",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "98089088e9b61b6e",
+      "risk_status": "unknown",
+      "risk_score": null,
+      "risk_reasons": [
+        "no_verified_exit_ip"
+      ],
+      "decision": "quarantine"
+    },
+    {
+      "id": "a84b1c6a069e5089",
       "risk_status": "unknown",
       "risk_score": null,
       "risk_reasons": [

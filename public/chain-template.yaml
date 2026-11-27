@@ -4,30 +4,114 @@ mode: rule
 log-level: warning
 ipv6: false
 proxies:
-- name: 🇺🇸US-193.151.160.9-0035
+- type: http
+  server: 138.199.35.206
+  port: 9002
+  tls: true
+  sni: 138.199.35.206
+  skip-cert-verify: true
+  name: US - zhuhai.uk 07
+- type: http
+  server: 138.199.35.205
+  port: 9002
+  tls: true
+  skip-cert-verify: true
+  name: US - zhuhai.uk
+- name: 🇺🇸US-95.215.201.18-0106
   type: ss
-  server: 193.151.160.9
+  server: 95.215.201.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-193.151.160.18-0038
+- type: http
+  server: 138.199.35.214
+  port: 9002
+  username: 'null'
+  password: None
+  tls: true
+  sni: 138.199.35.214
+  skip-cert-verify: true
+  name: US - zhuhai.uk 02
+- name: 🇺🇸US-173.244.56.6-0094
   type: ss
-  server: 193.151.160.18
+  server: 173.244.56.6
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- type: http
+  server: fan.596189.xyz
+  port: 443
+  username: 'null'
+  password: 'null'
+  tls: true
+  name: US - zhuhai.uk 09
+- name: 🇺🇸US-23.150.152.38-0119
+  type: ss
+  server: 23.150.152.38
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-162.251.62.31-0109
+- name: 🇺🇸US-137.184.89.151-0151
   type: ss
-  server: 162.251.62.31
+  server: 137.184.89.151
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-38.91.107.188-0107
+- name: 🇺🇸US-173.244.56.9-0089
   type: ss
-  server: 38.91.107.188
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇺🇸US-169.197.142.68-0092
+  type: ss
+  server: 169.197.142.68
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- type: http
+  server: 137.175.22.116
+  port: 443
+  tls: true
+  sni: 137.175.22.116
+  skip-cert-verify: true
+  name: US - zhuhai.uk 06
+- type: http
+  server: 137.175.22.40
+  port: 443
+  tls: true
+  skip-cert-verify: true
+  name: US - zhuhai.uk 05
+- name: 🇺🇸US-156.146.38.170-0033
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇺🇸US-156.146.38.169-0032
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: 🇺🇸US-38.128.66.32-0099
+  type: ss
+  server: 38.128.66.32
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-216.106.178.169-0079
+  type: ss
+  server: 216.106.178.169
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -46,16 +130,9 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-185.230.230.18-0036
+- name: 🇺🇸US-149.40.57.133-0126
   type: ss
-  server: 185.230.230.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇺🇸US-45.86.51.18-0040
-  type: ss
-  server: 45.86.51.18
+  server: 149.40.57.133
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -67,9 +144,9 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇺🇸US-37.19.198.236-0043
+- name: 🇺🇸US-37.19.198.243-0044
   type: ss
-  server: 37.19.198.236
+  server: 37.19.198.243
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
@@ -80,62 +157,6 @@ proxies:
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  udp: true
-- name: 🇺🇸US-37.19.198.244-0041
-  type: ss
-  server: 37.19.198.244
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: 🇺🇸US-38.91.100.39-0105
-  type: ss
-  server: 38.91.100.39
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇺🇸US-15.204.246.132-0156
-  type: ss
-  server: 15.204.246.132
-  port: 7307
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: 🇺🇸US-15.204.233.41-0154
-  type: ss
-  server: 15.204.233.41
-  port: 8882
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-  udp: true
-- name: 🇺🇸US-167.88.63.99-0085
-  type: ss
-  server: 167.88.63.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇺🇸US-38.121.43.225-0052
-  type: ss
-  server: 38.121.43.225
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇺🇸US-38.121.43.231-0065
-  type: ss
-  server: 38.121.43.231
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇺🇸US-172.111.36.123-0101
-  type: ss
-  server: 172.111.36.123
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: 🇺🇸US-38.121.43.18-0055
   type: ss
@@ -151,6 +172,27 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇺🇸US-172.111.36.123-0101
+  type: ss
+  server: 172.111.36.123
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-167.88.63.99-0085
+  type: ss
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇺🇸US-38.121.43.231-0065
+  type: ss
+  server: 38.121.43.231
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 - name: 🇺🇸US-38.22.17.129-0051
   type: ss
   server: 38.22.17.129
@@ -158,27 +200,49 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇨🇦CA-51.222.136.236-0167
+- name: 🇺🇸US-38.121.43.225-0052
   type: ss
-  server: 51.222.136.236
-  port: 8882
+  server: 38.121.43.225
+  port: 19999
   cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - type: http
-  server: 23.133.176.14
-  port: 443
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-  name: US - zhuhai.uk 02
-- type: http
-  server: 12.221.146.147
+  server: 38.28.193.1
   port: 443
   tls: true
   skip-cert-verify: true
-  name: US - zhuhai.uk
+  name: US - zhuhai.uk 10
+- name: 🇺🇸 美国 | USA
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: eee8ae65-bc48-438f-a606-a96f10bfb3b8
+  network: ws
+  ws-opts:
+    path: t.me/TEAMNETGRATISCOL
+    headers:
+      Host: x.m-90.xyz
+  tls: true
+  servername: x.m-90.xyz
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+- type: vless
+  server: 162.35.101.177
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+  skip-cert-verify: true
+  client-fingerprint: edge
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 99f2107b03f8
+  reality-opts:
+    public-key: cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk
+    short-id: bd8f712209a9c283
+  name: US - zhuhai.uk 04
 - name: HOME-RESIDENTIAL-REPLACE-ME
   type: socks5
   server: YOUR_HOME_HOST
@@ -194,31 +258,38 @@ proxy-groups:
   tolerance: 100
   lazy: true
   proxies:
-  - 🇺🇸US-193.151.160.9-0035
-  - 🇺🇸US-193.151.160.18-0038
-  - 🇺🇸US-162.251.62.31-0109
-  - 🇺🇸US-38.91.107.188-0107
+  - US - zhuhai.uk 07
+  - US - zhuhai.uk
+  - 🇺🇸US-95.215.201.18-0106
+  - US - zhuhai.uk 02
+  - 🇺🇸US-173.244.56.6-0094
+  - US - zhuhai.uk 09
+  - 🇺🇸US-23.150.152.38-0119
+  - 🇺🇸US-137.184.89.151-0151
+  - 🇺🇸US-173.244.56.9-0089
+  - 🇺🇸US-169.197.142.68-0092
+  - US - zhuhai.uk 06
+  - US - zhuhai.uk 05
+  - 🇺🇸US-156.146.38.170-0033
+  - 🇺🇸US-156.146.38.169-0032
+  - 🇺🇸US-38.128.66.32-0099
+  - 🇺🇸US-216.106.178.169-0079
   - 🇺🇸US-149.40.57.134-0100
   - 🇺🇸US-149.40.57.138-0098
-  - 🇺🇸US-185.230.230.18-0036
-  - 🇺🇸US-45.86.51.18-0040
+  - 🇺🇸US-149.40.57.133-0126
   - 🇺🇸US-172.111.38.72-0122
-  - 🇺🇸US-37.19.198.236-0043
+  - 🇺🇸US-37.19.198.243-0044
   - 🇺🇸US-37.19.198.160-0042
-  - 🇺🇸US-37.19.198.244-0041
-  - 🇺🇸US-38.91.100.39-0105
-  - 🇺🇸US-15.204.246.132-0156
-  - 🇺🇸US-15.204.233.41-0154
-  - 🇺🇸US-167.88.63.99-0085
-  - 🇺🇸US-38.121.43.225-0052
-  - 🇺🇸US-38.121.43.231-0065
-  - 🇺🇸US-172.111.36.123-0101
   - 🇺🇸US-38.121.43.18-0055
   - 🇺🇸US-38.22.17.219-0088
+  - 🇺🇸US-172.111.36.123-0101
+  - 🇺🇸US-167.88.63.99-0085
+  - 🇺🇸US-38.121.43.231-0065
   - 🇺🇸US-38.22.17.129-0051
-  - 🇨🇦CA-51.222.136.236-0167
-  - US - zhuhai.uk 02
-  - US - zhuhai.uk
+  - 🇺🇸US-38.121.43.225-0052
+  - US - zhuhai.uk 10
+  - 🇺🇸 美国 | USA
+  - US - zhuhai.uk 04
 - name: HOME-CHAIN
   type: select
   proxies:
